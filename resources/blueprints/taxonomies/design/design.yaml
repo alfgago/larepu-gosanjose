@@ -1,4 +1,3 @@
-title: Topic
 sections:
   main:
     display: Main
@@ -8,28 +7,20 @@ sections:
         field:
           type: text
           required: true
-          display: Title
           validate:
             - required
-      -
-        handle: show
-        field:
-          input_type: text
-          antlers: false
-          display: Show
-          type: text
-          icon: text
-          listable: hidden
+          display: Title
           instructions_position: above
+          listable: hidden
           visibility: visible
           always_save: false
+          input_type: text
+          antlers: false
   sidebar:
-    display: Sidebar
     fields:
       -
         handle: slug
         field:
           type: slug
           required: true
-          validate:
-            - required
+title: Design

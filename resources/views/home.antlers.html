@@ -114,77 +114,9 @@
                 
                 {{/collection:{slug} }}
 
-                <!--{{collection:articles as="article"}}
-                    {{article}}
-                        {{ if design:title == "Half-right" }}
-                        
-                            <div class="mb-16">
-                                <div class="flex flex-row">
-                                    <div class="flex justify-start w-2/4">
-                                        <h2 class="mb-4 text-center">
-                                            <a href="{{ url }}" class="text-6xl tracking-tight leading-tight font-bold">
-                                                {{ title }}
-                                            </a>
-                                        </h2>
-                                        
-                                        <p class="text-gray-600 text-2xl mb-6 text-center">
-                                            {{ excerpt | widont ?? content | strip_tags | safe_truncate(150, '...') }}
-                                        </p>
-                                    </div>
-                                    <div class="flex justify-end w-2/4">
-                                        {{main_image}}
-                                            <img src="{{ url }}" alt="" srcset="">
-                                        {{/main_image}}
-                                    </div>
-                                </div>
-                            </div>
-                        {{ elseif design:title == "Completed" }}
-                            
-                            <div class="mb-16">
-                                <h2 class="mb-4 text-center">
-                                    <a href="{{ url }}" class="text-6xl tracking-tight leading-tight font-bold">
-                                        {{ title }}
-                                    </a>
-                                </h2>
-                                
-                                <p class="text-gray-600 text-2xl mb-6 text-center">
-                                    {{ excerpt | widont ?? content | strip_tags | safe_truncate(150, '...') }}
-                                </p>
-                                
-                                {{main_image}}
-                                <img src="{{ url }}" alt="" srcset="">
-                                {{/main_image}}
-                            </div>
-                        
-                        {{ elseif design:title == "Half-left" }}
-                        
-                            <div class="mb-16">
-                                <div class="flex flex-row">
-                                    <div class="flex justify-start w-2/4">
-                                        {{main_image}}
-                                            <img src="{{ url }}" alt="" srcset="">
-                                        {{/main_image}}
-                                    </div>
-                                    <div class="flex justify-end w-2/4">
-                                        <h2 class="mb-4 text-center">
-                                            <a href="{{ url }}" class="text-6xl tracking-tight leading-tight font-bold">
-                                                {{ title }}
-                                            </a>
-                                        </h2>
-                                        
-                                        <p class="text-gray-600 text-2xl mb-6 text-center">
-                                            {{ excerpt | widont ?? content | strip_tags | safe_truncate(150, '...') }}
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-
-                        {{/if}}
-
-                    {{/article}}
-                {{/collection:articles}}-->
             </div>
         {{/page}}
+
     {{/collection:pages}}
 
 </div>

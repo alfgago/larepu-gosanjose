@@ -1,0 +1,9 @@
+title: Edu
+template: articles/index
+layout: articles/index
+mount: 1b659245-fc81-44e5-9296-49d0109df37a
+revisions: false
+sort_dir: asc
+date_behavior:
+  past: public
+  future: private

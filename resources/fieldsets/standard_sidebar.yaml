@@ -1,0 +1,34 @@
+title: 'Standard Sidebar'
+fields:
+  -
+    handle: slug
+    field:
+      generate: true
+      display: Slug
+      type: slug
+      icon: slug
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      always_save: false
+      validate:
+        - required
+  -
+    handle: date_field
+    field:
+      mode: single
+      time_enabled: true
+      time_seconds_enabled: false
+      full_width: false
+      inline: false
+      columns: 1
+      rows: 1
+      display: Date
+      type: date
+      icon: date
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      always_save: false
+      validate:
+        - required

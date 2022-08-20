@@ -15,3 +15,16 @@ preferences:
         - slug
         - show
         - taxonomy
+  collections:
+    articles:
+      columns:
+        - title
+        - author
+        - slug
+        - date
+        - design
+        - topics
+    now:
+      columns:
+        - title
+        - date

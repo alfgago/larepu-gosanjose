@@ -1,0 +1,11 @@
+title: Shop
+template: articles/index
+layout: articles/index
+mount: a0c57db4-a1e4-48d2-a44a-365bb838c815
+taxonomies:
+  - design
+revisions: false
+sort_dir: asc
+date_behavior:
+  past: public
+  future: private

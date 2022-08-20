@@ -1,0 +1,9 @@
+title: Stay
+template: articles/index
+layout: articles/index
+mount: 6f1ff66b-4175-45fb-bc65-bb881f2de801
+revisions: false
+sort_dir: asc
+date_behavior:
+  past: public
+  future: private

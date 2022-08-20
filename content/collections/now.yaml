@@ -1,0 +1,11 @@
+title: Now
+template: articles/index
+layout: articles/index
+mount: 4b06b7bc-4ed5-4f33-8ae2-5d0447dcb842
+taxonomies:
+  - design
+revisions: false
+sort_dir: asc
+date_behavior:
+  past: public
+  future: private

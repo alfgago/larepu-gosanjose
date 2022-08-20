@@ -1,0 +1,9 @@
+title: Med
+template: articles/index
+layout: articles/index
+mount: 6af7116d-c48c-420f-ab61-85a5a02d468f
+revisions: false
+sort_dir: asc
+date_behavior:
+  past: public
+  future: private

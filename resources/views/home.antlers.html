@@ -5,7 +5,7 @@
     </article>
 </div>
 
-<div class="max-w-6xl mx-auto ">
+<div class="max-w-6xl mx-auto flex flex-col items-center justify-center">
     
     {{collection:pages as="page" title:not_in="Home" sort="position"}}
         {{page}}
@@ -17,103 +17,101 @@
             <div>
                 
                 {{collection:{slug} as="article" sort="date"}}
-                    
-                    {{article}}
-                        {{ if design:slug == "completed" }}
+                    <div class="flex flex-wrap mb-16">
+                        {{article}}
+                            {{ if design:slug == "completed" }}
 
-                            <div class="mb-16">
-                                <h2 class="mb-4 text-center">
-                                    <a href="{{ url }}" class="text-6xl tracking-tight leading-tight font-bold">
-                                        {{ title }}
-                                    </a>
-                                </h2>
-                                
-                                <p class="text-gray-600 text-2xl mb-6 text-center">
-                                    {{ excerpt | widont ?? content | strip_tags | safe_truncate(150, '...') }}
-                                </p>
-                                
-                                {{main_image}}
-                                <img src="{{ url }}" alt="" srcset="">
-                                {{/main_image}}
-                            </div>
-
-                        {{ elseif design:slug == "half-rigth" }}
-                            
-                            <div class="mb-16">
-                                <div class="flex flex-row">
-                                    <div class="flex justify-center content-center w-1/4 flex-col ">
-                                        <h2 class="mb-4 text-start">
-                                            <a href="{{ url }}" class="text-4xl tracking-tight leading-tight font-bold">
-                                                {{ title }}
-                                            </a>
-                                        </h2>
-                                        
-                                        <p class="text-gray-600 text-2xl mb-6 text-start">
-                                            {{ excerpt | widont ?? content | strip_tags | safe_truncate(150, '...') }}
-                                        </p>
-                                    </div>
-                                    <div class="flex justify-end w-3/4 pl-28 py-16">
-                                        {{main_image}}
-                                            <img src="{{ url }}" alt="" srcset="">
-                                        {{/main_image}}
-                                    </div>
+                                <div class="mb-16">
+                                    <h2 class="mb-4 text-center">
+                                        <a href="{{ url }}" class="text-6xl tracking-tight leading-tight font-bold">
+                                            {{ title }}
+                                        </a>
+                                    </h2>
+                                    
+                                    <p class="text-gray-600 text-2xl mb-6 text-center">
+                                        {{ excerpt | widont ?? content | strip_tags | safe_truncate(150, '...') }}
+                                    </p>
+                                    
+                                    {{main_image}}
+                                    <img src="{{ url }}" alt="" srcset="">
+                                    {{/main_image}}
                                 </div>
-                            </div>
 
-                        {{ elseif design:slug == "half-left" }}
-                        
-                            <div class="mb-16">
-                                <div class="flex flex-row">
-                                    <div class="flex justify-start w-4/6 pr-24 py-16">
-                                        {{main_image}}
-                                            <img src="{{ url }}" alt="" srcset="">
-                                        {{/main_image}}
-                                    </div>
-                                    <div class="flex justify-center content-center w-2/6 flex-col ">
-                                        <h2 class="mb-4 text-start">
-                                            <a href="{{ url }}" class="text-4xl tracking-tight leading-tight font-bold">
-                                                {{ title }}
-                                            </a>
-                                        </h2>
-                                        
-                                        <p class="text-gray-600 text-2xl mb-6 text-start">
-                                            {{ excerpt | widont ?? content | strip_tags | safe_truncate(150, '...') }}
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        
-                        {{ elseif design:slug == "small" }}
-
-                            <div class="mb-16">
-                                <div class="flex flex-wrap w-1/3">
-
-                                    <div class="flex justify-start ">
-                                        {{main_image}}
-                                            <img class="max-w-40 max-h-40" src="{{ url }}" alt="" srcset="">
-                                        {{/main_image}}
-
-                                        <div class="flex justify-end w-2/4">
-                                            <h2 class="mb-4 text-center">
-                                                <a href="{{ url }}" class="text-6xl tracking-tight leading-tight font-bold">
+                            {{ elseif design:slug == "half-rigth" }}
+                                
+                                <div class="mb-16">
+                                    <div class="flex flex-row">
+                                        <div class="flex justify-center content-center w-1/4 flex-col ">
+                                            <h2 class="mb-4 text-start">
+                                                <a href="{{ url }}" class="text-4xl tracking-tight leading-tight font-bold">
                                                     {{ title }}
                                                 </a>
                                             </h2>
                                             
-                                            <p class="text-gray-600 text-2xl mb-6 text-center">
+                                            <p class="text-gray-600 text-2xl mb-6 text-start">
+                                                {{ excerpt | widont ?? content | strip_tags | safe_truncate(150, '...') }}
+                                            </p>
+                                        </div>
+                                        <div class="flex justify-end w-3/4 pl-28 py-16">
+                                            {{main_image}}
+                                                <img src="{{ url }}" alt="" srcset="">
+                                            {{/main_image}}
+                                        </div>
+                                    </div>
+                                </div>
+
+                            {{ elseif design:slug == "half-left" }}
+                            
+                                <div class="mb-16">
+                                    <div class="flex flex-row">
+                                        <div class="flex justify-start w-4/6 pr-24 py-16">
+                                            {{main_image}}
+                                                <img src="{{ url }}" alt="" srcset="">
+                                            {{/main_image}}
+                                        </div>
+                                        <div class="flex justify-center content-center w-2/6 flex-col ">
+                                            <h2 class="mb-4 text-start">
+                                                <a href="{{ url }}" class="text-4xl tracking-tight leading-tight font-bold">
+                                                    {{ title }}
+                                                </a>
+                                            </h2>
+                                            
+                                            <p class="text-gray-600 text-2xl mb-6 text-start">
                                                 {{ excerpt | widont ?? content | strip_tags | safe_truncate(150, '...') }}
                                             </p>
                                         </div>
                                     </div>
-                                    
                                 </div>
-                            </div>
+                            
+                            {{ elseif design:slug == "small" }}
 
-                        {{/if}}
-                    {{/article}}
+                                <div class="flex justify-start w-1/3 flex-col items-center">
+                                    <div class="">
+                                        {{main_image}}
+                                            <img class="w-auto max-w-xs" src="{{ url }}" alt="" srcset="">
+                                        {{/main_image}}
+
+                                        <div class="flex justify-start w-2/4 flex-col mt-8">
+                                            <h2 class="mb-4 text-start">
+                                                <a href="{{ url }}" class="text-3xl tracking-tight leading-tight font-bold">
+                                                    {{ title }}
+                                                </a>
+                                            </h2>
+                                            
+                                            <p class="text-gray-600 text-1xl.5 mb-6 text-start">
+                                                {{ excerpt | widont ?? content | strip_tags | safe_truncate(150, '...') }}
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            {{/if}}
+                        {{/article}}
+                    </div>
                 
                 {{/collection:{slug} }}
 
+                
             </div>
         {{/page}}
 

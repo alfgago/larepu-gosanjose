@@ -26,7 +26,7 @@ rm composer-setup.php
 php composer.phar install
  
 # GENERATE APP KEY
-php artisan key:generate
+php artisan key:generate --no-interaction
  
 # BUILD STATIC SITE
-php please ssg:generate
+php please ssg:generate --no-interaction

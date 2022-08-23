@@ -1,10 +1,10 @@
 title: Shop
-template: shop/index
-layout: shop/show
+template: articles/show
 mount: a0c57db4-a1e4-48d2-a44a-365bb838c815
 taxonomies:
   - design
 revisions: false
+route: 'shop/{slug}'
 sort_dir: asc
 date_behavior:
   past: public

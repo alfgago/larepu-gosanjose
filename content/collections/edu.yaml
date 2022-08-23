@@ -1,10 +1,10 @@
 title: Edu
-template: edu/index
-layout: edu/show
+template: articles/show
 mount: 1b659245-fc81-44e5-9296-49d0109df37a
 taxonomies:
   - design
 revisions: false
+route: 'edu/{slug}'
 sort_dir: asc
 date_behavior:
   past: public

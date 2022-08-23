@@ -1,10 +1,10 @@
 title: Med
-template: med/show
-layout: med/index
+template: articles/show
 mount: 6af7116d-c48c-420f-ab61-85a5a02d468f
 taxonomies:
   - design
 revisions: false
+route: 'med/{slug}'
 sort_dir: asc
 date_behavior:
   past: public

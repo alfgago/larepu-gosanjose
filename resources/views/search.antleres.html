@@ -1,0 +1,12 @@
+<div class="max-w-4xl mx-auto">
+    <h1>{{ title }}</h1>
+    {{ search:results}}
+        {{if results}}
+            <ul class="space-y-4">
+                {{results}}
+                    <li><a href="{{url}}" class="font-bold hover:text-blue-700">{{title}}</a></li>
+                {{/results}}
+            </ul>
+        {{/if}}
+    {{ /search:results}}
+</div>

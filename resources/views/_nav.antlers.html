@@ -19,9 +19,13 @@
     </div>
     <div class="w-full lg:w-auto lg:flex items-center" @click.outside="showMobileNav = false" x-show="showMobileNav">
         {{ nav }}
-        <a href="{{ url }}" class="block uppercase {{ is_current || is_parent ?= 'font-medium text-white' }} mt-4 lg:inline-block text-white text-lg hover:text-white lg:mt-0 mr-12">
+        <a href="#{{ title|slugify }}" class="block uppercase {{ is_current || is_parent ?= 'font-medium text-white' }} mt-4 lg:inline-block text-white text-lg hover:text-white lg:mt-0 mr-12">
             {{ title }}
         </a>
         {{ /nav }}
+        <!--<form action="/search/results" class="flex flex-row items-center">
+            <img src="/assets/site/search.svg" class="h-6 w-6">
+            <input class="border-2 border-gray outline-none px-2 h-8 rounded-none placeholdler-black font-bold ml-4" placeholder="Search" type="search" name="q" placeholder="Search">
+        </form>-->
     </div>
 </nav>

@@ -19,7 +19,7 @@
     </div>
     <div class="w-full lg:w-auto lg:flex items-center" @click.outside="showMobileNav = false" x-show="showMobileNav">
         {{ nav }}
-        <a href="{{ url }}" class="block {{ is_current || is_parent ?= 'font-medium text-white' }} mt-4 lg:inline-block text-white text-lg hover:text-white lg:mt-0 mr-12">
+        <a href="{{ url }}" class="block uppercase {{ is_current || is_parent ?= 'font-medium text-white' }} mt-4 lg:inline-block text-white text-lg hover:text-white lg:mt-0 mr-12">
             {{ title }}
         </a>
         {{ /nav }}

@@ -1,6 +1,6 @@
 title: Med
-template: articles/index
-layout: articles/index
+template: med/show
+layout: med/index
 mount: 6af7116d-c48c-420f-ab61-85a5a02d468f
 taxonomies:
   - design

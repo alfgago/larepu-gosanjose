@@ -6,7 +6,7 @@
             {{ content | widont }}
         </header>
 
-        {{ collection:now as="articles" paginate="10" }}
+        {{ collection:edu as="articles" paginate="10" }}
         {{ if no_results }}
         <h2 class="text-3xl italic tracking-tight">Feel the rhythm! Feel the rhyme! Get on up, it's writing time! Cool
             writings!</h2>
@@ -32,6 +32,6 @@
         </div>
         {{ /if }}
         {{ /paginate }}
-        {{ /collection:now }}
+        {{ /collection:edu }}
     </article>
 </div>

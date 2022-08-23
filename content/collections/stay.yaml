@@ -1,6 +1,6 @@
 title: Stay
-template: articles/index
-layout: articles/index
+template: stay/index
+layout: stay/show
 mount: 6f1ff66b-4175-45fb-bc65-bb881f2de801
 taxonomies:
   - design

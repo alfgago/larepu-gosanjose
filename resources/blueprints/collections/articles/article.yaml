@@ -88,22 +88,6 @@ sections:
           validate:
             - required
       -
-        handle: topics
-        field:
-          type: terms
-          taxonomies:
-            - topics
-          display: Topics
-          mode: select
-          instructions_position: above
-          listable: hidden
-          visibility: visible
-          always_save: false
-          max_items: 1
-          create: true
-          validate:
-            - required
-      -
         handle: design
         field:
           type: terms

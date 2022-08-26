@@ -17,10 +17,13 @@ sections:
           input_type: text
           antlers: false
   sidebar:
+    display: Sidebar
     fields:
       -
         handle: slug
         field:
           type: slug
           required: true
+          validate:
+            - required
 title: Design

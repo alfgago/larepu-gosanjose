@@ -10,7 +10,7 @@
     {{collection:pages as="page" title:not_in="Home" sort="position"}}
         {{page}}
             <div id="{{title|slugify}}" class="mb-16">
-                <h2 class="mb-4 mt-6 w-full text-center">
+                <h2 class="font-futurab mb-4 mt-6 w-full text-center">
                     <!--<a href="{{ url }}" class="text-2xl py-3 px-20 text-white bg-green-600 hover:text-green-600 hover:bg-white hover:border-green-600 border-2 tracking-tight leading-tight uppercase">{{title}}</a>-->
                     <a href="" class="text-2xl py-3 px-20 text-white bg-green-600 hover:text-green-600 hover:bg-white hover:border-green-600 border-2 tracking-tight leading-tight uppercase">{{title}}</a>
                 </h2>
@@ -23,18 +23,18 @@
                             {{ if design:slug == "completed" }}
 
                                 <div class="mb-16">
-                                    <h2 class="mb-4 text-center">
+                                    <h2 class="font-futurab mb-4 text-center">
                                         <a href="{{ url }}" class="text-6xl tracking-tight leading-tight font-bold">
                                             {{ title }}
                                         </a>
                                     </h2>
                                     
-                                    <p class="text-gray-600 text-2xl mb-6 text-center">
+                                    <p class="font-futural text-gray-600 text-2xl mb-6 text-center">
                                         {{ excerpt | widont ?? content | strip_tags | safe_truncate(150, '...') }}
                                     </p>
                                     
                                     {{main_image}}
-                                    <img src="{{ url }}" alt="" srcset="">
+                                        <img src="{{ url }}" alt="" srcset="">
                                     {{/main_image}}
                                 </div>
 
@@ -43,13 +43,13 @@
                                 <div class="mb-16">
                                     <div class="flex flex-row">
                                         <div class="flex justify-center content-center w-1/4 flex-col ">
-                                            <h2 class="mb-4 text-start">
+                                            <h2 class="font-futurab mb-4 text-start">
                                                 <a href="{{ url }}" class="text-4xl tracking-tight leading-tight font-bold">
                                                     {{ title }}
                                                 </a>
                                             </h2>
                                             
-                                            <p class="text-gray-600 text-2xl mb-6 text-start">
+                                            <p class="font-futural text-gray-600 text-2xl mb-6 text-start">
                                                 {{ excerpt | widont ?? content | strip_tags | safe_truncate(150, '...') }}
                                             </p>
                                         </div>
@@ -71,13 +71,13 @@
                                             {{/main_image}}
                                         </div>
                                         <div class="flex justify-center content-center w-2/6 flex-col ">
-                                            <h2 class="mb-4 text-start">
+                                            <h2 class="font-futurab mb-4 text-start">
                                                 <a href="{{ url }}" class="text-4xl tracking-tight leading-tight font-bold">
                                                     {{ title }}
                                                 </a>
                                             </h2>
                                             
-                                            <p class="text-gray-600 text-2xl mb-6 text-start">
+                                            <p class="font-futural text-gray-600 text-2xl mb-6 text-start">
                                                 {{ excerpt | widont ?? content | strip_tags | safe_truncate(150, '...') }}
                                             </p>
                                         </div>
@@ -93,13 +93,13 @@
                                         {{/main_image}}
 
                                         <div class="flex justify-start w-2/4 flex-col mt-8">
-                                            <h2 class="mb-4 text-start">
+                                            <h2 class="font-futurab mb-4 text-start">
                                                 <a href="{{ url }}" class="text-3xl tracking-tight leading-tight font-bold">
                                                     {{ title }}
                                                 </a>
                                             </h2>
                                             
-                                            <p class="text-gray-600 text-1xl.5 mb-6 text-start">
+                                            <p class="font-futural text-gray-600 text-1xl.5 mb-6 text-start">
                                                 {{ excerpt | widont ?? content | strip_tags | safe_truncate(150, '...') }}
                                             </p>
                                         </div>

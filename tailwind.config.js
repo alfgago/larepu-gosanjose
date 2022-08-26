@@ -7,7 +7,9 @@ module.exports = {
     theme: {
         fontFamily: {
             sans: ['Inter', 'sans'],
-            mono: ['Menlo', 'monospace']
+            mono: ['Menlo', 'monospace'],
+            futurab: ['Futura', 'Bold'],
+            futural: ['Futura Lt BT', 'Light']
         },
         extend: {
             colors: {

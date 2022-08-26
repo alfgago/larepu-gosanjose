@@ -1,9 +1,0 @@
-title: Do
-template: articles/index
-layout: articles/index
-mount: cf7b75a7-49ef-4d08-992c-bddfae666e8d
-revisions: false
-sort_dir: asc
-date_behavior:
-  past: public
-  future: private

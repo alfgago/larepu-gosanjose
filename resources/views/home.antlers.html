@@ -10,13 +10,13 @@
     {{collection:pages as="page" title:not_in="Home" sort="position"}}
         {{page}}
             <div id="{{title|slugify}}" class="mb-16">
-                <h2 class="mb-24 w-full text-center">
+                <h2 class="mb-24 mt-4 w-full text-center">
                     <a href="{{ url }}" class="text-2xl py-3 px-20 text-white bg-green-600 hover:text-green-600 hover:bg-white hover:border-green-600 border-2 tracking-tight leading-tight uppercase">{{title}}</a>
                 </h2>
             </div>
             <div>
                 
-                {{collection:{slug} as="article" sort="date"}}
+                {{collection:articles taxonomy:topics={slug} as="article" sort="date"}}
                     <div class="flex flex-wrap mb-16">
                         {{article}}
                             {{ if design:slug == "completed" }}
@@ -37,7 +37,7 @@
                                     {{/main_image}}
                                 </div>
 
-                            {{ elseif design:slug == "half-rigth" }}
+                            {{ elseif design:slug == "half-right" }}
                                 
                                 <div class="mb-16">
                                     <div class="flex flex-row">
@@ -109,7 +109,7 @@
                         {{/article}}
                     </div>
                 
-                {{/collection:{slug} }}
+                {{/collection:articles }}
 
                 
             </div>

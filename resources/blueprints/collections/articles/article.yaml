@@ -12,29 +12,6 @@ sections:
           validate:
             - required
       -
-        handle: section
-        field:
-          options:
-            Now: Now
-            Do: Do
-          multiple: false
-          max_items: 1
-          clearable: true
-          searchable: true
-          taggable: false
-          push_tags: false
-          cast_booleans: false
-          default: Now
-          display: section
-          type: select
-          icon: select
-          listable: hidden
-          instructions_position: above
-          visibility: visible
-          always_save: false
-          validate:
-            - required
-      -
         handle: content
         field:
           type: markdown
@@ -101,3 +78,11 @@ sections:
           always_save: false
           max_items: 1
           create: true
+      -
+        handle: topics
+        field:
+          type: terms
+          taxonomies:
+            - topics
+          display: Topics
+          mode: select

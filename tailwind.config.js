@@ -8,8 +8,12 @@ module.exports = {
         fontFamily: {
             sans: ['Inter', 'sans'],
             mono: ['Menlo', 'monospace'],
-            futurab: ['Futura', 'Bold'],
-            futural: ['Futura Lt BT', 'Light']
+            futura: ['Futura', 'Bold'],
+            futural: ['Futura Lt BT', 'Light'],
+            futuram: ['Futura Md BT', 'Medium'],
+            futurabc: ['Futura BdCn BT', 'BoldCondensed'],
+            futurabk: ['Futura Bk BT', 'Book'],
+            futuraltcn: ['Futura LtCn BT', 'LightCondensed']
         },
         extend: {
             colors: {

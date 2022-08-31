@@ -2,6 +2,25 @@
     <div class="text-md antialiased font-medium">
         <!--<a href="/" class="font-futurab block text-xl lg:inline-block mr-12 text-white">{{ settings:site_name }}</a>-->
     </div>
+    <div class="first-part hidden lg:w-1/5 lg:flex justify-center">
+        <div class="hidden lg:flex">
+            <button class="flex items-center px-3 text-white" x-bind:class="{'hidden': showDesktop}" @click="showDesktop = true">
+                <svg class="fill-current h-5 w-5" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <title>Open Menu</title>
+                    <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+                </svg>
+            </button>
+            <button class="items-center px-3 text-white" x-bind:class="{'hidden': !showDesktop}" @click="showDesktop = false" x-cloak>
+                <svg class="fill-current h-5 w-5" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <title>Close Menu</title>
+                    <path
+                        d="M10 8.586L2.929 1.515 1.515 2.929 8.586 10l-7.071 7.071 1.414 1.414L10 11.414l7.071 7.071 1.414-1.414L11.414 10l7.071-7.071-1.414-1.414L10 8.586z" />
+                </svg>
+            </button>
+        </div>
+    </div>
+    
+
     <div class="block lg:hidden">
         <button class="flex items-center px-3 text-white" x-bind:class="{'hidden': showMobileNav}" @click="showMobileNav = true">
             <svg class="fill-current h-5 w-5" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -9,7 +28,7 @@
                 <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
             </svg>
         </button>
-        <button class="items-center px-3 text-white" x-bind:class="{'flex': showMobileNav, 'hidden': ! showMobileNav}" @click="showMobileNav = false" x-cloak>
+        <button class="items-center px-3 text-white" x-bind:class="{'flex': showMobileNav, 'block': ! showMobileNav}" @click="showMobileNav = false" x-cloak>
             <svg class="fill-current h-5 w-5" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                 <title>Close Menu</title>
                 <path
@@ -17,15 +36,30 @@
             </svg>
         </button>
     </div>
-    <div class="w-full lg:w-auto lg:flex items-center" @click.outside="showMobileNav = false" x-show="showMobileNav">
-        {{ nav title:not_in="Art|Trad|Sports|Urban Nature|Convention|Airport" }}
-        <a href="#{{ title|slugify }}" class="font-futurab block uppercase {{ is_current || is_parent ?= 'font-medium text-white' }} mt-4 lg:inline-block text-white text-2xl hover:text-white lg:mt-0 mr-12">
-            {{ title }}
-        </a>
-        {{ /nav }}
-        <!--<form action="/search/results" class="flex flex-row items-center">
+
+    <div class="second-part w-3/5">
+        <div class="w-full lg:w-auto lg:flex items-center justify-center" @click.outside="showMobileNav = false" x-show="showMobileNav">
+            {{ nav title:not_in="Art|Trad|Sports|Urban Nature|Convention|Airport" }}
+            <a href="#{{ title|slugify }}" class="font-futurab block uppercase {{ is_current || is_parent ?= 'font-medium text-white' }} mt-4 lg:inline-block text-white text-2xl hover:text-white lg:mt-0 mr-12">
+                {{ title }}
+            </a>
+            {{ /nav }}
+        </div>
+        
+        <div class="w-full lg:w-auto lg:flex items-center justify-center" @click.outside="showDesktop = false" x-show="showDesktop">
+            {{ nav title:not_in="Now|Eat|Shop|Stay|Med|Edu" }}
+            <a href="#{{ title|slugify }}" class="uppercase {{ is_current || is_parent ?= 'font-medium text-white' }} mt-4  text-white text-2xl hover:text-white lg:mt-0 mr-12" x-bind:class="{'hidden': !showDesktop}" >
+                {{ title }}
+            </a>
+            {{ /nav }}
+        </div>
+    </div>
+    
+    <div class="third-part w-1/5">
+        <form action="/search/results" class="flex flex-row items-center">
             <img src="/assets/site/search.svg" class="h-6 w-6">
             <input class="border-2 border-gray outline-none px-2 h-8 rounded-none placeholdler-black font-bold ml-4" placeholder="Search" type="search" name="q" placeholder="Search">
-        </form>-->
+        </form>
     </div>
+        
 </nav>

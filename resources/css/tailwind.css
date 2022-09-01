@@ -7,3 +7,5 @@
 @import "tailwindcss/utilities";
 
 @import url('./futura-font.css');
+
+@import "customcss.css";

@@ -540,21 +540,9 @@ video {
 }.mx-auto{
   margin-left: auto !important;
   margin-right: auto !important;
-}.my-8{
-  margin-top: 2rem !important;
-  margin-bottom: 2rem !important;
 }.-mx-16{
   margin-left: -4rem !important;
   margin-right: -4rem !important;
-}.mx-auto{
-  margin-left: auto !important;
-  margin-right: auto !important;
-}.my-8{
-  margin-top: 2rem !important;
-  margin-bottom: 2rem !important;
-}.mx-auto{
-  margin-left: auto !important;
-  margin-right: auto !important;
 }.mt-16{
   margin-top: 4rem !important;
 }.mb-16{
@@ -585,20 +573,6 @@ video {
   margin-bottom: 0px !important;
 }.mb-32{
   margin-bottom: 8rem !important;
-}.mt-10{
-  margin-top: 2.5rem !important;
-}.mb-4{
-  margin-bottom: 1rem !important;
-}.mt-10{
-  margin-top: 2.5rem !important;
-}.mb-4{
-  margin-bottom: 1rem !important;
-}.mb-24{
-  margin-bottom: 6rem !important;
-}.mt-10{
-  margin-top: 2.5rem !important;
-}.mb-4{
-  margin-bottom: 1rem !important;
 }.block{
   display: block !important;
 }.inline-block{
@@ -659,6 +633,10 @@ video {
   flex-wrap: wrap !important;
 }.content-center{
   align-content: center !important;
+}.items-start{
+  align-items: flex-start !important;
+}.items-end{
+  align-items: flex-end !important;
 }.items-center{
   align-items: center !important;
 }.justify-start{
@@ -742,12 +720,6 @@ video {
   padding-left: 4rem !important;
 }.pt-32{
   padding-top: 8rem !important;
-}.pl-4{
-  padding-left: 1rem !important;
-}.pb-24{
-  padding-bottom: 6rem !important;
-}.pl-4{
-  padding-left: 1rem !important;
 }.text-center{
   text-align: center !important;
 }.text-start{
@@ -777,33 +749,6 @@ video {
 }.text-sm{
   font-size: 0.875rem !important;
   line-height: 1.25rem !important;
-}.text-6xl{
-  font-size: 3.75rem !important;
-  line-height: 1 !important;
-}.text-8xl{
-  font-size: 6rem !important;
-  line-height: 1 !important;
-}.text-xl{
-  font-size: 1.25rem !important;
-  line-height: 1.75rem !important;
-}.text-6xl{
-  font-size: 3.75rem !important;
-  line-height: 1 !important;
-}.text-2xl{
-  font-size: 1.5rem !important;
-  line-height: 2rem !important;
-}.text-xl{
-  font-size: 1.25rem !important;
-  line-height: 1.75rem !important;
-}.text-6xl{
-  font-size: 3.75rem !important;
-  line-height: 1 !important;
-}.text-2xl{
-  font-size: 1.5rem !important;
-  line-height: 2rem !important;
-}.text-xl{
-  font-size: 1.25rem !important;
-  line-height: 1.75rem !important;
 }.font-medium{
   font-weight: 500 !important;
 }.font-bold{
@@ -910,9 +855,6 @@ video {
 }.hover\:text-white:hover{
   --tw-text-opacity: 1 !important;
   color: rgb(255 255 255 / var(--tw-text-opacity)) !important;
-}.hover\:text-blue-700:hover{
-  --tw-text-opacity: 1 !important;
-  color: rgb(29 78 216 / var(--tw-text-opacity)) !important;
 }@media (min-width: 768px){.md\:block{
     display: block !important;
   }

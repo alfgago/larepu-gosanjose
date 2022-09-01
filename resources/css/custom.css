@@ -1,0 +1,21 @@
+
+.toggle-menu {
+    position: absolute;
+    top: 100%;
+    background: #31b963;
+    left: 0;
+    width: 100%;
+    padding: 1rem;
+    text-align: center;
+}
+
+.top-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+body {
+    padding-top: 64px;
+}

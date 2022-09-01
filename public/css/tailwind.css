@@ -717,16 +717,6 @@ h1 {
   }
 }
 
-.toggle-menu {
-    position: absolute;
-    top: 100%;
-    background: #31b963;
-    left: 0;
-    width: 100%;
-    padding: 1rem;
-    text-align: center;
-}
-
 .absolute {
   position: absolute !important;
 }
@@ -877,6 +867,10 @@ h1 {
   width: 100% !important;
 }
 
+.w-screen {
+  width: 100vw !important;
+}
+
 .w-6 {
   width: 1.5rem !important;
 }
@@ -959,6 +953,10 @@ h1 {
   margin-bottom: calc(1rem * var(--tw-space-y-reverse)) !important;
 }
 
+.overflow-x-hidden {
+  overflow-x: hidden !important;
+}
+
 .scroll-smooth {
   scroll-behavior: smooth !important;
 }
@@ -1037,11 +1035,6 @@ h1 {
 .py-12 {
   padding-top: 3rem !important;
   padding-bottom: 3rem !important;
-}
-
-.py-5 {
-  padding-top: 1.25rem !important;
-  padding-bottom: 1.25rem !important;
 }
 
 .px-2 {
@@ -1207,6 +1200,27 @@ h1 {
   box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000) !important;
 }
 
+.toggle-menu {
+    position: absolute;
+    top: 100%;
+    background: #31b963;
+    left: 0;
+    width: 100%;
+    padding: 1rem;
+    text-align: center;
+}
+
+.top-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+body {
+    padding-top: 64px;
+}
+
 .hover\:text-blue-700:hover {
   --tw-text-opacity: 1 !important;
   color: rgb(29 78 216 / var(--tw-text-opacity)) !important;
@@ -1269,3 +1283,4 @@ h1 {
     padding-bottom: 8rem !important;
   }
 }
+

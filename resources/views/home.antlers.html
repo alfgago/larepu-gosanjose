@@ -9,11 +9,8 @@
     
     {{collection:pages as="page" title:not_in="Home" sort="position"}}
         {{page}}
-            <div id="{{title|slugify}}" class="mb-16">
-                <h2 class="font-futurab mb-4 mt-6 w-full text-center">
-                    <!--<a href="{{ url }}" class="text-2xl py-3 px-20 text-white bg-green-600 hover:text-green-600 hover:bg-white hover:border-green-600 border-2 tracking-tight leading-tight uppercase">{{title}}</a>-->
-                    <a href="" class="text-2xl py-3 px-20 text-white bg-green-600 hover:text-green-600 hover:bg-white hover:border-green-600 border-2 tracking-tight leading-tight uppercase">{{title}}</a>
-                </h2>
+            <div id="{{title|slugify}}" class="mb-10 mt-10">
+                <h1 class="text-2xl py-3 px-20 text-white bg-green-600 border-2 tracking-tight leading-tight uppercase">{{title}}</h1>
             </div>
             <div>
                 

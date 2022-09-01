@@ -1,4 +1,4 @@
-<nav class="flex items-center justify-center lg:justify-center flex-wrap py-5 px-auto bg-green-600">
+<nav class="flex items-center justify-center lg:justify-center flex-wrap py-5 px-auto bg-green-600 relative">
     <div class="text-md antialiased font-medium">
         <!--<a href="/" class="font-futurab block text-xl lg:inline-block mr-12 text-white">{{ settings:site_name }}</a>-->
     </div>
@@ -34,7 +34,7 @@
                 {{ /nav }}
             </div>
 
-            <div class="w-full lg:w-auto lg:flex items-center justify-center" @click.outside="showDesktop = false" x-show="showDesktop">
+            <div class="toggle-menu" @click.outside="showDesktop = false" x-show="showDesktop">
                 {{ nav title:not_in="Now|Eat|Shop|Stay|Med|Edu" }}
                 <a href="#{{ title|slugify }}" class="uppercase {{ is_current || is_parent ?= 'font-medium text-white' }} mt-4  text-white text-xl hover:text-white lg:mt-0 mr-12" x-bind:class="{'hidden': !showDesktop}" >
                     {{ title }}
@@ -52,7 +52,7 @@
                 {{ /nav }}
             </div>
 
-            <div class="w-full lg:w-auto lg:flex items-center justify-center" @click.outside="showDesktop = false" x-show="showDesktop">
+            <div class="toggle-menu" @click.outside="showDesktop = false" x-show="showDesktop">
                 {{ nav title:not_in="Now|Eat|Shop|Stay|Med|Edu" }}
                 <a href="/#{{ title|slugify }}" class="uppercase {{ is_current || is_parent ?= 'font-medium text-white' }} mt-4  text-white text-xl hover:text-white lg:mt-0 mr-12" x-bind:class="{'hidden': !showDesktop}" >
                     {{ title }}

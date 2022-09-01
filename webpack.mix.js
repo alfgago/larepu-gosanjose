@@ -18,6 +18,8 @@ mix.postCss('resources/css/tailwind.css', 'public/css', [
     require('tailwindcss'),
 ])
 
+mix.postCss('resources/css/fonts/stylesheet.css', 'public/css')
+
 if (mix.inProduction()) {
    mix.version();
 }

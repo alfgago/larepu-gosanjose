@@ -10,7 +10,7 @@
     {{ sections }}
         
         {{ if show_title }}
-            <div id="{{title|slugify}}" class="mb-10 mt-10">
+            <div id="{{section_topic:slug|slugify}}" class="mb-10 mt-10 pt-20">
                 <h1 class="text-2xl py-3 px-20 text-white bg-green-600 border-2 tracking-tight leading-tight uppercase">{{section_topic:slug}}</h1>
             </div>
         {{ /if }}

@@ -751,11 +751,6 @@ h1 {
   margin-right: -4rem !important;
 }
 
-.mx-auto {
-  margin-left: auto !important;
-  margin-right: auto !important;
-}
-
 .mt-16 {
   margin-top: 4rem !important;
 }
@@ -816,34 +811,6 @@ h1 {
   margin-bottom: 8rem !important;
 }
 
-.mb-10 {
-  margin-bottom: 2.5rem !important;
-}
-
-.mt-10 {
-  margin-top: 2.5rem !important;
-}
-
-.mb-8 {
-  margin-bottom: 2rem !important;
-}
-
-.mb-16 {
-  margin-bottom: 4rem !important;
-}
-
-.mb-4 {
-  margin-bottom: 1rem !important;
-}
-
-.mb-6 {
-  margin-bottom: 1.5rem !important;
-}
-
-.mt-8 {
-  margin-top: 2rem !important;
-}
-
 .block {
   display: block !important;
 }
@@ -874,10 +841,6 @@ h1 {
 
 .h-8 {
   height: 2rem !important;
-}
-
-.h-52 {
-  height: 13rem !important;
 }
 
 .min-h-screen {
@@ -932,34 +895,6 @@ h1 {
   width: 5rem !important;
 }
 
-.w-full {
-  width: 100% !important;
-}
-
-.w-52 {
-  width: 13rem !important;
-}
-
-.w-2\/4 {
-  width: 50% !important;
-}
-
-.w-1\/4 {
-  width: 25% !important;
-}
-
-.w-3\/4 {
-  width: 75% !important;
-}
-
-.w-4\/6 {
-  width: 66.666667% !important;
-}
-
-.w-2\/6 {
-  width: 33.333333% !important;
-}
-
 .max-w-5xl {
   max-width: 64rem !important;
 }
@@ -978,18 +913,6 @@ h1 {
 
 .max-w-4xl {
   max-width: 56rem !important;
-}
-
-.max-w-5xl {
-  max-width: 64rem !important;
-}
-
-.max-w-6xl {
-  max-width: 72rem !important;
-}
-
-.max-w-xs {
-  max-width: 20rem !important;
 }
 
 .list-disc {
@@ -1097,11 +1020,6 @@ h1 {
   background-color: rgb(31 41 55 / var(--tw-bg-opacity)) !important;
 }
 
-.bg-green-600 {
-  --tw-bg-opacity: 1 !important;
-  background-color: rgb(22 163 74 / var(--tw-bg-opacity)) !important;
-}
-
 .object-cover {
   -o-object-fit: cover !important;
      object-fit: cover !important;
@@ -1156,19 +1074,8 @@ h1 {
   padding-bottom: 0.25rem !important;
 }
 
-.py-3 {
-  padding-top: 0.75rem !important;
-  padding-bottom: 0.75rem !important;
-}
-
-.px-20 {
-  padding-left: 5rem !important;
-  padding-right: 5rem !important;
-}
-
-.py-16 {
-  padding-top: 4rem !important;
-  padding-bottom: 4rem !important;
+.pt-20 {
+  padding-top: 5rem !important;
 }
 
 .pl-28 {
@@ -1201,18 +1108,6 @@ h1 {
 
 .pt-32 {
   padding-top: 8rem !important;
-}
-
-.pt-20 {
-  padding-top: 5rem !important;
-}
-
-.pl-28 {
-  padding-left: 7rem !important;
-}
-
-.pr-24 {
-  padding-right: 6rem !important;
 }
 
 .text-center {
@@ -1258,39 +1153,6 @@ h1 {
   line-height: 1.25rem !important;
 }
 
-.text-lg {
-  font-size: 1.125rem !important;
-  line-height: 1.75rem !important;
-}
-
-.text-2xl {
-  font-size: 1.5rem !important;
-  line-height: 2rem !important;
-}
-
-.text-6xl {
-  font-size: 3.75rem !important;
-  line-height: 1 !important;
-}
-
-.text-3xl {
-  font-size: 1.875rem !important;
-  line-height: 2.25rem !important;
-}
-
-.text-4xl {
-  font-size: 2.25rem !important;
-  line-height: 2.5rem !important;
-}
-
-.font-medium {
-  font-weight: 500 !important;
-}
-
-.font-bold {
-  font-weight: 700 !important;
-}
-
 .font-medium {
   font-weight: 500 !important;
 }
@@ -1315,20 +1177,12 @@ h1 {
   line-height: 1.5 !important;
 }
 
-.leading-tight {
-  line-height: 1.25 !important;
-}
-
 .tracking-tight {
   letter-spacing: -0.025em !important;
 }
 
 .tracking-widest {
   letter-spacing: 0.1em !important;
-}
-
-.tracking-tight {
-  letter-spacing: -0.025em !important;
 }
 
 .text-teal {
@@ -1354,21 +1208,6 @@ h1 {
 .text-gray-800 {
   --tw-text-opacity: 1 !important;
   color: rgb(31 41 55 / var(--tw-text-opacity)) !important;
-}
-
-.text-teal {
-  --tw-text-opacity: 1 !important;
-  color: rgb(0 132 131 / var(--tw-text-opacity)) !important;
-}
-
-.text-white {
-  --tw-text-opacity: 1 !important;
-  color: rgb(255 255 255 / var(--tw-text-opacity)) !important;
-}
-
-.text-gray-600 {
-  --tw-text-opacity: 1 !important;
-  color: rgb(75 85 99 / var(--tw-text-opacity)) !important;
 }
 
 .no-underline {
@@ -1416,6 +1255,14 @@ h1 {
 
 body {
     padding-top: 64px;
+}
+
+.columns3{
+    display: flex!important;
+    justify-content: space-between!important;
+    flex-direction: column!important;
+    max-width: 13rem!important;
+    align-items: start!important;
 }
 
 .hover\:text-blue-700:hover {

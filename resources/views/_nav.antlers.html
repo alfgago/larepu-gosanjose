@@ -71,7 +71,7 @@
                 x-on:mouseleave="timeout = setTimeout(() => { isOpen = false }, 2500)"
             >
                 <img src="/assets/site/search.svg" class="h-6 w-6">
-                <input x-show="isOpen" @click="isOpen = true" class="border-2 border-gray outline-none px-2 h-8 rounded-none placeholdler-black font-bold ml-4" placeholder="Search" type="search" name="q" value="{{get:q}}" placeholder="Search">    
+                <input x-show="isOpen" @click="isOpen = true" class="border-2 border-gray outline-none px-2 h-8 rounded-none placeholdler-black font-bold ml-4 w-3/4" placeholder="Search" type="search" name="q" value="{{get:q}}" placeholder="Search">    
             </div>
         </form>
     </div>

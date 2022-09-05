@@ -2,15 +2,27 @@
     <div class="text-md antialiased font-medium">
         <!--<a href="/" class="font-futurab block text-xl lg:inline-block mr-12 text-white">{{ settings:site_name }}</a>-->
     </div>
+<<<<<<< HEAD
     <div class="first-part hidden lg:w-1/5 lg:flex justify-center">
         <div class="hidden lg:flex bg-gray-300">
             <button class="flex items-center p-2 text-white" x-bind:class="{'hidden': showDesktop}" @click="showDesktop = true">
+=======
+    
+
+
+    <!--Mobile-->
+    <!--Mobile humburger button-->
+    <div class="flex md:hidden flex-col w-full gap-5 items-start px-4">
+        <div class="block lg:hidden bg-gray-300">
+            <button class="flex items-center p-2 text-white" x-bind:class="{'hidden': showMobileNav}" @click="showMobileNav = true">
+>>>>>>> 899b318 (arreglos al home para que sea más ágil)
                 <img src="/assets/site/menu-light.svg" class="h-6 w-6">
             </button>
             <button class="items-center p-2 text-white" x-bind:class="{'hidden': !showDesktop}" @click="showDesktop = false" x-cloak>
                 <img src="/assets/site/x-menu.svg" class="h-6 w-6">
             </button>
         </div>
+<<<<<<< HEAD
     </div>
     
 
@@ -24,6 +36,16 @@
     </div>
 
     <div class="second-part w-3/5">
+=======
+
+        <form action="/search" class="flex flex-row items-center">
+            <div class="flex items-center">
+                <input x-show="showMobileNav" class="border-2 border-gray outline-none px-2 h-8 rounded-none placeholdler-black font-bold ml-4 w-40" placeholder="Search" type="search" name="q" value="{{get:q}}" placeholder="Search">    
+                <img src="/assets/site/search.svg" class="h-6 w-6" x-show="showMobileNav">
+            </div>
+        </form>
+        
+>>>>>>> 899b318 (arreglos al home para que sea más ágil)
         {{if current_uri == "/"}}
 
             <div class="w-full lg:w-auto lg:flex items-center justify-center" @click.outside="showMobileNav = false" x-show="showMobileNav">

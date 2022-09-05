@@ -1,17 +1,16 @@
-id: 9242876a-41c4-42f8-96f8-ac92d6025406
 title: Settings
 data:
   site_name: 'Go San José'
   social:
     -
+      name: Facebook
+      url: 'https://www.facebook.com/larepublicacr?_rdr=p'
+      icon: site/social-icons/facebook.svg
+    -
       name: Twitter
-      url: 'https://twitter.com/jackmcdade'
+      url: 'https://twitter.com/La_Republica'
       icon: site/social-icons/twitter.svg
     -
-      name: Github
-      url: 'https://github.com/statamic/starter-kit-cool-writings'
-      icon: site/social-icons/github.svg
-    -
-      name: Email
-      url: 'mailto:jack@statamic.com'
-      icon: site/social-icons/email.svg
+      name: Instagram
+      url: 'https://www.instagram.com/la_republicacr/'
+      icon: site/social-icons/instagram.svg

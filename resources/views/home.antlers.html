@@ -20,13 +20,13 @@
                 {{collection:articles taxonomy:topics={section_topic:slug} as="article" sort="date" limit={amount} offset="{skip_count}" }}
                    {{article}}
                     <div class="mb-16">
-                        <h2 class="font-futurab mb-4 text-center">
-                            <a href="{{ url }}" class="text-6xl tracking-tight leading-tight font-bold">
+                        <h2 class="font-futurab mb-4 text-center mx-3">
+                            <a href="{{ url }}" class="text-3xl lg:text-6xl tracking-tight leading-tight font-bold">
                                 {{ title }}
                             </a>
                         </h2>
                         
-                        <p class="font-futural text-gray-600 text-2xl mb-6 text-center">
+                        <p class="font-futural text-gray-600 text-2xl mb-6 text-center mx-3">
                             {{ excerpt | widont ?? content | strip_tags | safe_truncate(150, '...') }}
                         </p>
                         
@@ -38,23 +38,23 @@
                 {{/collection:articles }}
             </div>
         {{ elseif section_type == "3-columns" }}
-            <div class="flex flex-wrap mb-8 justify-between w-full">
+            <div class="flex flex-col lg:flex-row items-center lg:flex-wrap mb-8 lg:justify-between w-full lg:items-start">
                 {{collection:articles taxonomy:topics={section_topic:slug} as="article" sort="date" limit={amount} offset="{skip_count}" }}
                 {{article}}
                 <div class="columns3">
-                    <div class="flex flex-col flex-wrap justify-center">
+                    <div class="flex flex-col lg:flex-row flex-wrap justify-start lg:mb-0 mb-8">
                         {{main_image}}
                             <img class="w-52 h-52 max-w-xs object-cover object-center" src="{{ url }}" alt="" srcset="">
                         {{/main_image}}
 
-                        <div class="flex justify-start w-2/4 flex-col mt-8">
+                        <div class="flex justify-start w-full lg:w-2/4 flex-col mt-4">
                             <h2 class="font-futurab mb-4 text-start">
-                                <a href="{{ url }}" class="text-3xl tracking-tight leading-tight font-bold">
+                                <a href="{{ url }}" class="text-3xl lg:text-3xl tracking-tight leading-tight font-bold">
                                     {{ title }}
                                 </a>
                             </h2>
                             
-                            <p class="font-futural text-gray-600 text-1xl.5 mb-6 text-start">
+                            <p class="font-futural text-gray-600 text-xl mb-6 text-start">
                                 {{ excerpt | widont ?? content | strip_tags | safe_truncate(150, '...') }}
                             </p>
                         </div>
@@ -70,18 +70,18 @@
                 {{article}}
                     <div class="mb-16">
                         <div class="flex flex-row">
-                            <div class="flex justify-center content-center w-1/4 flex-col ">
-                                <h2 class="font-futurab mb-4 text-start">
-                                    <a href="{{ url }}" class="text-4xl tracking-tight leading-tight font-bold">
+                            <div class="flex justify-center content-center w-2/6 flex-col ">
+                                <h2 class="font-futurab mb-4 text-start ml-6 lg:ml-0">
+                                    <a href="{{ url }}" class="text-2xl lg:text-4xl tracking-tight leading-tight font-bold">
                                         {{ title }}
                                     </a>
                                 </h2>
                                 
-                                <p class="font-futural text-gray-600 text-2xl mb-6 text-start">
+                                <p class="font-futural text-gray-600 text-xl lg:text-2xl mb-6 text-start ml-6 lg:ml-0">
                                     {{ excerpt | widont ?? content | strip_tags | safe_truncate(150, '...') }}
                                 </p>
                             </div>
-                            <div class="flex justify-end w-3/4 pl-28 py-16">
+                            <div class="flex justify-end w-4/6 pl-4 py-16">
                                 {{main_image}}
                                     <img src="{{ url }}" alt="" srcset="">
                                 {{/main_image}}
@@ -104,14 +104,14 @@
                                         <img src="{{ url }}" alt="" srcset="">
                                     {{/main_image}}
                                 </div>
-                                <div class="flex justify-center content-center w-2/6 flex-col ">
+                                <div class="flex justify-center content-center w-2/6 flex-col mr-3 lg:mr-0">
                                     <h2 class="font-futurab mb-4 text-start">
-                                        <a href="{{ url }}" class="text-4xl tracking-tight leading-tight font-bold">
+                                        <a href="{{ url }}" class="text-2xl lg:text-4xl tracking-tight leading-tight font-bold">
                                             {{ title }}
                                         </a>
                                     </h2>
                                     
-                                    <p class="font-futural text-gray-600 text-2xl mb-6 text-start">
+                                    <p class="font-futural text-gray-600 text-xl lg:text-2xl mb-6 text-start">
                                         {{ excerpt | widont ?? content | strip_tags | safe_truncate(150, '...') }}
                                     </p>
                                 </div>

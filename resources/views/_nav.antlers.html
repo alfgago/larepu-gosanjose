@@ -1,9 +1,8 @@
-<nav class="flex items-center justify-center lg:justify-center flex-wrap py-3 px-auto bg-green-600 top-menu">
-    <div class="text-md antialiased font-medium">
-        <!--<a href="/" class="font-futurab block text-xl lg:inline-block mr-12 text-white">{{ settings:site_name }}</a>-->
-    </div>
-    <div class="first-part hidden lg:w-1/5 lg:flex justify-center">
-        <div class="hidden lg:flex bg-gray-300">
+<nav class="hidden lg:flex items-center justify-center lg:justify-center flex-wrap py-3 px-auto bg-green-600 top-menu">
+
+    <div class="first-part lg:w-1/5 ">
+
+        <div class="hidden lg:w-fit lg:ml-12 lg:flex bg-gray-300">
             <button class="flex items-center p-2 text-white" x-bind:class="{'hidden': showDesktop}" @click="showDesktop = true">
                 <img src="/assets/site/menu-light.svg" class="h-6 w-6">
             </button>
@@ -11,22 +10,16 @@
                 <img src="/assets/site/x-menu.svg" class="h-6 w-6">
             </button>
         </div>
+
     </div>
     
 
-    <div class="block lg:hidden bg-gray-300">
-        <button class="flex items-center p-2 text-white" x-bind:class="{'hidden': showMobileNav}" @click="showMobileNav = true">
-            <img src="/assets/site/menu-light.svg" class="h-6 w-6">
-        </button>
-        <button class="items-center p-2 text-white" x-bind:class="{'flex': showMobileNav, 'block': ! showMobileNav}" @click="showMobileNav = false" x-cloak>
-            <img src="/assets/site/x-menu.svg" class="h-6 w-6">
-        </button>
-    </div>
+    
 
     <div class="second-part w-3/5">
         {{if current_uri == "/"}}
 
-            <div class="w-full lg:w-auto lg:flex items-center justify-center" @click.outside="showMobileNav = false" x-show="showMobileNav">
+            <div class="w-full lg:w-auto lg:flex items-center justify-center" @click.outside="showExtraMenu = false" x-show="showExtraMenu">
                 {{ nav title:not_in="Art|Trad|Sports|Urban Nature|Convention|Airport" }}
                 <a href="#{{ title|slugify }}" class="font-futurab block uppercase {{ is_current || is_parent ?= 'font-medium text-white' }} mt-4 lg:inline-block text-white text-xl hover:text-white lg:mt-0 mr-12">
                     {{ title }}
@@ -44,7 +37,7 @@
 
         {{ else }}
 
-            <div class="w-full lg:w-auto lg:flex items-center justify-center" @click.outside="showMobileNav = false" x-show="showMobileNav">
+            <div class="w-full lg:w-auto lg:flex items-center justify-center" @click.outside="showExtraMenu = false" x-show="showExtraMenu">
                 {{ nav title:not_in="Art|Trad|Sports|Urban Nature|Convention|Airport" }}
                 <a href="/#{{ title|slugify }}" class="font-futurab block uppercase {{ is_current || is_parent ?= 'font-medium text-white' }} mt-4 lg:inline-block text-white text-xl hover:text-white lg:mt-0 mr-12">
                     {{ title }}
@@ -74,6 +67,61 @@
                 <input x-show="isOpen" @click="isOpen = true" class="border-2 border-gray outline-none px-2 h-8 rounded-none placeholdler-black font-bold ml-4 w-3/4" placeholder="Search" type="search" name="q" value="{{get:q}}" placeholder="Search">    
             </div>
         </form>
+    </div>
+        
+</nav>
+
+
+
+<!--Mobile menu-->
+
+<nav class="flex lg:hidden flex-wrap pb-3 px-4 pr-auto bg-green-600 top-menu flex-col items-start drop-shadow-2xl">
+
+    <div class="first-part lg:w-1/5 pt-3">
+
+        <div class="block lg:hidden bg-gray-300">
+            <button class="flex items-center p-2 text-white" x-bind:class="{'hidden': showMobileNav}" @click="showMobileNav = true, showExtraMenu = true">
+                <img src="/assets/site/menu-light.svg" class="h-6 w-6">
+            </button>
+            <button class="items-center p-2 text-white" x-bind:class="{'hidden': !showMobileNav}" @click="showMobileNav = false, showExtraMenu = false" x-cloak>
+                <img src="/assets/site/x-menu.svg" class="h-6 w-6">
+            </button>
+        </div>
+
+    </div>
+    
+    <div class="second-part w-full py-4" x-show="showExtraMenu">
+        <form action="/search" class="flex flex-row items-center w-screen">
+            <div class="flex items-center w-full">
+                <input class="border-2 border-gray outline-none h-12 rounded-none placeholdler-black font-bold pl-4 w-5/6" placeholder="Search" type="search" name="q" value="{{get:q}}" placeholder="Search">   
+                <img src="/assets/site/search.svg" class="h-6 w-6 ml-4"> 
+            </div>
+        </form>
+    </div>    
+
+    <div class="third-part w-full" x-show="showExtraMenu">
+        {{if current_uri == "/"}}
+
+        <div class="w-full flex flex-wrap items-start p-4" @click.outside="showExtraMenu = false" >
+            {{ nav }}
+            <a href="#{{ title|slugify }}" class="w-1/2 font-futurab block uppercase {{ is_current || is_parent ?= 'font-medium text-white' }} mt-4 text-white text-xl hover:text-white">
+                {{ title }}
+            </a>
+            {{ /nav }}
+        </div>
+
+    {{ else }}
+
+        <div class="w-1/2 flex flex-wrap items-center justify-center" @click.outside="showExtraMenu = false">
+            {{ nav }}
+            <a href="/#{{ title|slugify }}" class="font-futurab block uppercase {{ is_current || is_parent ?= 'font-medium text-white' }} mt-4 lg:inline-block text-white text-xl hover:text-white lg:mt-0 mr-12">
+                {{ title }}
+            </a>
+            {{ /nav }}
+        </div>
+
+        {{/if}}
+        
     </div>
         
 </nav>

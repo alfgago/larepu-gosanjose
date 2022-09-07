@@ -1,6 +1,6 @@
 <nav class="hidden lg:flex items-center justify-center lg:justify-center flex-wrap py-3 px-auto bg-green-600 top-menu">
 
-    <div class="first-part lg:w-1/5 ">
+    <div class="first-part lg:w-1/5 flex flex-row h-10">
 
         <div class="hidden lg:w-fit lg:ml-12 lg:flex bg-gray-300">
             <button class="flex items-center p-2 text-white" x-bind:class="{'hidden': showDesktop}" @click="showDesktop = true">
@@ -10,17 +10,17 @@
                 <img src="/assets/site/x-menu.svg" class="h-6 w-6">
             </button>
         </div>
-
+        <a class="pl-6 flex items-center" href="/">
+            <span class="text-3xl text-white leading-tight uppercase font-semibold">Go</span>
+        </a>
     </div>
-    
-
     
 
     <div class="second-part w-3/5">
         {{if current_uri == "/"}}
 
             <div class="w-full lg:w-auto lg:flex items-center justify-center" @click.outside="showExtraMenu = false" x-show="showExtraMenu">
-                {{ nav title:not_in="Art|Trad|Sports|Urban Nature|Convention|Airport" }}
+                {{ nav title:in="Now|Eat|Shop|Art|Night|Green|Trad|Stay" }}
                 <a href="#{{ title|slugify }}" class="font-futurab block uppercase {{ is_current || is_parent ?= 'font-medium text-white' }} mt-4 lg:inline-block text-white text-xl hover:text-white lg:mt-0 mr-12">
                     {{ title }}
                 </a>
@@ -28,7 +28,7 @@
             </div>
 
             <div class="toggle-menu" @click.outside="showDesktop = false" x-show="showDesktop">
-                {{ nav title:not_in="Now|Eat|Shop|Stay|Med|Edu" }}
+                {{ nav title:in="Med|Edu" }}
                 <a href="#{{ title|slugify }}" class="uppercase {{ is_current || is_parent ?= 'font-medium text-white' }} mt-4  text-white text-xl hover:text-white lg:mt-0 mr-12" x-bind:class="{'hidden': !showDesktop}" >
                     {{ title }}
                 </a>
@@ -38,7 +38,7 @@
         {{ else }}
 
             <div class="w-full lg:w-auto lg:flex items-center justify-center" @click.outside="showExtraMenu = false" x-show="showExtraMenu">
-                {{ nav title:not_in="Art|Trad|Sports|Urban Nature|Convention|Airport" }}
+                {{ nav title:in="Now|Eat|Shop|Art|Night|Green|Trad|Stay" }}
                 <a href="/#{{ title|slugify }}" class="font-futurab block uppercase {{ is_current || is_parent ?= 'font-medium text-white' }} mt-4 lg:inline-block text-white text-xl hover:text-white lg:mt-0 mr-12">
                     {{ title }}
                 </a>
@@ -46,7 +46,7 @@
             </div>
 
             <div class="toggle-menu" @click.outside="showDesktop = false" x-show="showDesktop">
-                {{ nav title:not_in="Now|Eat|Shop|Stay|Med|Edu" }}
+                {{ nav title:in="Med|Edu" }}
                 <a href="/#{{ title|slugify }}" class="uppercase {{ is_current || is_parent ?= 'font-medium text-white' }} mt-4  text-white text-xl hover:text-white lg:mt-0 mr-12" x-bind:class="{'hidden': !showDesktop}" >
                     {{ title }}
                 </a>
@@ -59,9 +59,9 @@
     
     <div class="third-part w-1/5">
         <form action="/search" class="flex flex-row items-center">
-            <div class="flex items-center" x-data="{ isOpen: false, timeout: null }"
-                x-on:mouseenter="isOpen = true; clearTimeout(timeout)"
-                x-on:mouseleave="timeout = setTimeout(() => { isOpen = false }, 2500)"
+            <div class="flex items-center" x-data="{ isOpen: false }"
+                x-on:click="isOpen = true"
+                x-on:click.outside="isOpen = false"
             >
                 <img src="/assets/site/search.svg" class="h-6 w-6">
                 <input x-show="isOpen" @click="isOpen = true" class="border-2 border-gray outline-none px-2 h-8 rounded-none placeholdler-black font-bold ml-4 w-3/4" placeholder="Search" type="search" name="q" value="{{get:q}}" placeholder="Search">    
@@ -103,7 +103,7 @@
         {{if current_uri == "/"}}
 
         <div class="w-full flex flex-wrap items-start p-4" @click.outside="showExtraMenu = false" >
-            {{ nav }}
+            {{ nav  title:in="Now|Eat|Shop|Art|Night|Green|Trad|Stay" }}
             <a href="#{{ title|slugify }}" class="w-1/2 font-futurab block uppercase {{ is_current || is_parent ?= 'font-medium text-white' }} mt-4 text-white text-xl hover:text-white">
                 {{ title }}
             </a>
@@ -113,7 +113,7 @@
     {{ else }}
 
         <div class="w-1/2 flex flex-wrap items-center justify-center" @click.outside="showExtraMenu = false">
-            {{ nav }}
+            {{ nav  title:in="Now|Eat|Shop|Art|Night|Green|Trad|Stay" }}
             <a href="/#{{ title|slugify }}" class="font-futurab block uppercase {{ is_current || is_parent ?= 'font-medium text-white' }} mt-4 lg:inline-block text-white text-xl hover:text-white lg:mt-0 mr-12">
                 {{ title }}
             </a>

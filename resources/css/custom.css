@@ -25,6 +25,6 @@ body {
     display: flex!important;
     justify-content: space-between!important;
     flex-direction: column!important;
-    max-width: 13rem!important;
+    max-width: 15rem!important;
     align-items: start!important;
 }

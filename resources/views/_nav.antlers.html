@@ -1,8 +1,8 @@
-<nav class="hidden lg:flex items-center justify-center lg:justify-center flex-wrap py-3 px-auto bg-green-600 top-menu">
+<nav class="hidden xl:flex items-center justify-center xl:justify-center flex-wrap py-3 px-auto bg-green-600 top-menu">
 
-    <div class="first-part lg:w-1/5 flex flex-row h-10">
+    <div class="first-part xl:w-1/5 flex flex-row h-10">
 
-        <div class="hidden lg:w-fit lg:ml-12 lg:flex bg-gray-300">
+        <div class="hidden xl:w-fit xl:ml-12 xl:flex bg-gray-300">
             <button class="flex items-center p-2 text-white" x-bind:class="{'hidden': showDesktop}" @click="showDesktop = true">
                 <img src="/assets/site/menu-light.svg" class="h-6 w-6">
             </button>
@@ -19,9 +19,9 @@
     <div class="second-part w-3/5">
         {{if current_uri == "/"}}
 
-            <div class="w-full lg:w-auto lg:flex items-center justify-center" @click.outside="showExtraMenu = false" x-show="showExtraMenu">
+            <div class="w-full xl:w-auto xl:flex items-center justify-center" @click.outside="showExtraMenu = false" x-show="showExtraMenu">
                 {{ nav title:in="Now|Eat|Shop|Art|Night|Green|Trad|Stay" }}
-                <a href="#{{ title|slugify }}" class="font-futurab block uppercase {{ is_current || is_parent ?= 'font-medium text-white' }} mt-4 lg:inline-block text-white text-xl hover:text-white lg:mt-0 mr-12">
+                <a href="#{{ title|slugify }}" class="font-futurab block uppercase {{ is_current || is_parent ?= 'font-medium text-white' }} mt-4 xl:inline-block text-white text-xl hover:text-white xl:mt-0 mr-12">
                     {{ title }}
                 </a>
                 {{ /nav }}
@@ -29,7 +29,7 @@
 
             <div class="toggle-menu" @click.outside="showDesktop = false" x-show="showDesktop">
                 {{ nav title:in="Med|Edu" }}
-                <a href="#{{ title|slugify }}" class="uppercase {{ is_current || is_parent ?= 'font-medium text-white' }} mt-4  text-white text-xl hover:text-white lg:mt-0 mr-12" x-bind:class="{'hidden': !showDesktop}" >
+                <a href="#{{ title|slugify }}" class="uppercase {{ is_current || is_parent ?= 'font-medium text-white' }} mt-4  text-white text-xl hover:text-white xl:mt-0 mr-12" x-bind:class="{'hidden': !showDesktop}" >
                     {{ title }}
                 </a>
                 {{ /nav }}
@@ -37,9 +37,9 @@
 
         {{ else }}
 
-            <div class="w-full lg:w-auto lg:flex items-center justify-center" @click.outside="showExtraMenu = false" x-show="showExtraMenu">
+            <div class="w-full xl:w-auto xl:flex items-center justify-center" @click.outside="showExtraMenu = false" x-show="showExtraMenu">
                 {{ nav title:in="Now|Eat|Shop|Art|Night|Green|Trad|Stay" }}
-                <a href="/#{{ title|slugify }}" class="font-futurab block uppercase {{ is_current || is_parent ?= 'font-medium text-white' }} mt-4 lg:inline-block text-white text-xl hover:text-white lg:mt-0 mr-12">
+                <a href="/#{{ title|slugify }}" class="font-futurab block uppercase {{ is_current || is_parent ?= 'font-medium text-white' }} mt-4 xl:inline-block text-white text-xl hover:text-white xl:mt-0 mr-12">
                     {{ title }}
                 </a>
                 {{ /nav }}
@@ -47,7 +47,7 @@
 
             <div class="toggle-menu" @click.outside="showDesktop = false" x-show="showDesktop">
                 {{ nav title:in="Med|Edu" }}
-                <a href="/#{{ title|slugify }}" class="uppercase {{ is_current || is_parent ?= 'font-medium text-white' }} mt-4  text-white text-xl hover:text-white lg:mt-0 mr-12" x-bind:class="{'hidden': !showDesktop}" >
+                <a href="/#{{ title|slugify }}" class="uppercase {{ is_current || is_parent ?= 'font-medium text-white' }} mt-4  text-white text-xl hover:text-white xl:mt-0 mr-12" x-bind:class="{'hidden': !showDesktop}" >
                     {{ title }}
                 </a>
                 {{ /nav }}
@@ -75,11 +75,11 @@
 
 <!--Mobile menu-->
 
-<nav class="flex lg:hidden flex-wrap pb-3 px-4 pr-auto bg-green-600 top-menu flex-col items-start drop-shadow-2xl">
+<nav class="flex xl:hidden flex-wrap pb-3 px-4 pr-auto bg-green-600 top-menu flex-col items-start drop-shadow-2xl">
 
-    <div class="first-part lg:w-1/5 pt-3">
+    <div class="first-part xl:w-1/5 pt-3">
 
-        <div class="block lg:hidden bg-gray-300">
+        <div class="block xl:hidden bg-gray-300">
             <button class="flex items-center p-2 text-white" x-bind:class="{'hidden': showMobileNav}" @click="showMobileNav = true, showExtraMenu = true">
                 <img src="/assets/site/menu-light.svg" class="h-6 w-6">
             </button>
@@ -114,7 +114,7 @@
 
         <div class="w-1/2 flex flex-wrap items-center justify-center" @click.outside="showExtraMenu = false">
             {{ nav  title:in="Now|Eat|Shop|Art|Night|Green|Trad|Stay" }}
-            <a href="/#{{ title|slugify }}" class="font-futurab block uppercase {{ is_current || is_parent ?= 'font-medium text-white' }} mt-4 lg:inline-block text-white text-xl hover:text-white lg:mt-0 mr-12">
+            <a href="/#{{ title|slugify }}" class="font-futurab block uppercase {{ is_current || is_parent ?= 'font-medium text-white' }} mt-4 xl:inline-block text-white text-xl hover:text-white xl:mt-0 mr-12">
                 {{ title }}
             </a>
             {{ /nav }}

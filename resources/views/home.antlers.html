@@ -105,21 +105,21 @@
                     {{article}}
                         <div class="mb-8">
                             <div class="flex flex-row">
-                                <div class="flex justify-start w-4/6 pr-24 py-16">
+                                <div class="flex justify-start w-4/6 pr-4 py-16">
                                     <a href="{{url}}">
                                         {{main_image}}
                                             <img src="{{ url }}" alt="" srcset="">
                                         {{/main_image}}
                                     </a>
                                 </div>
-                                <div class="flex justify-center content-center w-2/6 flex-col mr-3 lg:mr-0">
-                                    <h2 class="font-futurab mb-4 text-start">
+                                <div class="flex justify-center content-center w-2/6 flex-col lg:mr-0">
+                                    <h2 class="font-futurab mb-4 text-start mr-4 lg:mr-0">
                                         <a href="{{ url }}" class="text-2xl lg:text-2xl tracking-tight leading-tight font-bold">
                                             {{ title }}
                                         </a>
                                     </h2>
                                     
-                                    <p class="font-futural text-gray-600 text-xl lg:text-2xl mb-6 text-start">
+                                    <p class="font-futural text-gray-600 text-xl lg:text-2xl mb-6 text-start mr-4 lg:mr-0">
                                         {{ excerpt | widont ?? content | strip_tags | safe_truncate(150, '...') }}
                                     </p>
                                 </div>

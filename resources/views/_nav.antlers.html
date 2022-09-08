@@ -60,17 +60,17 @@
     <div class="third-part w-1/5 flex flex-row">
         <div class="weather-container flex flex-row pr-4">
             <img class="icon h-6 text-white pr-1" src="/assets/site/cloudy.svg">
-            <p class="temp font-futura text-white"></p>
-            <p class="pb-1 text-white relative bottom-1">&#8728;</p>
-            <p class="pl-1 font-futura text-white">C</p>
+            <p x-show="!searchBar" class="temp font-futura text-white"></p>
+            <p x-show="!searchBar" class="pb-1 text-white relative bottom-1">&#8728;</p>
+            <p x-show="!searchBar" class="pl-1 font-futura text-white">C</p>
         </div>
         <form action="/search" class="flex flex-row items-center">
-            <div class="flex items-center" x-data="{ isOpen: false }"
-                x-on:click="isOpen = true"
-                x-on:click.outside="isOpen = false"
+            <div class="flex items-center"
+                x-on:click="searchBar = true"
+                x-on:click.outside="searchBar = false"
             >
                 <img src="/assets/site/search.svg" class="h-6 w-6">
-                <input x-show="isOpen" @click="isOpen = true" class="border-2 border-gray outline-none px-2 h-8 rounded-none placeholdler-black font-bold ml-4 w-3/4" placeholder="Search" type="search" name="q" value="{{get:q}}" placeholder="Search">    
+                <input x-show="searchBar" @click="searchBar = true" class="border-2 border-gray outline-none px-2 h-8 rounded-none placeholdler-black font-bold ml-4 w-3/4" placeholder="Search" type="search" name="q" value="{{get:q}}" placeholder="Search">    
             </div>
         </form>
     </div>

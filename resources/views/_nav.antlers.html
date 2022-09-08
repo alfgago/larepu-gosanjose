@@ -57,7 +57,13 @@
         
     </div>
     
-    <div class="third-part w-1/5">
+    <div class="third-part w-1/5 flex flex-row">
+        <div class="weather-container flex flex-row pr-4">
+            <img class="icon h-6 text-white pr-1" src="/assets/site/cloudy.svg">
+            <p class="temp font-futura text-white"></p>
+            <p class="pb-1 text-white relative bottom-1">&#8728;</p>
+            <p class="pl-1 font-futura text-white">C</p>
+        </div>
         <form action="/search" class="flex flex-row items-center">
             <div class="flex items-center" x-data="{ isOpen: false }"
                 x-on:click="isOpen = true"

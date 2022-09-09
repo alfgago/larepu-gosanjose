@@ -1,4 +1,12 @@
-
+.goog-te-banner-frame.skiptranslate {
+    display: none !important;
+    } 
+body {
+    top: 0px !important; 
+    }
+.go{
+    letter-spacing: -6px;
+}
 .toggle-menu {
     position: absolute;
     top: 100%;
@@ -7,6 +15,8 @@
     width: 100%;
     padding: 1rem;
     text-align: center;
+    display: flex;
+    justify-content: center;
 }
 
 .top-menu {
@@ -27,4 +37,19 @@ body {
     flex-direction: column!important;
     max-width: 15rem!important;
     align-items: start!important;
+}
+
+.goog-te-gadget-simple{
+    background-color: transparent !important;
+    border: none !important;
+    font-size: inherit;
+    display: block;
+    padding-top: 1px;
+    padding-bottom: 2px;
+    cursor: pointer;
+    zoom: 1;
+    display: inline;
+}
+.goog-te-menu-value{
+    display: flex;
 }

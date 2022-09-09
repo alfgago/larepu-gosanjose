@@ -3,7 +3,7 @@ function googleTranslateElementInit() {
     document.getElementsByClassName('goog-te-gadget-icon')[0].style.visibility = 'hidden';
 }
 
-
+/*
 setTimeout(() => {
     console.log('entrada');
     $('.goog-te-gadget-icon').remove();
@@ -14,3 +14,5 @@ setTimeout(() => {
     $('.goog-te-menu-value').prepend('<img class="h-2 w-2" src="/assets/site/world.svg"></img>');         
     console.log('bandera3');
 }, "500")
+
+*/

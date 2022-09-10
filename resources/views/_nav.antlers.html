@@ -27,7 +27,7 @@
                 {{ /nav }}
             </div>
 
-            <div class="toggle-menu gap-8" @click.outside="showDesktop = false" x-show="showDesktop">
+            <div class="toggle-menu gap-16" @click.outside="showDesktop = false" x-show="showDesktop">
                 {{ nav title:in="Med|Edu" }}
                 <a href="#{{ title|slugify }}" class="uppercase {{ is_current || is_parent ?= 'font-medium text-white' }} mt-4  text-white text-xl hover:text-white xl:mt-0" x-bind:class="{'hidden': !showDesktop}" >
                     {{ title }}
@@ -61,17 +61,17 @@
         <div id="google_translate_element" class="flex flex-row"></div>
         <div class="weather-container flex flex-row pr-4">
             <img class="icon h-6 text-white pr-1" src="/assets/site/cloudy.svg">
-            <p x-show="!searchBar" class="temp font-futura text-white"></p>
-            <p x-show="!searchBar" class="pb-1 text-white relative bottom-1">&#8728;</p>
-            <p x-show="!searchBar" class="pl-1 font-futura text-white">C</p>
+            <p class="temp font-futura text-white"></p>
+            <p class="pb-1 text-white relative bottom-1">&#8728;</p>
+            <p class="pl-1 font-futura text-white">C</p>
         </div>
         <form action="/search" class="flex flex-row items-center">
-            <div class="flex items-center"
+            <div class="flex items-center relative"
                 x-on:click="searchBar = true"
                 x-on:click.outside="searchBar = false"
             >
                 <img src="/assets/site/search.svg" class="h-6 w-6">
-                <input x-show="searchBar" @click="searchBar = true" class="border-2 border-gray outline-none px-2 h-8 rounded-none placeholdler-black font-futura ml-4 w-3/4" placeholder="Search" type="search" name="q" value="{{get:q}}" placeholder="Search">    
+                <input id="searchBar" x-show="searchBar" @click="searchBar = true" class="border-2 border-gray outline-none px-2 h-8 rounded-none placeholdler-black font-futura ml-4 w-3/4" placeholder="Search" type="search" name="q" value="{{get:q}}" placeholder="Search">    
             </div>
         </form>
     </div>

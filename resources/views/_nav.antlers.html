@@ -122,7 +122,7 @@
 
     {{ else }}
 
-        <div class="w-1/2 flex flex-wrap items-center justify-center" @click.outside="showExtraMenu = false">
+        <div class="w-2/3 flex flex-wrap items-center justify-between lg:justify-center" @click.outside="showExtraMenu = false">
             {{ nav  title:in="Now|Eat|Shop|Art|Night|Green|Trad|Stay" }}
             <a href="/#{{ title|slugify }}" class="font-futurab block uppercase {{ is_current || is_parent ?= 'font-medium text-white' }} mt-4 xl:inline-block text-white text-xl hover:text-white xl:mt-0 mr-12">
                 {{ title }}

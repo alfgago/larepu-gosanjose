@@ -95,4 +95,24 @@ position: absolute;
 
 .min-w-240{
     min-width: 240px !important;
+    min-height: 176px !important;
 }
+.min-w-450{
+    min-width: 450px !important;
+}
+
+.content-show{
+    align-items: center;
+    gap: 2%;
+}
+
+.content-show img{
+    object-fit: cover;
+    width: 400px;
+    height: 400px;
+}
+
+article h1{
+    margin-bottom: 2rem;
+}
+

@@ -34,6 +34,21 @@ sections:
           display: Author
           default: current
       -
+        handle: featured_image
+        field:
+          use_breakpoints: false
+          allow_ratio: false
+          allow_fit: true
+          restrict: false
+          allow_uploads: true
+          display: 'Featured Image'
+          type: responsive
+          icon: assets
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+          always_save: false
+      -
         handle: main_image
         field:
           mode: list

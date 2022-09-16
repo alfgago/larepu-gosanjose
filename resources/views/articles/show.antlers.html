@@ -11,9 +11,7 @@
             {{ date format="F j, Y" }}
         </div>
         <div class="flex flex-col lg:flex-row-reverse content-show">
-            {{main_image}}
-                <img src="{{ url }}" alt="" srcset="" class="w-full">
-            {{/main_image}}
+            {{responsive:featured_image webp="true" avif="false" quality:webp="85" glide:width="1600"}}
             <div class="p-8 lg:min-w-450">
                 {{ content | widont }}
             </div>

@@ -31,9 +31,7 @@
                         </p>
                         
                         <a class="w-full" href="{{url}}">
-                            {{main_image}}
-                                <img class="object-cover w-screen h-auto height-620" src="{{ url }}" alt="" srcset="">
-                            {{/main_image}}
+                            {{responsive:featured_image webp="true" avif="false" quality:webp="85" glide:width="1600"}}
                         </a>
                     </div>
                     {{/article}}
@@ -46,9 +44,7 @@
                 <div class="columns3">
                     <div class="flex flex-col lg:flex-row flex-wrap justify-start lg:mb-0 mb-8">
                         <a href="{{url}}">
-                            {{main_image}}
-                                <img src="{{ url }}" alt="" srcset="" class="h-44 object-cover min-w-240">
-                            {{/main_image}}
+                            {{responsive:featured_image webp="true" avif="false" quality:webp="85" glide:width="400"}}
                         </a>
 
                         <div class="flex justify-start w-full lg:w-full flex-col mt-4">
@@ -87,9 +83,7 @@
                             </div>
                             <div class="flex justify-end w-4/6 pl-4 py-16">
                                 <a href="{{url}}">
-                                    {{main_image}}
-                                        <img src="{{ url }}" alt="" srcset="">
-                                    {{/main_image}}
+                                    {{responsive:featured_image webp="true" avif="false" quality:webp="85" glide:width="1600"}}
                                 </a>
                             </div>
                         </div>
@@ -107,9 +101,7 @@
                             <div class="flex flex-row">
                                 <div class="flex justify-start w-4/6 pr-4 py-16">
                                     <a href="{{url}}">
-                                        {{main_image}}
-                                            <img src="{{ url }}" alt="" srcset="">
-                                        {{/main_image}}
+                                        {{responsive:featured_image webp="true" avif="false" quality:webp="85" glide:width="1152"}}
                                     </a>
                                 </div>
                                 <div class="flex justify-center content-center w-2/6 flex-col lg:mr-0">

@@ -1,4 +1,4 @@
-<!-- statamic:hide --><p align="center"><img src="https://statamic.com/assets/branding/Statamic-Logo-Rad.png" width="100" alt="Statamic Logo" /></p>
+<!-- statamic:hide --><p align="center"><img src="https://statamic.com/assets/branding/Statamic-Logo-Rad.png'" width="100" alt="Statamic Logo" /></p>
 <h1 align="center">
   Statamic Starter Kit: Cool Writings
 </h1>
@@ -21,7 +21,7 @@
 <!-- statamic:hide -->
 ## Screenshot
 
-![Screenshot](https://github.com/statamic/statamic-starter-cool-writings/raw/master/screenshot.png)
+![Screenshot](https://github.com/statamic/statamic-starter-cool-writings/raw/master/screenshot.png')
 <!-- /statamic:hide -->
 
 ## Video Tour

@@ -97,3 +97,13 @@ sections:
             - topics
           display: Topics
           mode: select
+      -
+        handle: facebook_link
+        field:
+          display: 'Facebook Link'
+          type: link
+          icon: link
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+          always_save: false

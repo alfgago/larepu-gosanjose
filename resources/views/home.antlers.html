@@ -16,10 +16,10 @@
         {{ /if }}
 
         {{ if section_type == "full" }}
-            <div class="flex flex-wrap mb-8 justify-between">
+            <div class="flex flex-wrap mb-8 justify-between w-full">
                 {{collection:articles taxonomy:topics={section_topic:slug} as="article" sort="date" limit={amount} offset="{skip_count}" }}
                    {{article}}
-                    <div class="mb-16">
+                    <div class="mb-16 w-full">
                         <h2 class="font-futurab mb-4 text-center mx-3">
                             <a href="{{ url }}" class="text-3xl lg:text-3xl tracking-tight leading-tight font-bold">
                                 {{ title }}
@@ -30,9 +30,9 @@
                             {{ excerpt | widont ?? content | strip_tags | safe_truncate(150, '...') }}
                         </p>
                         
-                        <a href="{{url}}">
+                        <a class="w-full" href="{{url}}">
                             {{main_image}}
-                                <img src="{{ url }}" alt="" srcset="">
+                                <img class="object-cover w-screen h-auto height-620" src="{{ url }}" alt="" srcset="">
                             {{/main_image}}
                         </a>
                     </div>
@@ -47,7 +47,7 @@
                     <div class="flex flex-col lg:flex-row flex-wrap justify-start lg:mb-0 mb-8">
                         <a href="{{url}}">
                             {{main_image}}
-                                <img src="{{ url }}" alt="" srcset="" class="h-44 object-cover">
+                                <img src="{{ url }}" alt="" srcset="" class="h-44 object-cover min-w-240">
                             {{/main_image}}
                         </a>
 

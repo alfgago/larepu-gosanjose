@@ -88,3 +88,11 @@ position: absolute;
     margin-right: 7px;
     width: 200px !important;
 }
+
+.height-620{
+    height: 620px !important;
+}
+
+.min-w-240{
+    min-width: 240px !important;
+}

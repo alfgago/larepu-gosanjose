@@ -4,55 +4,8 @@ blueprint: home
 title: Home
 template: home
 updated_by: 73a44fc3-f8d3-4d01-9c7e-095429bb71dc
-updated_at: 1662384979
+updated_at: 1663335225
 sections:
-  -
-    type: data
-    articles_topic: now
-    amount: 3
-    skip_count: 0
-    enabled: true
-    section_type: full
-    section_topic: now
-    show_title: true
-    show_ad: false
-  -
-    section_type: half-right
-    section_topic: now
-    amount: 1
-    skip_count: 3
-    type: data
-    enabled: true
-    show_title: false
-    show_ad: false
-  -
-    section_type: full
-    section_topic: now
-    amount: 2
-    skip_count: 4
-    type: data
-    enabled: true
-    show_title: false
-    show_ad: false
-  -
-    section_type: half-left
-    section_topic: now
-    amount: 1
-    skip_count: 6
-    type: data
-    enabled: true
-    show_title: false
-    show_ad: false
-  -
-    section_type: full
-    section_topic: now
-    amount: 1
-    skip_count: 7
-    type: data
-    enabled: true
-    show_title: false
-    show_ad: true
-    select_ad: 1bc61b3b-6247-44dc-8669-66eb920db46b
   -
     section_type: full
     section_topic: eat
@@ -71,8 +24,17 @@ sections:
     section_type: 3-columns
     section_topic: eat
     show_title: false
+    show_ad: false
+  -
+    section_type: full
+    section_topic: eat
+    amount: 3
+    skip_count: 4
+    show_title: false
     show_ad: true
     select_ad: 72da573b-2de2-4d26-b164-110f0ec8c248
+    type: data
+    enabled: true
   -
     section_type: full
     section_topic: shop
@@ -85,6 +47,89 @@ sections:
   -
     section_type: 3-columns
     section_topic: shop
+    amount: 3
+    skip_count: 1
+    show_title: false
+    show_ad: false
+    type: data
+    enabled: true
+  -
+    section_type: full
+    section_topic: shop
+    amount: 1
+    skip_count: 4
+    show_title: false
+    show_ad: true
+    select_ad: a2914b8a-6fc2-41b0-873e-3a2c070f808a
+    type: data
+    enabled: true
+  -
+    section_type: full
+    section_topic: art
+    amount: 1
+    skip_count: 0
+    show_title: true
+    show_ad: false
+    type: data
+    enabled: true
+  -
+    section_type: 3-columns
+    section_topic: art
+    amount: 3
+    skip_count: 1
+    show_title: false
+    show_ad: true
+    select_ad: 72da573b-2de2-4d26-b164-110f0ec8c248
+    type: data
+    enabled: true
+  -
+    section_type: full
+    section_topic: night
+    amount: 1
+    skip_count: 0
+    show_title: true
+    show_ad: false
+    type: data
+    enabled: true
+  -
+    section_type: half-right
+    section_topic: night
+    amount: 1
+    skip_count: 1
+    show_title: false
+    show_ad: false
+    type: data
+    enabled: true
+  -
+    section_type: half-left
+    section_topic: night
+    amount: 1
+    skip_count: 2
+    show_title: false
+    show_ad: false
+    type: data
+    enabled: true
+  -
+    section_type: full
+    section_topic: night
+    amount: 1
+    skip_count: 3
+    show_title: false
+    show_ad: false
+    type: data
+    enabled: true
+  -
+    section_type: full
+    section_topic: green
+    amount: 1
+    skip_count: 0
+    show_title: true
+    show_ad: false
+    type: data
+    enabled: true
+  -
+    section_type: 3-columns
+    section_topic: green
     amount: 3
     skip_count: 1
     show_title: false
@@ -94,40 +139,11 @@ sections:
     enabled: true
   -
     section_type: full
-    section_topic: sports
+    section_topic: green
     amount: 1
-    skip_count: 0
-    show_title: true
-    show_ad: false
-    type: data
-    enabled: true
-  -
-    section_type: 3-columns
-    section_topic: sports
-    amount: 3
-    skip_count: 1
+    skip_count: 4
     show_title: false
-    show_ad: true
-    select_ad: 1bc61b3b-6247-44dc-8669-66eb920db46b
-    type: data
-    enabled: true
-  -
-    section_type: full
-    section_topic: art
-    amount: 1
-    skip_count: 0
-    show_title: true
     show_ad: false
-    type: data
-    enabled: true
-  -
-    section_type: 3-columns
-    section_topic: art
-    amount: 3
-    skip_count: 1
-    show_title: false
-    show_ad: true
-    select_ad: 72da573b-2de2-4d26-b164-110f0ec8c248
     type: data
     enabled: true
   -
@@ -168,21 +184,12 @@ sections:
     enabled: true
   -
     section_type: full
-    section_topic: urban-nature
+    section_topic: trad
     amount: 1
-    skip_count: 0
-    show_title: true
-    show_ad: false
-    type: data
-    enabled: true
-  -
-    section_type: 3-columns
-    section_topic: urban-nature
-    amount: 3
-    skip_count: 1
+    skip_count: 6
     show_title: false
     show_ad: true
-    select_ad: a2914b8a-6fc2-41b0-873e-3a2c070f808a
+    select_ad: 1bc61b3b-6247-44dc-8669-66eb920db46b
     type: data
     enabled: true
   -
@@ -236,24 +243,6 @@ sections:
     amount: 3
     skip_count: 1
     show_title: false
-    show_ad: false
-    type: data
-    enabled: true
-  -
-    section_type: full
-    section_topic: convention
-    amount: 1
-    skip_count: 0
-    show_title: true
-    show_ad: false
-    type: data
-    enabled: true
-  -
-    section_type: full
-    section_topic: airport
-    amount: 1
-    skip_count: 0
-    show_title: true
     show_ad: false
     type: data
     enabled: true

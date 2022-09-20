@@ -9,13 +9,19 @@ sections:
           required: true
           validate:
             - required
+          instructions_position: above
+          listable: hidden
+          visibility: visible
+          always_save: false
+          input_type: text
+          antlers: false
       -
-        handle: image
+        handle: ad_image
         field:
           mode: list
           container: assets
-          restrict: false
-          allow_uploads: true
+          restrict: true
+          allow_uploads: false
           show_filename: true
           display: Image
           type: assets
@@ -24,22 +30,8 @@ sections:
           instructions_position: above
           visibility: visible
           always_save: false
-          validate:
-            - required
-      -
-        handle: page_relation
-        field:
-          max_items: 1
-          mode: select
-          display: 'Page relation'
-          type: collections
-          icon: collections
-          listable: hidden
-          instructions_position: above
-          visibility: visible
-          always_save: false
-          validate:
-            - required
+          folder: content/lr
+          max_files: 1
   sidebar:
     display: Sidebar
     fields:
@@ -50,15 +42,13 @@ sections:
           localizable: true
           instructions_position: above
           listable: hidden
-          visibility: read_only
+          visibility: hidden
           always_save: false
-          generate: false
-          validate:
-            - required
+          generate: true
       -
-        handle: url
+        handle: link
         field:
-          display: Url
+          display: Link
           type: link
           icon: link
           listable: hidden

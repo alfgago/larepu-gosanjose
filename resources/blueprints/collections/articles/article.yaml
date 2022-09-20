@@ -12,29 +12,6 @@ sections:
           validate:
             - required
       -
-        handle: section
-        field:
-          options:
-            Now: Now
-            Do: Do
-          multiple: false
-          max_items: 1
-          clearable: true
-          searchable: true
-          taggable: false
-          push_tags: false
-          cast_booleans: false
-          default: Now
-          display: section
-          type: select
-          icon: select
-          listable: hidden
-          instructions_position: above
-          visibility: visible
-          always_save: false
-          validate:
-            - required
-      -
         handle: content
         field:
           type: markdown
@@ -87,6 +64,17 @@ sections:
           required: true
           validate:
             - required
+          instructions_position: above
+          listable: hidden
+          visibility: visible
+          always_save: false
+          mode: single
+          time_enabled: true
+          time_seconds_enabled: false
+          full_width: false
+          inline: false
+          columns: 1
+          rows: 1
       -
         handle: design
         field:
@@ -101,3 +89,21 @@ sections:
           always_save: false
           max_items: 1
           create: true
+      -
+        handle: topics
+        field:
+          type: terms
+          taxonomies:
+            - topics
+          display: Topics
+          mode: select
+      -
+        handle: facebook_link
+        field:
+          display: 'Facebook Link'
+          type: link
+          icon: link
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+          always_save: false

@@ -1,34 +1,137 @@
-<nav class="flex items-center justify-center lg:justify-center flex-wrap py-5 px-auto bg-green-600">
-    <div class="w-1/4"></div>
-    <div class="w-2/4">
-        <div class="block lg:hidden">
-            <button class="flex items-center px-3 text-white" x-bind:class="{'hidden': showMobileNav}" @click="showMobileNav = true">
-            <svg class="fill-current h-5 w-5" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                    <title>Open Menu</title>
-                    <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
-                </svg>
+<nav class="hidden xl:flex items-center justify-center xl:justify-center flex-wrap py-3 px-auto bg-green-600 top-menu">
+
+    <div class="first-part xl:w-1/5 flex flex-row h-10">
+
+        <div class="hidden xl:w-fit xl:ml-12 xl:flex bg-gray-300">
+            <button class="flex items-center p-2 text-white" x-bind:class="{'hidden': showDesktop}" @click="showDesktop = true">
+                <img src="/assets/site/menu-light.svg" class="h-6 w-6">
             </button>
-            <button class="items-center px-3 text-white" x-bind:class="{'flex': showMobileNav, 'hidden': ! showMobileNav}" @click="showMobileNav = false" x-cloak>
-                <svg class="fill-current h-5 w-5" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                    <title>Close Menu</title>
-                    <path
-                        d="M10 8.586L2.929 1.515 1.515 2.929 8.586 10l-7.071 7.071 1.414 1.414L10 11.414l7.071 7.071 1.414-1.414L11.414 10l7.071-7.071-1.414-1.414L10 8.586z" />
-                </svg>
+            <button class="items-center p-2 text-white" x-bind:class="{'hidden': !showDesktop}" @click="showDesktop = false" x-cloak>
+                <img src="/assets/site/x-menu.svg" class="h-6 w-6">
             </button>
         </div>
-        <div class="w-full lg:w-auto justify-evenly lg:flex items-center" @click.outside="showMobileNav = false" x-show="showMobileNav">
-            {{ nav }}
-            <a href="#{{ title|slugify }}" class="block uppercase {{ is_current || is_parent ?= 'font-medium text-white' }} mt-4 lg:inline-block text-white text-lg hover:text-white lg:mt-0 mr-12">
+        <a class="pl-6 flex items-center" href="/">
+            <span class="text-3xl text-white leading-tight font-futura font-bold go">Go</span>
+        </a>
+    </div>
+    
+
+    <div class="second-part w-3/5">
+        {{if current_uri == "/"}}
+
+            <div class="w-full xl:w-auto xl:flex items-center justify-center gap-8" @click.outside="showExtraMenu = false" x-show="showExtraMenu">
+                {{ nav title:in="Now|Eat|Shop|Art|Night|Green|Trad|Stay" }}
+                <a href="#{{ title|slugify }}" class="font-futurab block uppercase {{ is_current || is_parent ?= 'font-medium text-white' }} mt-4 xl:inline-block text-white text-xl hover:text-white xl:mt-0 ">
+                    {{ title }}
+                </a>
+                {{ /nav }}
+            </div>
+
+            <div class="toggle-menu gap-16" @click.outside="showDesktop = false" x-show="showDesktop">
+                {{ nav title:in="Med|Edu" }}
+                <a href="#{{ title|slugify }}" class="uppercase {{ is_current || is_parent ?= 'font-medium text-white' }} mt-4  text-white text-xl hover:text-white xl:mt-0" x-bind:class="{'hidden': !showDesktop}" >
+                    {{ title }}
+                </a>
+                {{ /nav }}
+            </div>
+
+        {{ else }}
+
+            <div class="w-full xl:w-auto xl:flex items-center justify-center gap-8" @click.outside="showExtraMenu = false" x-show="showExtraMenu">
+                {{ nav title:in="Now|Eat|Shop|Art|Night|Green|Trad|Stay" }}
+                <a href="/#{{ title|slugify }}" class="font-futurab block uppercase {{ is_current || is_parent ?= 'font-medium text-white' }} mt-4 xl:inline-block text-white text-xl hover:text-white xl:mt-0">
+                    {{ title }}
+                </a>
+                {{ /nav }}
+            </div>
+
+            <div class="toggle-menu gap-8" @click.outside="showDesktop = false" x-show="showDesktop">
+                {{ nav title:in="Med|Edu" }}
+                <a href="/#{{ title|slugify }}" class="uppercase {{ is_current || is_parent ?= 'font-medium text-white' }} mt-4  text-white text-xl hover:text-white xl:mt-0" x-bind:class="{'hidden': !showDesktop}" >
+                    {{ title }}
+                </a>
+                {{ /nav }}
+            </div>
+
+        {{/if}}
+        
+    </div>
+    
+    <div class="third-part w-1/5 flex flex-row items-center">
+        <div id="google_translate_element" class="flex flex-row"></div>
+        <div class="ukflag p-2 pl-0">
+            <img class="h-7" src="/assets/site/ukflag.png" alt="" srcset="">
+        </div>
+        <div class="weather-container flex flex-row pr-4">
+            <img class="icon h-6 text-white pr-1" src="/assets/site/cloudy.svg">
+            <p class="temp font-futura text-white"></p>
+            <p class="pb-1 text-white relative bottom-1">&#8728;</p>
+            <p class="pl-1 font-futura text-white">C</p>
+        </div>
+        <form action="/search" class="flex flex-row items-center">
+            <div class="flex items-center relative"
+                x-on:click="searchBar = true"
+                x-on:click.outside="searchBar = false"
+            >
+                <img src="/assets/site/search.svg" class="h-6 w-6">
+                <input id="searchBar" x-show="searchBar" @click="searchBar = true" class="border-2 border-gray outline-none px-2 h-8 rounded-none placeholdler-black font-futura ml-4 w-3/4" placeholder="Search" type="search" name="q" value="{{get:q}}" placeholder="Search">    
+            </div>
+        </form>
+    </div>
+        
+</nav>
+
+
+
+<!--Mobile menu-->
+
+<nav class="flex xl:hidden flex-wrap pb-3 px-4 pr-auto bg-green-600 top-menu flex-col items-start drop-shadow-2xl">
+
+    <div class="first-part xl:w-1/5 pt-3">
+
+        <div class="block xl:hidden bg-gray-300">
+            <button class="flex items-center p-2 text-white" x-bind:class="{'hidden': showMobileNav}" @click="showMobileNav = true, showExtraMenu = true">
+                <img src="/assets/site/menu-light.svg" class="h-6 w-6">
+            </button>
+            <button class="items-center p-2 text-white" x-bind:class="{'hidden': !showMobileNav}" @click="showMobileNav = false, showExtraMenu = false" x-cloak>
+                <img src="/assets/site/x-menu.svg" class="h-6 w-6">
+            </button>
+        </div>
+
+    </div>
+    
+    <div class="second-part w-full py-4" x-show="showExtraMenu">
+        <form action="/search" class="flex flex-row items-center w-screen">
+            <div class="flex items-center w-full">
+                <input class="border-2 border-gray outline-none h-12 rounded-none placeholdler-black font-futura pl-4 w-5/6" placeholder="Search" type="search" name="q" value="{{get:q}}" placeholder="Search">   
+                <img src="/assets/site/search.svg" class="h-6 w-6 ml-4"> 
+            </div>
+        </form>
+    </div>    
+
+    <div class="third-part w-full" x-show="showExtraMenu">
+        {{if current_uri == "/"}}
+
+        <div class="w-full flex flex-wrap items-start p-4" @click.outside="showExtraMenu = false" >
+            {{ nav  title:in="Now|Eat|Shop|Art|Night|Green|Trad|Stay" }}
+            <a href="#{{ title|slugify }}" class="w-1/2 font-futurab block uppercase {{ is_current || is_parent ?= 'font-medium text-white' }} mt-4 text-white text-xl hover:text-white">
                 {{ title }}
             </a>
             {{ /nav }}
         </div>
+
+    {{ else }}
+
+        <div class="w-2/3 flex flex-wrap items-center justify-between lg:justify-center" @click.outside="showExtraMenu = false">
+            {{ nav  title:in="Now|Eat|Shop|Art|Night|Green|Trad|Stay" }}
+            <a href="/#{{ title|slugify }}" class="font-futurab block uppercase {{ is_current || is_parent ?= 'font-medium text-white' }} mt-4 xl:inline-block text-white text-xl hover:text-white xl:mt-0 mr-12">
+                {{ title }}
+            </a>
+            {{ /nav }}
+        </div>
+
+        {{/if}}
+        
     </div>
-    <div class="w-1/4">
-        <form action="/search/results" class="flex flex-row items-center">
-            <img src="/assets/site/search.svg" class="h-6 w-6">
-            <input class="border-2 border-gray outline-none px-2 h-8 rounded-none placeholdler-black font-bold ml-4" placeholder="Search" type="search" autofocus name="q" value="{{ get:q }}" placeholder="Search">
-        </form>
-    </div>
-    
+        
 </nav>

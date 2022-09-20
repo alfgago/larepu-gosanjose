@@ -1,15 +1,25 @@
-<div class="max-w-5xl mx-auto relative mt-16 content">
-    <article class="lg:py-32 max-w-2xl mx-auto">
+<div class="max-w-5xl mx-auto relative mb-16 lg:my-16 mt-4">
+    <a class="ml-2" href="/">
+        <button type="button" class="text-green-700 border border-green-700 hover:bg-green-600 hover:text-white focus:outline-none font-medium rounded-full text-sm p-2.5 text-center inline-flex items-center dark:text-green-600 dark:hover:text-white">
+            <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z" clip-rule="evenodd"/></svg>
+            <span class="sr-only">Icon description</span>
+        </button>
+    </a>
+    <article class="pb-16 pt-4">
         <h1>{{ title }}</h1>
-        <div class="bg-gray-800 inline-block text-sm mb-16 pr-4 pl-16 -ml-16 uppercase tracking-widest text-white py-1 rounded-r-full">
-            Published
-            {{ if topics }}
-                in {{ topics }}<a href="{{ url }}" class="text-teal-light no-underline hover:text-white">{{ title }}</a>{{ unless last }}, {{ /unless }}{{ /topics }}
-            {{ /if }}
-            on {{ date format="M j, Y" }}
+        <div class="bg-gray-800 inline-block text-sm pr-4 pl-8 pb-2 lg:pb-0 uppercase tracking-widest text-white py-1 rounded-r-full">
+            {{ date format="F j, Y" }}
         </div>
-        <div class="content">
-            {{ content | widont }}
+        <div class="flex flex-col lg:flex-row-reverse content-show">
+            {{main_image}}
+                <img src="{{ url }}" alt="" srcset="" class="w-full">
+            {{/main_image}}
+            <div class="p-8 lg:min-w-450">
+                {{ content | widont }}
+            </div>
         </div>
     </article>
+    <div class="more pl-8 lg:relative lg:bottom-14">
+        <a href="{{facebook_link}}">More</a>
+    </div>
 </div>

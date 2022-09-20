@@ -10,7 +10,7 @@
     {{collection:pages as="page" title:not_in="Home" sort="position"}}
         {{page}}
             <div id="{{title|slugify}}" class="mb-16">
-                <h2 class="mb-24 w-full text-center">
+                <h2 class="mb-24 mt-4 w-full text-center">
                     <a href="{{ url }}" class="text-2xl py-3 px-20 text-white bg-green-600 hover:text-green-600 hover:bg-white hover:border-green-600 border-2 tracking-tight leading-tight uppercase">{{title}}</a>
                 </h2>
             </div>
@@ -109,9 +109,8 @@
                         {{/article}}
                     </div>
                 
-                {{/collection:{slug} }}
+                    
 
-                
             </div>
         {{/page}}
 

@@ -1,12 +1,13 @@
 <div class="max-w-4xl mx-auto">
-    <h1>{{ title }}</h1>
-    {{ search:results}}
-        {{if results}}
-            <ul class="space-y-4">
-                {{results}}
-                    <li><a href="{{url}}" class="font-bold hover:text-blue-700">{{title}}</a></li>
-                {{/results}}
-            </ul>
-        {{/if}}
-    {{ /search:results}}
+    <h1 class="text-5xl font-black">Results for "{{ get:q }}"</h1>
+    {{ search:results index="default" }}
+        {{ if no_results }}
+            <h2>No results found for {{ get:q }}.</h2>
+        {{ else }}
+            <a href="{{ url }}">
+                <h2>{{ title }}</h2>
+                <p>{{ description | truncate:180 }}</p>
+            </a>
+        {{ /if }}
+    {{ /search:results }}
 </div>

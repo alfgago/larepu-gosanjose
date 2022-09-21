@@ -7,12 +7,12 @@
     </a>
     <article class="pb-16 pt-4">
         <h1>{{ title }}</h1>
-        <div class="bg-gray-800 inline-block text-sm pr-4 pl-8 pb-2 lg:pb-0 uppercase tracking-widest text-white py-1 rounded-r-full">
+        <div class="bg-gray-800 inline-block text-sm pr-4 pl-4 pb-2 lg:pb-0 uppercase tracking-widest text-white py-1">
             {{ date format="F j, Y" }}
         </div>
         <div class="flex flex-col lg:flex-row-reverse content-show">
             {{main_image}}
-                <img src="{{ url }}" alt="" srcset="" class="w-full">
+                <img src="{{ url }}" alt="" srcset="" class="w-full max-w-md">
             {{/main_image}}
             <div class="p-8 lg:min-w-450">
                 {{ content | widont }}

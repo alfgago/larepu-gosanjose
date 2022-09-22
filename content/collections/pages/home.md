@@ -293,4 +293,4 @@ sections:
     enabled: true
 published: true
 ---
-![Go San José Main Image](/assets/site/go-san-jose-(1).png)
+![Go San José Main Image](/assets/site/go-san-jose-(1).webp)

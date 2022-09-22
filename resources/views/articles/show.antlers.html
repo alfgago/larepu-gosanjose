@@ -7,7 +7,7 @@
     </a>
     <article class="pb-16 pt-4">
         <h1>{{ title }}</h1>
-        <div class="bg-gray-800 inline-block text-sm pr-4 pl-4 pb-2 lg:pb-0 uppercase tracking-widest text-white py-1">
+        <div class="bg-gray-800 inline-block text-sm p-4 uppercase tracking-widest text-white py-1">
             {{ date format="F j, Y" }}
         </div>
         <div class="flex flex-col lg:flex-row-reverse content-show">
@@ -21,5 +21,8 @@
     </article>
     <div class="more pl-8 lg:relative lg:bottom-14">
         <a href="{{facebook_link}}">More</a>
+    </div>
+    <div class="w-full flex justify-center">
+        {{embed_code}}
     </div>
 </div>

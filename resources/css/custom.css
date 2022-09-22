@@ -116,3 +116,10 @@ article h1{
     margin-bottom: 2rem;
 }
 
+.gmap_canvas{
+    width: 100% !important;
+}
+
+.gmap_canvas iframe{
+    width: inherit;
+}

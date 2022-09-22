@@ -68,13 +68,16 @@
             <p class="pb-1 text-white relative bottom-1">&#8728;</p>
             <p class="pl-1 font-futura text-white">C</p>
         </div>
-        <form action="/search/results" class="flex flex-row items-center">
-            <div class="flex items-center relative"
+        <form id="search-desktop" action="/search/results" class="flex flex-row items-center">
+            <div class="flex items-center relative cursor-pointer"
                 x-on:click="searchBar = true"
                 x-on:click.outside="searchBar = false"
             >
                 <img src="/assets/site/search.svg" class="h-6 w-6">
                 <input id="searchBar" x-show="searchBar" @click="searchBar = true" class="border-2 border-gray outline-none px-2 h-8 rounded-none placeholdler-black font-futura ml-4 w-3/4" placeholder="Search" type="search" name="q" value="{{get:q}}" placeholder="Search">    
+                <button class="bg-green-600 hover:bg-green-700 text-white font-bold py-1 px-4 ml-2" x-show="searchBar" type="submit" form="search-desktop" value="{{q}}">
+                    <span class="text-white ">Search</span>
+                </button>
             </div>
         </form>
     </div>
@@ -113,10 +116,10 @@
                 <p class="pl-1 font-futura text-white">C</p>
             </div>
         </div>
-        <form id="search" action="/search/results" class="flex flex-row items-center w-screen">
+        <form id="search-mobile" action="/search/results" class="flex flex-row items-center w-screen">
             <div class="flex items-center w-full">
                 <input class="border-2 border-gray outline-none h-12 rounded-none placeholdler-black font-futura pl-4 w-3/4" placeholder="Search" type="search" name="q" value="{{get:q}}" placeholder="Search">   
-                <button type="submit" form="search" value="Submit">
+                <button type="submit" form="search-mobile" value="{{q}}">
                     <img src="/assets/site/search.svg" class="h-6 w-6 ml-4"> 
                 </button>
             </div>

@@ -3,11 +3,6 @@ function googleTranslateElementInit() {
     document.getElementsByClassName('goog-te-gadget-icon')[0].style.visibility = 'hidden';
 }
 
-
-let parent = document.querySelectorAll('.goog-te-menu-value > span')[0]
-parent.addEventListener('DOMSubtreeModified', () => start())
-start()
-
 function start(){
     let lang = document.querySelectorAll('.goog-te-menu-value > span')[0]
     let consult = document.querySelectorAll('.goog-te-menu-value > p')[0]
@@ -56,3 +51,7 @@ function validation(lg){
     }
     return lg
 }
+
+let parent = document.querySelectorAll('.goog-te-menu-value > span')[0]
+parent.addEventListener('DOMSubtreeModified', () => start())
+start()

@@ -4,7 +4,7 @@ blueprint: home
 title: Home
 template: home
 updated_by: 73a44fc3-f8d3-4d01-9c7e-095429bb71dc
-updated_at: 1663335225
+updated_at: 1663345099
 sections:
   -
     section_type: full
@@ -28,7 +28,7 @@ sections:
   -
     section_type: full
     section_topic: eat
-    amount: 3
+    amount: 4
     skip_count: 4
     show_title: false
     show_ad: true
@@ -135,6 +135,15 @@ sections:
     show_title: false
     show_ad: true
     select_ad: a2914b8a-6fc2-41b0-873e-3a2c070f808a
+    type: data
+    enabled: true
+  -
+    section_type: full
+    section_topic: green
+    amount: 1
+    skip_count: 4
+    show_title: false
+    show_ad: false
     type: data
     enabled: true
   -

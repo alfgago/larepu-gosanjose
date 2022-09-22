@@ -108,7 +108,7 @@ position: absolute;
 
 .content-show img{
     object-fit: cover;
-    width: 400px;
+    width: 500px !important;
     height: 400px;
 }
 

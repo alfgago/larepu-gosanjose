@@ -127,7 +127,7 @@
         {{if current_uri == "/"}}
 
         <div class="w-full flex flex-wrap items-start p-4">
-            {{ nav  title:in="Now|Eat|Shop|Art|Night|Green|Trad|Stay|Med|Edu" }}
+            {{ nav  title:in="Now|Eat|Shop|Art|Night|Green|Trad|Stay" }}
             <a href="#{{ title|slugify }}" class="w-1/2 font-futurab block uppercase {{ is_current || is_parent ?= 'font-medium text-white' }} mt-4 text-white text-xl hover:text-white">
                 {{ title }}
             </a>
@@ -137,7 +137,7 @@
     {{ else }}
 
         <div class="w-2/3 flex flex-wrap items-center justify-between lg:justify-center">
-            {{ nav  title:in="Now|Eat|Shop|Art|Night|Green|Trad|Stay|Med|Edu" }}
+            {{ nav  title:in="Now|Eat|Shop|Art|Night|Green|Trad|Stay" }}
             <a href="/#{{ title|slugify }}" class="font-futurab block uppercase {{ is_current || is_parent ?= 'font-medium text-white' }} mt-4 xl:inline-block text-white text-xl hover:text-white xl:mt-0 mr-12">
                 {{ title }}
             </a>

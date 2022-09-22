@@ -52,6 +52,8 @@ function validation(lg){
     return lg
 }
 
-let parent = document.querySelectorAll('.goog-te-menu-value > span')[0]
-parent.addEventListener('DOMSubtreeModified', () => start())
-start()
+setTimeout(() => {
+    let parent = document.querySelectorAll('.goog-te-menu-value > span')[0]
+    parent.addEventListener('DOMSubtreeModified', () => start())
+    start()
+}, "1000")

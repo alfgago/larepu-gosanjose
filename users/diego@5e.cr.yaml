@@ -1,30 +1,4 @@
 super: true
 name: Diego
-id: 73a44fc3-f8d3-4d01-9c7e-095429bb71dc
-password_hash: $2y$10$OzHyWLR7MkP3Qvz3kFZ3IedfBhPWOmcz/mihlMuPCeDQj7dh2MHIW
-preferences:
-  taxonomies:
-    design:
-      columns:
-        - title
-        - slug
-        - taxonomy
-    topics:
-      columns:
-        - title
-        - slug
-        - show
-        - taxonomy
-  collections:
-    articles:
-      columns:
-        - title
-        - author
-        - slug
-        - date
-        - design
-        - topics
-    now:
-      columns:
-        - title
-        - date
+id: 9f14bbaf-8a9c-47ea-b074-5c2f52882546
+password_hash: $2y$10$oW7y8AmwAKunwCPJdPVhdOaOqdjnU6U2p85XHBC5qQkEsP.A4vJpi

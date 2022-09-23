@@ -13,6 +13,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::statamic('search', 'search', [
+Route::statamic('/search/results', 'search', [
     'title' => 'Search Results'
 ]);

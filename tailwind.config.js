@@ -5,6 +5,10 @@ module.exports = {
         './content/**/*.md'
     ],
     theme: {
+        fontFamily: {
+            sans: ['Inter', 'sans'],
+            mono: ['Menlo', 'monospace']
+        },
         extend: {
             colors: {
                 'teal': '#008483',

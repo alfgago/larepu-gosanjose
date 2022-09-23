@@ -1,15 +1,24 @@
-<div class="max-w-4xl mx-auto mt-10 mb-4 min-h-screen">
+<div class="max-w-4xl mx-auto p-6 pt-10 min-h-screen">
     <h2 class="text-6xl font-futura mb-4">{{ title }}:</h2>
     {{ search:results as="results"}}
         {{if results}}
             <p class="mb-8 text-2xl">Some titles related with the search: "{{get:q}}"</p>
             <ul class="space-y-4 pl-4">
                 {{results}}
-                    <li class="list-disc"><a href="{{url}}" class="text-xl font-bold hover:text-blue-700">{{title}}</a></li>
+                    <li class="list-disc"><a href="{{url}}" class="text-xl font-bold hover:text-green-700">{{title}}</a></li>
                 {{/results}}
             </ul>
+            <div class="hidden lg:visible lg:flex absolute w-full justify-center mt-12">
+                <img class="max-h-96" src="/assets/site/search-desktop.svg" alt="" srcset="">
+            </div>
+            <div class="visible flex lg:hidden absolute w-full justify-center mt-12">
+                <img class="max-h-96" src="/assets/site/search-mobile.svg" alt="" srcset="">
+            </div>
         {{else}}
-            <p class="text-4xl font-futura mb-4 text-center pt-36">:( Results not found for: "{{get:q}}"</p>
+            <p class="text-4xl font-futura mb-4 text-center pt-24">:( Results not found for: "{{get:q}}"</p>
+            <div class="flex mt-16 w-full justify-center">
+                <img class="max-h-96" src="/assets/site/no-data.svg" alt="" srcset="">
+            </div>
         {{/if}}
     {{ /search:results}}
 </div>

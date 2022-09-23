@@ -732,6 +732,10 @@ h1 {
   visibility: visible !important;
 }
 
+.fixed {
+  position: fixed !important;
+}
+
 .absolute {
   position: absolute !important;
 }
@@ -863,14 +867,6 @@ h1 {
   display: none !important;
 }
 
-.h-auto {
-  height: auto !important;
-}
-
-.h-44 {
-  height: 11rem !important;
-}
-
 .h-10 {
   height: 2.5rem !important;
 }
@@ -903,16 +899,16 @@ h1 {
   width: 100% !important;
 }
 
-.w-screen {
-  width: 100vw !important;
-}
-
 .w-2\/6 {
   width: 33.333333% !important;
 }
 
 .w-4\/6 {
   width: 66.666667% !important;
+}
+
+.w-screen {
+  width: 100vw !important;
 }
 
 .w-6 {
@@ -957,10 +953,6 @@ h1 {
 
 .max-w-4xl {
   max-width: 56rem !important;
-}
-
-.max-w-md {
-  max-width: 28rem !important;
 }
 
 .cursor-pointer {
@@ -1092,11 +1084,6 @@ h1 {
   background-color: rgb(31 41 55 / var(--tw-bg-opacity)) !important;
 }
 
-.object-cover {
-  -o-object-fit: cover !important;
-     object-fit: cover !important;
-}
-
 .p-6 {
   padding: 1.5rem !important;
 }
@@ -1208,10 +1195,6 @@ h1 {
 
 .pt-3 {
   padding-top: 0.75rem !important;
-}
-
-.pl-0 {
-  padding-left: 0px !important;
 }
 
 .pb-16 {

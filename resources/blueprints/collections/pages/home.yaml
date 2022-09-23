@@ -1,0 +1,165 @@
+title: Home
+sections:
+  main:
+    display: Main
+    fields:
+      -
+        handle: title
+        field:
+          type: text
+          required: true
+          character_limit: 0
+          display: Title
+          validate:
+            - required
+      -
+        handle: subtitle
+        field:
+          character_limit: 0
+          type: text
+          display: Subtitle
+      -
+        handle: content
+        field:
+          restrict: false
+          automatic_line_breaks: true
+          automatic_links: false
+          escape_markup: true
+          smartypants: false
+          type: markdown
+          display: Content
+      -
+        handle: template
+        field:
+          type: template
+          display: Template
+      -
+        handle: sections
+        field:
+          collapse: false
+          previews: true
+          sets:
+            data:
+              display: Data
+              fields:
+                -
+                  handle: section_type
+                  field:
+                    options:
+                      full: 'Full width'
+                      half-right: 'Half Right'
+                      half-left: 'Half Left'
+                      3-columns: 3-columns
+                    multiple: false
+                    max_items: 1
+                    clearable: false
+                    searchable: true
+                    taggable: false
+                    push_tags: false
+                    cast_booleans: false
+                    display: 'Section type'
+                    type: select
+                    icon: select
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    always_save: false
+                    default: full
+                -
+                  handle: section_topic
+                  field:
+                    max_items: 1
+                    mode: select
+                    create: true
+                    taxonomies:
+                      - topics
+                    display: Topic
+                    type: terms
+                    icon: taxonomy
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    always_save: false
+                -
+                  handle: amount
+                  field:
+                    display: Amount
+                    type: integer
+                    icon: integer
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    always_save: false
+                -
+                  handle: skip_count
+                  field:
+                    display: Offset
+                    type: integer
+                    icon: integer
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    always_save: false
+                -
+                  handle: show_title
+                  field:
+                    default: false
+                    display: 'Show Title'
+                    type: toggle
+                    icon: toggle
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    always_save: false
+                -
+                  handle: show_ad
+                  field:
+                    default: false
+                    display: 'Show Ad'
+                    type: toggle
+                    icon: toggle
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    always_save: false
+                -
+                  handle: select_ad
+                  field:
+                    max_items: 1
+                    mode: select
+                    create: true
+                    collections:
+                      - ads
+                    display: 'Select Ad'
+                    type: entries
+                    icon: entries
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    always_save: false
+                    if:
+                      show_ad: 'equals true'
+          display: Sections
+          type: replicator
+          icon: replicator
+          listable: true
+          instructions_position: above
+          visibility: visible
+          always_save: false
+  sidebar:
+    display: Sidebar
+    fields:
+      -
+        handle: slug
+        field:
+          type: slug
+          localizable: true
+      -
+        handle: parent
+        field:
+          type: entries
+          collections:
+            - pages
+          max_items: 1
+          listable: false
+          localizable: true

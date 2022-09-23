@@ -1,0 +1,16 @@
+title: Settings
+data:
+  site_name: 'Go San José'
+  social:
+    -
+      name: Facebook
+      url: 'https://www.facebook.com/larepublicacr?_rdr=p'
+      icon: site/social-icons/facebook.svg
+    -
+      name: Twitter
+      url: 'https://twitter.com/La_Republica'
+      icon: site/social-icons/twitter.svg
+    -
+      name: Instagram
+      url: 'https://www.instagram.com/la_republicacr/'
+      icon: site/social-icons/instagram.svg

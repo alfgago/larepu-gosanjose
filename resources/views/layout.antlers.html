@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="{{ site:short_locale }}" class="scroll-smooth overflow-x-hidden w-screen">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>{{ title }} — {{ settings:site_name }}</title>
+        <meta name="description" content="{{ excerpt ?? title }}">
+        <meta name="theme-color" content="00908F">
+        <link rel="stylesheet" href="{{ mix src='css/fonts.css' }}">
+        <link rel="stylesheet" href="{{ mix src='css/tailwind.css' }}">
+        <script src="{{ mix src='/js/site.js' }}" defer></script>
+        <script src="js/weather.js" async></script>
+        <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" ></script>
+        <script src="js/translate.js" async></script>
+    </head>
+    <body id="body" class="bg-white leading-normal text-grey-800 font-futural overflow-x-hidden" x-data="{ showMobileNav: false, showDesktop: false, showExtraMenu: false, searchBar: false}">
+        {{ partial:nav }}
+        {{ template_content }}
+        {{ partial:footer }}
+    </body>
+</html>

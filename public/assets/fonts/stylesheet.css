@@ -1,0 +1,47 @@
+@font-face {
+    font-family: 'Futura';
+    src: url('Futura-Bold.woff2') format('woff2'),
+        url('Futura-Bold.woff') format('woff'),
+        url('Futura-Bold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Futura';
+    src: url('FuturaBT-Medium.woff2') format('woff2'),
+        url('FuturaBT-Medium.woff') format('woff'),
+        url('FuturaBT-Medium.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Futura';
+    src: url('FuturaBT-Light.woff2') format('woff2'),
+        url('FuturaBT-Light.woff') format('woff'),
+        url('FuturaBT-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+body {
+    font-family: 'Futura', 'sans-serif';
+    font-weight: 400;
+}
+
+.font-futura {
+    font-family: 'Futura', 'sans-serif';
+    font-weight: 400;
+}
+.font-futural {
+    font-family: 'Futura', 'sans-serif';
+    font-weight: 100;
+}
+.font-futura {
+    font-family: 'Futura', 'sans-serif';
+    font-weight: 500;
+}

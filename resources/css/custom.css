@@ -1,0 +1,125 @@
+.goog-te-banner-frame.skiptranslate {
+    display: none !important;
+    } 
+body {
+    top: 0px !important; 
+    }
+.go{
+    letter-spacing: -6px;
+}
+.toggle-menu {
+    position: absolute;
+    top: 100%;
+    background: #31b963;
+    left: 0;
+    width: 100%;
+    padding: 1rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.top-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+}
+
+body {
+    padding-top: 64px;
+}
+
+.columns3{
+    display: flex!important;
+    justify-content: space-between!important;
+    flex-direction: column!important;
+    max-width: 15rem!important;
+    align-items: start!important;
+}
+
+.goog-te-gadget-simple{
+    background-color: transparent !important;
+    border: none !important;
+    font-size: inherit;
+    display: block;
+    padding-top: 1px;
+    padding-bottom: 2px;
+    cursor: pointer;
+    zoom: 1;
+    display: inline;
+}
+.goog-te-menu-value{
+    display: flex;
+}
+
+.goog-te-gadget img,
+a.goog-te-menu-value > span:first-of-type,
+a.goog-te-menu-value > span:nth-of-type(2) {
+    display: none;
+}
+
+a.goog-te-menu-value{
+    position: relative;
+    height: 20px;
+}
+
+.goog-te-menu-value:before {
+    content: '';
+    position: relative;
+    top: 0;
+    left: 0;
+    background: url(/assets/site/world.svg);
+    background-size: 20px;
+    height: 20px;
+    width: 25px;
+    background-repeat: no-repeat;
+}
+
+.goog-te-gadget-simple .goog-te-menu-value span {
+    color: #fff !important;
+}
+
+#searchBar{
+position: absolute;
+    right: 100%;
+    top: 0px;
+    margin-right: 7px;
+    width: 200px !important;
+}
+
+.height-620{
+    height: 620px !important;
+}
+
+.min-w-240{
+    min-width: 240px !important;
+    min-height: 176px !important;
+}
+.min-w-450{
+    min-width: 450px !important;
+}
+
+.content-show{
+    align-items: center;
+    gap: 2%;
+}
+
+.content-show img{
+    object-fit: cover;
+    width: 500px !important;
+    height: 400px;
+}
+
+article h1{
+    margin-bottom: 2rem;
+}
+
+.gmap_canvas{
+    width: 100% !important;
+}
+
+.gmap_canvas iframe{
+    width: inherit;
+}

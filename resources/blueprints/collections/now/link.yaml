@@ -1,0 +1,34 @@
+title: Link
+sections:
+  main:
+    display: Main
+    fields:
+      -
+        handle: title
+        field:
+          type: text
+          required: true
+          validate:
+            - required
+      -
+        handle: redirect
+        field:
+          type: link
+          validate:
+            - required
+  sidebar:
+    display: Sidebar
+    fields:
+      -
+        handle: slug
+        field:
+          type: slug
+          localizable: true
+      -
+        handle: design
+        field:
+          type: terms
+          taxonomies:
+            - design
+          display: Design
+          mode: select

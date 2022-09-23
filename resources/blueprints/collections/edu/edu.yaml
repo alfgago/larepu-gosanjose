@@ -1,0 +1,38 @@
+sections:
+  main:
+    display: Main
+    fields:
+      -
+        handle: title
+        field:
+          type: text
+          required: true
+          validate:
+            - required
+      -
+        import: standard_note
+  sidebar:
+    display: Sidebar
+    fields:
+      -
+        import: standard_sidebar
+        config:
+          slug:
+            localizable: true
+      -
+        handle: design
+        field:
+          type: terms
+          taxonomies:
+            - design
+          display: Design
+          mode: select
+          instructions_position: above
+          listable: hidden
+          visibility: visible
+          always_save: false
+          max_items: 1
+          create: true
+          validate:
+            - required
+title: Edu

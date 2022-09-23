@@ -1,5 +1,4 @@
 <nav class="hidden xl:flex items-center justify-center xl:justify-center flex-wrap py-3 px-auto bg-green-600 top-menu">
-
     <div class="first-part xl:w-1/5 flex flex-row h-10">
 
         <div class="hidden xl:w-fit xl:ml-12 xl:flex bg-gray-300">
@@ -14,7 +13,6 @@
             <span class="text-3xl text-white leading-tight font-futura font-bold go">Go</span>
         </a>
     </div>
-    
 
     <div class="second-part w-3/5">
         {{if current_uri == "/"}}
@@ -54,17 +52,9 @@
             </div>
 
         {{/if}}
-        
     </div>
     
     <div class="third-part w-1/5 flex flex-row items-center">
-        <div id="google_translate_element" class="flex flex-row"></div>
-        <div class="weather-container flex flex-row pr-4">
-            <img class="icon h-6 text-white pr-1" src="/assets/site/cloudy.svg">
-            <p class="temp font-futura text-white"></p>
-            <p class="pb-1 text-white relative bottom-1">&#8728;</p>
-            <p class="pl-1 font-futura text-white">C</p>
-        </div>
         <form id="search-desktop" action="/search/results" class="flex flex-row items-center">
             <div class="flex items-center relative cursor-pointer"
                 x-on:click="searchBar = true"
@@ -78,13 +68,20 @@
             </div>
         </form>
     </div>
-        
 </nav>
 
 
+<div id="google-trans" style="position: fixed;top: 20px;right: 0;z-index: 99999;display: flex;">
+    <div id="google_translate_element" class="flex flex-row"></div>
+    <div class="weather-container flex flex-row pr-4">
+        <img class="icon h-6 text-white pr-1" src="/assets/site/cloudy.svg">
+        <p class="temp font-futura text-white"></p>
+        <p class="pb-1 text-white relative bottom-1">&#8728;</p>
+        <p class="pl-1 font-futura text-white">C</p>
+    </div>
+</div>
 
 <!--Mobile menu-->
-
 <nav class="flex xl:hidden flex-wrap pb-3 px-4 pr-auto bg-green-600 top-menu flex-col items-start drop-shadow-2xl" @click.outside="showExtraMenu = false, showMobileNav = false">
 
     <div class="first-part xl:w-1/5 pt-3 flex flex-row">
@@ -104,16 +101,6 @@
     
     <div class="second-part w-full py-4" x-show="showExtraMenu">
         <div class="flex justify-evenly items-center w-3/4 p-2">
-            <div id="google_translate_element" class="flex flex-row"></div>
-            <div class="ukflag p-2 pl-0">
-                <span class="text-white uppercase font-futura">en</span>
-            </div>
-            <div class="weather-container flex flex-row pr-4">
-                <img class="icon h-6 text-white pr-1" src="/assets/site/cloudy.svg">
-                <p class="temp font-futura text-white"></p>
-                <p class="pb-1 text-white relative bottom-1">&#8728;</p>
-                <p class="pl-1 font-futura text-white">C</p>
-            </div>
         </div>
         <form id="search-mobile" action="/search/results" class="flex flex-row items-center w-screen">
             <div class="flex items-center w-full">

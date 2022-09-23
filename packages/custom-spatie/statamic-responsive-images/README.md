@@ -103,7 +103,7 @@ By default, responsive images generates a small base64 encoded placeholder to sh
 By default, responsive tag generates original source image file format and WEBP variants of the image, so if you use a JPG image as source then by default JPG and WEBP variants will be generated. You can toggle WEBP and AVIF variant generation with the tag parameters.
 
 ```twig
-{{ responsive:image_field webp="true" avif="false" }}
+{{ responsive:image_field  avif="false" }}
 ```
 
 You can also toggle this in responsive-images.php config file, it will apply your preferences globally.

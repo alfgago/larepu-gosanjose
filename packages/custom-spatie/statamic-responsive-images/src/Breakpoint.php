@@ -92,7 +92,7 @@ class Breakpoint implements Arrayable
         return $params;
     }
 
-    private function getCropFocus($params): string|null
+    private function getCropFocus($params)
     {
         if (
             Config::get('statamic.assets.auto_crop') === false
@@ -110,7 +110,7 @@ class Breakpoint implements Arrayable
      * @param string|null $format
      * @return int|null
      */
-    private function getFormatQuality(string $format = null): int|null
+    private function getFormatQuality(string $format = null)
     {
         // Backwards compatible if someone used glide:quality to adjust quality
         $glideParamsQualityValue = $this->parameters['glide:quality'] ?? $this->parameters['glide:q'] ?? null;

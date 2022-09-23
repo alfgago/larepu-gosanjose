@@ -819,7 +819,7 @@
             "dist": {
                 "type": "path",
                 "url": "./packages/custom-spatie/statamic-responsive-images",
-                "reference": "d2d1dec1502ae6acb4e5527860501230e92e6749"
+                "reference": "c8fd8b5f0cec04e139710907af98164e09be0b86"
             },
             "require": {
                 "statamic/cms": "~3.3"

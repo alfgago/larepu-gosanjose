@@ -41,57 +41,63 @@ class ResponsiveTag extends Tags
             return '';
         }
 
-        $maxWidth = (int) ($this->params->all()['glide:width'] ?? 0);
-        $width = $responsive->asset->width();
-        $height = $responsive->assetHeight();
-        $src = $responsive->asset->url();
+        try{
 
-        if ($maxWidth > 0 && $maxWidth < $responsive->asset->width()) {
-            $width = $maxWidth;
-            $height = $width / $responsive->defaultBreakpoint()->ratio;
+            $maxWidth = (int) ($this->params->all()['glide:width'] ?? 0);
+            $width = $responsive->asset->width();
+            $height = $responsive->assetHeight();
+            $src = $responsive->asset->url();
 
-            $src = app(GenerateImageJob::class, ['asset' => $responsive->asset, 'params' => [
-                'width' => $width,
-                'height' => $height,
-            ]])->handle();
-        }
+            if ($maxWidth > 0 && $maxWidth < $responsive->asset->width()) {
+                $width = $maxWidth;
+                $height = $width / $responsive->defaultBreakpoint()->ratio;
 
-        if (in_array($responsive->asset->extension(), ['svg', 'gif'])) {
+                $src = app(GenerateImageJob::class, ['asset' => $responsive->asset, 'params' => [
+                    'width' => $width,
+                    'height' => $height,
+                ]])->handle();
+            }
+
+            if (in_array($responsive->asset->extension(), ['svg', 'gif'])) {
+                return view('responsive-images::responsiveImage', [
+                    'attributeString' => $this->getAttributeString(),
+                    'src' => $src,
+                    'width' => $width,
+                    'height' => $height,
+                    'asset' => $responsive->asset->toAugmentedArray(),
+                ])->render();
+            }
+
+            $includePlaceholder = $this->includePlaceholder();
+
+            $sources = $responsive->breakPoints()
+                ->map(function (Breakpoint $breakpoint) use ($includePlaceholder) {
+                    return [
+                        'media' => $breakpoint->getMediaString(),
+                        'srcSet' => $breakpoint->getSrcSet($includePlaceholder),
+                        'srcSetWebp' => $this->getSrcSetFromBreakpoint($breakpoint, 'webp', $includePlaceholder),
+                        'srcSetAvif' => $this->getSrcSetFromBreakpoint($breakpoint, 'avif', $includePlaceholder),
+                        'placeholder' => $breakpoint->placeholder(),
+                    ];
+                });
+
             return view('responsive-images::responsiveImage', [
                 'attributeString' => $this->getAttributeString(),
+                'includePlaceholder' => $includePlaceholder,
+                'placeholder' => $sources->last()['placeholder'],
                 'src' => $src,
+                'sources' => $sources,
                 'width' => $width,
                 'height' => $height,
                 'asset' => $responsive->asset->toAugmentedArray(),
             ])->render();
+
+        }catch(\Throwable $e){
+            return $e;
         }
-
-        $includePlaceholder = $this->includePlaceholder();
-
-        $sources = $responsive->breakPoints()
-            ->map(function (Breakpoint $breakpoint) use ($includePlaceholder) {
-                return [
-                    'media' => $breakpoint->getMediaString(),
-                    'srcSet' => $breakpoint->getSrcSet($includePlaceholder),
-                    'srcSetWebp' => $this->getSrcSetFromBreakpoint($breakpoint, 'webp', $includePlaceholder),
-                    'srcSetAvif' => $this->getSrcSetFromBreakpoint($breakpoint, 'avif', $includePlaceholder),
-                    'placeholder' => $breakpoint->placeholder(),
-                ];
-            });
-
-        return view('responsive-images::responsiveImage', [
-            'attributeString' => $this->getAttributeString(),
-            'includePlaceholder' => $includePlaceholder,
-            'placeholder' => $sources->last()['placeholder'],
-            'src' => $src,
-            'sources' => $sources,
-            'width' => $width,
-            'height' => $height,
-            'asset' => $responsive->asset->toAugmentedArray(),
-        ])->render();
     }
 
-    private function getAttributeString(): string
+    private function getAttributeString()
     {
         $breakpointPrefixes = collect(array_keys(config('statamic.responsive-images.breakpoints')))
             ->map(function ($breakpoint) {

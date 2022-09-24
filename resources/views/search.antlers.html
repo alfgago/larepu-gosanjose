@@ -1,12 +1,12 @@
 <div class="max-w-4xl mx-auto p-6 pt-10 min-h-screen">
     <h2 class="text-6xl font-futura mb-4">{{ title }}:</h2>
-    {{ search:results as="results"}}
-        {{if results}}
+    {{ search:results as="result"}}
+        {{if result}}
             <p class="mb-8 text-2xl">Some titles related with the search: "{{get:q}}"</p>
             <ul class="space-y-4 pl-4">
-                {{results}}
+                {{result}}
                     <li class="list-disc"><a href="{{url}}" class="text-xl font-bold hover:text-green-700">{{title}}</a></li>
-                {{/results}}
+                {{/result}}
             </ul>
             <div class="hidden lg:visible lg:flex absolute w-full justify-center mt-12">
                 <img class="max-h-96" src="/assets/site/search-desktop.svg" alt="" srcset="">

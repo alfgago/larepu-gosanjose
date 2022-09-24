@@ -821,8 +821,8 @@ h1 {
   margin-left: 1rem !important;
 }
 
-.ml-2 {
-  margin-left: 0.5rem !important;
+.mr-2 {
+  margin-right: 0.5rem !important;
 }
 
 .ml-8 {
@@ -835,6 +835,10 @@ h1 {
 
 .mb-2 {
   margin-bottom: 0.5rem !important;
+}
+
+.ml-2 {
+  margin-left: 0.5rem !important;
 }
 
 .mt-8 {
@@ -1450,7 +1454,7 @@ a.goog-te-menu-value{
     color: #fff !important;
 }
 
-#searchBar{
+#search-desktop input{
     position: absolute;
     right: 0px;
     top: 55px;

@@ -81,7 +81,7 @@ a.goog-te-menu-value{
     color: #fff !important;
 }
 
-#searchBar{
+#search-desktop input{
     position: absolute;
     right: 0px;
     top: 55px;

@@ -54,7 +54,7 @@
         {{/if}}
     </div>
     
-    <div class="third-part w-1/5 flex flex-row items-center">
+    <div class="third-part w-1/5 flex flex-row">
         <form id="search-desktop" action="/search/results" class="flex flex-row items-center">
             <div class="flex items-center relative cursor-pointer"
                 x-on:click="searchBar = true"
@@ -62,7 +62,8 @@
             >
                 <img src="/assets/site/search.svg" class="h-6 w-6">
                 <input id="searchBar" x-show="searchBar" @click="searchBar = true" class="border-2 border-gray outline-none px-2 h-8 rounded-none placeholdler-black font-futura ml-4 w-3/4" placeholder="Search" type="search" name="q" value="{{get:q}}" placeholder="Search">    
-                <button class="bg-green-600 hover:bg-green-700 text-white font-bold py-1 px-4 ml-2" x-show="searchBar" type="submit" form="search-desktop" value="{{q}}">
+                <span class="text-white  bg-green-600 hover:bg-green-700 font-bold py-1 px-4 ml-2" x-bind:class="{'hidden': searchBar, 'cursor-pointer': searchBar}" x-on:click="searchBar = !searchBar">Search</span>
+                <button class="bg-green-600 hover:bg-green-700 text-white font-bold py-1 px-4 ml-2" x-bind:class="{'hidden': !searchBar, 'cursor-pointer': !searchBar}" x-on:click="searchBar = !searchBar" type="submit" form="search-desktop" value="{{q}}">
                     <span class="text-white ">Search</span>
                 </button>
             </div>
@@ -70,9 +71,9 @@
     </div>
 </nav>
 
-<div id="google-trans" style="position: fixed;top: 20px;right: 0;z-index: 99999;display: none;">
+<div x-bind:class="{'hidden': !showMobileNav}" id="google-trans" class="fixed lg:top-5 lg:right-0 flex lg:flex">
     <div id="google_translate_element" class="flex flex-row"></div>
-    <div class="weather-container flex flex-row pr-4">
+    <div class="weather-container flex flex-row ml-8 lg:ml-4 lg:mr-6">
         <img class="icon h-6 text-white pr-1" src="/assets/site/cloudy.svg">
         <p class="temp font-futura text-white"></p>
         <p class="pb-1 text-white relative bottom-1">&#8728;</p>
@@ -81,7 +82,7 @@
 </div>
 
 <!--Mobile menu-->
-<nav class="flex xl:hidden flex-wrap pb-3 px-4 pr-auto bg-green-600 top-menu flex-col items-start drop-shadow-2xl" @click.outside="showExtraMenu = false, showMobileNav = false">
+<nav class="flex xl:hidden flex-wrap pb-3 px-4 pr-auto bg-green-600 top-menu flex-col items-start drop-shadow-2xl">
 
     <div class="first-part xl:w-1/5 pt-3 flex flex-row items-center">
 
@@ -109,9 +110,9 @@
 
         {{ else }}
 
-            <div class="w-full flex items-start p-4">
+            <div class="w-full flex items-start px-4">
                 {{ nav  title:in="Now|Eat|Shop|Stay" }}
-                <a href="/#{{ title|slugify }}" class="w-1/2 px-2 font-futurab block uppercase {{ is_current || is_parent ?= 'font-medium text-white' }} xl:inline-block text-white text-xl hover:text-white xl:mt-0 mr-12">
+                <a href="/#{{ title|slugify }}" class="w-1/2 px-2 font-futurab block uppercase {{ is_current || is_parent ?= 'font-medium text-white' }} text-white text-xl hover:text-white">
                     {{ title }}
                 </a>
                 {{ /nav }}
@@ -121,8 +122,7 @@
     </div>
     
     <div class="second-part w-full py-4" x-show="showExtraMenu">
-        <div class="flex justify-evenly items-center w-3/4 p-2">
-        </div>
+        <div class="h-14"></div>
         <form id="search-mobile" action="/search/results" class="flex flex-row items-center w-screen">
             <div class="flex items-center w-full">
                 <input class="border-2 border-gray outline-none h-12 rounded-none placeholdler-black font-futura pl-4 w-3/4" placeholder="Search" type="search" name="q" value="{{get:q}}" placeholder="Search">   

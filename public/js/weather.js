@@ -31,5 +31,5 @@ setTimeout(() => {
             document.querySelectorAll(".temp")[0].innerHTML = temp;
         }
     });
-  }, "100")
+  }, "500")
 

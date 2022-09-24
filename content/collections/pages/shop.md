@@ -2,7 +2,7 @@
 id: a0c57db4-a1e4-48d2-a44a-365bb838c815
 blueprint: page
 title: Shop
-updated_by: 73a44fc3-f8d3-4d01-9c7e-095429bb71dc
+updated_by: 9f14bbaf-8a9c-47ea-b074-5c2f52882546
 updated_at: 1661515461
 template: shop/index
 position: 3

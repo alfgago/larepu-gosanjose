@@ -82,7 +82,7 @@ a.goog-te-menu-value{
 }
 
 #searchBar{
-position: absolute;
+    position: absolute;
     right: 100%;
     top: 0px;
     margin-right: 7px;
@@ -99,6 +99,9 @@ position: absolute;
 }
 .min-w-450{
     min-width: 450px !important;
+}
+.max-h-350{
+    max-height: 350px !important;
 }
 
 .content-show{

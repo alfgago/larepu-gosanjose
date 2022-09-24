@@ -133,7 +133,7 @@ sections:
       -
         handle: facebook_link
         field:
-          display: 'Facebook Link'
+          display: Link
           type: link
           icon: link
           listable: hidden

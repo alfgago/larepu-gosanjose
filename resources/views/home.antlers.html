@@ -10,8 +10,8 @@
     {{ sections }}
         
         {{ if show_title }}
-            <div id="{{section_topic:slug|slugify}}" class="mb-10 pt-16">
-                <h1 class="text-xl py-3 px-20 text-white bg-green-600 border-2 tracking-tight leading-tight uppercase">{{section_topic:slug}}</h1>
+            <div id="{{section_topic:slug|slugify}}" class="pt-16">
+                <h1 class="text-xl py-3 px-20 text-white bg-green-600 border-2 tracking-tight leading-tight uppercase mb-8">{{section_topic:slug}}</h1>
             </div>
         {{ /if }}
 
@@ -19,7 +19,7 @@
             <div class="flex flex-wrap mb-8 justify-between w-full">
                 {{collection:articles taxonomy:topics={section_topic:slug} as="article" sort="date" limit={amount} offset="{skip_count}" }}
                    {{article}}
-                    <div class="mb-16 w-full">
+                    <div class="mb-16 w-full mx-8 lg:mx-0">
                         <h2 class="font-futurab mb-4 text-center mx-3">
                             <a href="{{ url }}" class="text-3xl lg:text-3xl tracking-tight leading-tight font-bold">
                                 {{ title }}
@@ -30,8 +30,8 @@
                             {{ excerpt | widont ?? content | strip_tags | safe_truncate(150, '...') }}
                         </p>
                         
-                        <a class="w-full" href="{{url}}">
-                            {{responsive:featured_image webp="true" avif="false" quality:webp="85" glide:width="1600"}}
+                        <a class="object-cover max-h-350" href="{{url}}">
+                            {{responsive:featured_image class="max-h-350 lg:height-620 w-full object-cover" webp="true" avif="false" quality:webp="85" glide:width="1600"}}
                         </a>
                     </div>
                     {{/article}}
@@ -65,10 +65,10 @@
             </div>
         {{ elseif section_type == "half-right" }}
         
-            <div class="flex flex-wrap mb-8 justify-between">
+            <div class="flex flex-wrap mb-8 justify-between w-full">
                 {{collection:articles taxonomy:topics={section_topic:slug} as="article" sort="date" limit={amount} offset="{skip_count}" }}
                 {{article}}
-                    <div class="mb-8">
+                    <div class="mb-8 w-full">
                         <div class="flex flex-row">
                             <div class="flex justify-center content-center w-2/6 flex-col ">
                                 <h2 class="font-futurab mb-4 text-start ml-6 lg:ml-0">
@@ -82,8 +82,8 @@
                                 </p>
                             </div>
                             <div class="flex justify-end w-4/6 pl-4 py-16">
-                                <a href="{{url}}">
-                                    {{responsive:featured_image webp="true" avif="false" quality:webp="85" glide:width="1600"}}
+                                <a class="object-cover w-full" href="{{url}}">
+                                    {{responsive:featured_image class="height-620 object-cover w-full" webp="true" avif="false" quality:webp="85" glide:width="1600"}}
                                 </a>
                             </div>
                         </div>
@@ -94,14 +94,14 @@
         
         {{ elseif section_type == "half-left" }}
         
-            <div class="flex flex-wrap mb-8 justify-between">
+            <div class="flex flex-wrap mb-8 justify-between w-full">
                 {{collection:articles taxonomy:topics={section_topic:slug} as="article" sort="date" limit={amount} offset="{skip_count}" }}
                     {{article}}
                         <div class="mb-8">
                             <div class="flex flex-row">
                                 <div class="flex justify-start w-4/6 pr-4 py-16">
-                                    <a href="{{url}}">
-                                        {{responsive:featured_image webp="true" avif="false" quality:webp="85" glide:width="1152"}}
+                                    <a class="object-cover w-full" href="{{url}}">
+                                        {{responsive:featured_image class="height-620 object-cover w-full" webp="true" avif="false" quality:webp="85" glide:width="1152"}}
                                     </a>
                                 </div>
                                 <div class="flex justify-center content-center w-2/6 flex-col lg:mr-0">

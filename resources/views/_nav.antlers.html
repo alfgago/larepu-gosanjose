@@ -1,12 +1,12 @@
 <nav class="hidden xl:flex items-center justify-center xl:justify-center flex-wrap py-3 px-auto bg-green-600 top-menu">
     <div class="first-part xl:w-1/5 flex flex-row h-10">
 
-        <div class="hidden xl:w-fit xl:ml-12 xl:flex bg-gray-300">
+        <div class="hidden xl:w-fit xl:ml-12 xl:flex  ">
             <button class="flex items-center p-2 text-white" x-bind:class="{'hidden': showDesktop}" @click="showDesktop = true">
-                <img src="/assets/site/menu-light.svg" class="h-6 w-6">
+                <img src="/assets/site/menu-white(1).svg" class="h-6 w-6">
             </button>
             <button class="items-center p-2 text-white" x-bind:class="{'hidden': !showDesktop}" @click="showDesktop = false" x-cloak>
-                <img src="/assets/site/x-menu.svg" class="h-6 w-6">
+                <img src="/assets/site/close-button.svg" class="h-6 w-6">
             </button>
         </div>
         <a class="pl-6 flex items-center" href="/">
@@ -70,8 +70,7 @@
     </div>
 </nav>
 
-
-<div id="google-trans" style="position: fixed;top: 20px;right: 0;z-index: 99999;display: flex;">
+<div id="google-trans" style="position: fixed;top: 20px;right: 0;z-index: 99999;display: none;">
     <div id="google_translate_element" class="flex flex-row"></div>
     <div class="weather-container flex flex-row pr-4">
         <img class="icon h-6 text-white pr-1" src="/assets/site/cloudy.svg">
@@ -84,19 +83,41 @@
 <!--Mobile menu-->
 <nav class="flex xl:hidden flex-wrap pb-3 px-4 pr-auto bg-green-600 top-menu flex-col items-start drop-shadow-2xl" @click.outside="showExtraMenu = false, showMobileNav = false">
 
-    <div class="first-part xl:w-1/5 pt-3 flex flex-row">
+    <div class="first-part xl:w-1/5 pt-3 flex flex-row items-center">
 
-        <div class="block xl:hidden bg-gray-300">
-            <button class="flex items-center p-2 text-white" x-bind:class="{'hidden': showMobileNav}" @click="showMobileNav = true, showExtraMenu = true">
-                <img src="/assets/site/menu-light.svg" class="h-6 w-6">
+        <div class="block xl:hidden">
+            <button class="flex items-center py-2 text-white" x-bind:class="{'hidden': showMobileNav}" @click="showMobileNav = true, showExtraMenu = true">
+                <img src="/assets/site/menu-white.svg" class="h-10 w-10">
             </button>
-            <button class="items-center p-2 text-white" x-bind:class="{'hidden': !showMobileNav}" @click="showMobileNav = false, showExtraMenu = false" x-cloak>
-                <img src="/assets/site/x-menu.svg" class="h-6 w-6">
+            <button class="items-center py-2 text-white" x-bind:class="{'hidden': !showMobileNav}" @click="showMobileNav = false, showExtraMenu = false" x-cloak>
+                <img src="/assets/site/close-button.svg" class="h-10 w-10">
             </button>
         </div>
         <a class="pl-6 flex items-center" href="/">
             <span class="text-3xl text-white leading-tight font-futura font-bold go">Go</span>
         </a>
+
+        {{if current_uri == "/"}}
+
+            <div class="w-full flex items-start px-4">
+                {{ nav  title:in="Now|Eat|Shop|Stay" }}
+                <a href="#{{ title|slugify }}" class="w-1/2 px-2 font-futurab block uppercase {{ is_current || is_parent ?= 'font-medium text-white' }} text-white text-xl hover:text-white">
+                    {{ title }}
+                </a>
+                {{ /nav }}
+            </div>
+
+        {{ else }}
+
+            <div class="w-full flex items-start p-4">
+                {{ nav  title:in="Now|Eat|Shop|Stay" }}
+                <a href="/#{{ title|slugify }}" class="w-1/2 px-2 font-futurab block uppercase {{ is_current || is_parent ?= 'font-medium text-white' }} xl:inline-block text-white text-xl hover:text-white xl:mt-0 mr-12">
+                    {{ title }}
+                </a>
+                {{ /nav }}
+            </div>
+
+        {{/if}}
     </div>
     
     <div class="second-part w-full py-4" x-show="showExtraMenu">
@@ -116,7 +137,7 @@
         {{if current_uri == "/"}}
 
         <div class="w-full flex flex-wrap items-start p-4">
-            {{ nav  title:in="Now|Eat|Shop|Art|Night|Green|Trad|Stay" }}
+            {{ nav  title:in="Art|Night|Green|Trad|Med|Edu" }}
             <a href="#{{ title|slugify }}" class="w-1/2 font-futurab block uppercase {{ is_current || is_parent ?= 'font-medium text-white' }} mt-4 text-white text-xl hover:text-white">
                 {{ title }}
             </a>
@@ -126,7 +147,7 @@
     {{ else }}
 
         <div class="w-full flex flex-wrap items-start p-4">
-            {{ nav  title:in="Now|Eat|Shop|Art|Night|Green|Trad|Stay" }}
+            {{ nav  title:in="Art|Night|Green|Trad|Med|Edu" }}
             <a href="/#{{ title|slugify }}" class="font-futurab block uppercase {{ is_current || is_parent ?= 'font-medium text-white' }} mt-4 xl:inline-block text-white text-xl hover:text-white xl:mt-0 mr-12">
                 {{ title }}
             </a>

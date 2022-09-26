@@ -1,5 +1,5 @@
 <div class="max-w-5xl mx-auto relative">
-    <article class="pt-6">
+    <article id="home" class="pt-6">
         <p class="font-medium text-lg text-teal">{{ subtitle }}</p>
         {{ content }}
     </article>
@@ -26,106 +26,23 @@
                             </a>
                         </h2>
                         
-                        <p class="font-futural text-gray-600 text-xl mb-6 text-center mx-3">
+                        <p class="font-futural text-gray-600 text-xl mb-3 lg:mb-6 text-center mx-3">
                             {{ excerpt | widont ?? content | strip_tags | safe_truncate(150, '...') }}
                         </p>
                         
-                        <a class="object-cover max-h-350" href="{{url}}">
-                            {{responsive:featured_image loading='lazy' class="max-h-350 lg:height-620 w-full object-cover" webp="true" avif="false" quality:webp="85" glide:width="1200" }}
+                        <a class="object-cover max-h-350 max-h-620" href="{{url}}">
+                            {{responsive:featured_image loading='lazy' class="max-h-350 max-h-620 h-auto w-full object-cover" webp="true" avif="false" quality:webp="85" glide:width="1200" }}
                         </a>
                     </div>
                     {{/article}}
                 {{/collection:articles }}
             </div>
-        {{ elseif section_type == "3-columns" }}
-            <div class="flex flex-col lg:flex-row items-center lg:flex-wrap mb-8 lg:justify-between w-full lg:items-start">
-                {{collection:articles taxonomy:topics={section_topic:slug} as="article" sort="date" limit={amount} offset="{skip_count}" }}
-                {{article}}
-                <div class="columns3">
-                    <div class="flex flex-col lg:flex-row flex-wrap justify-start lg:mb-0 mb-8">
-                        <a href="{{url}}">
-                            {{responsive:featured_image loading='lazy' webp="true" avif="false" quality:webp="85" glide:width="400"}}
-                        </a>
-
-                        <div class="flex justify-start w-full lg:w-full flex-col mt-4">
-                            <h2 class="font-futurab mb-4 text-start">
-                                <a href="{{ url }}" class="text-3xl lg:text-2xl tracking-tight leading-tight font-bold">
-                                    {{ title }}
-                                </a>
-                            </h2>
-                            
-                            <p class="font-futural text-gray-600 text-xl mb-6 text-start">
-                                {{ excerpt | widont ?? content | strip_tags | safe_truncate(150, '...') }}
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                {{/article}}
-                {{/collection:articles }}
-            </div>
-        {{ elseif section_type == "half-right" }}
-        
-            <div class="flex flex-wrap mb-8 justify-between w-full">
-                {{collection:articles taxonomy:topics={section_topic:slug} as="article" sort="date" limit={amount} offset="{skip_count}" }}
-                {{article}}
-                    <div class="mb-8 w-full">
-                        <div class="flex flex-row">
-                            <div class="flex justify-center content-center w-2/6 flex-col ">
-                                <h2 class="font-futurab mb-4 text-start ml-6 lg:ml-0">
-                                    <a href="{{ url }}" class="text-2xl lg:text-2xl tracking-tight leading-tight font-bold">
-                                        {{ title }}
-                                    </a>
-                                </h2>
-                                
-                                <p class="font-futural text-gray-600 text-xl lg:text-2xl mb-6 text-start ml-6 lg:ml-0">
-                                    {{ excerpt | widont ?? content | strip_tags | safe_truncate(150, '...') }}
-                                </p>
-                            </div>
-                            <div class="flex justify-end w-4/6 pl-4 py-16">
-                                <a class="object-cover w-full" href="{{url}}">
-                                    {{responsive:featured_image loading='lazy' class="height-620 object-cover w-full" webp="true" avif="false" quality:webp="85" glide:width="1600"}}
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                {{/article}}
-                {{/collection:articles }}
-            </div>
-        
-        {{ elseif section_type == "half-left" }}
-        
-            <div class="flex flex-wrap mb-8 justify-between w-full">
-                {{collection:articles taxonomy:topics={section_topic:slug} as="article" sort="date" limit={amount} offset="{skip_count}" }}
-                    {{article}}
-                        <div class="mb-8">
-                            <div class="flex flex-row">
-                                <div class="flex justify-start w-4/6 pr-4 py-16">
-                                    <a class="object-cover w-full" href="{{url}}">
-                                        {{responsive:featured_image loading='lazy' class="height-620 object-cover w-full" webp="true" avif="false" quality:webp="85" glide:width="1152"}}
-                                    </a>
-                                </div>
-                                <div class="flex justify-center content-center w-2/6 flex-col lg:mr-0">
-                                    <h2 class="font-futurab mb-4 text-start mr-4 lg:mr-0">
-                                        <a href="{{ url }}" class="text-2xl lg:text-2xl tracking-tight leading-tight font-bold">
-                                            {{ title }}
-                                        </a>
-                                    </h2>
-                                    
-                                    <p class="font-futural text-gray-600 text-xl lg:text-2xl mb-6 text-start mr-4 lg:mr-0">
-                                        {{ excerpt | widont ?? content | strip_tags | safe_truncate(150, '...') }}
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    {{/article}}
-                {{/collection:articles }}
-            </div>
-        {{ /if }}
+        {{/if}}
         
         {{ if show_ad == "1" }}
             <div class="mb-8 w-full">
                 <a href="{{select_ad:link}}" target="_blank" rel="">
-                    <img class="w-full" src="{{select_ad:ad_image}}" alt="" srcset="">
+                    <img class="w-full h-auto lg:h-52" src="{{select_ad:ad_image}}" alt="Esto es un banner de anuncio">
                 </a>
             </div>
         {{ /if }}

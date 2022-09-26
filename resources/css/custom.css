@@ -100,9 +100,6 @@ a.goog-te-menu-value{
 .min-w-450{
     min-width: 450px !important;
 }
-.max-h-350{
-    max-height: 350px !important;
-}
 
 .content-show{
     align-items: center;
@@ -136,4 +133,21 @@ article h1{
     flex-direction: row-reverse;
     position: absolute !important;
     right: 15%;
+}
+
+#home img{
+    height: auto;
+    width: 100%;
+    max-width: 1024px;
+    max-height: 330px;
+}
+
+.max-h-620{
+    max-height: 620px !important;
+}
+
+@media (max-width: 640px) {
+    .max-h-350{
+        max-height: 350px !important;
+    }
 }

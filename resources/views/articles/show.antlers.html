@@ -6,19 +6,23 @@
         </button>
     </a>
     <article class="pb-6 lg:pb-16 pt-4">
-        <h1>{{ title }}</h1>
-        <div class="bg-gray-800 inline-block text-sm p-4 uppercase tracking-widest text-white py-1 my-3">
-            {{ date format="F j, Y" }}
-        </div>
+        <h1 class="px-4">{{ title }}</h1>
+        {{topics}}
+            {{if title == 'Now'}}
+                <div class="bg-gray-800 inline-block text-sm p-4 uppercase tracking-widest text-white py-1 my-3">
+                    {{ date format="F j, Y" }}
+                </div>
+            {{/if}}
+        {{/topics}}
         <div class="flex flex-col lg:flex-row-reverse content-show">
-            {{responsive:featured_image loading='lazy' class="w-full max-w-md" webp="true" avif="false" quality:webp="85" glide:width="1600"}}
+            {{responsive:featured_image loading='lazy' class="w-full max-w-md px-12" webp="true" avif="false" quality:webp="85" glide:width="1600"}}
             <div class="p-8 lg:min-w-450">
                 {{ content | widont }}
             </div>
         </div>
     </article>
-    <div class="more pl-8 lg:relative lg:bottom-14">
-        <a href="{{facebook_link}}">More</a>
+    <div class="more lg:relative lg:bottom-14 bg-green-600 hover:bg-green-700 inline-block text-sm p-4 uppercase tracking-widest text-white py-1 my-3">
+        <a target="_blank" href="{{facebook_link}}">More</a>
     </div>
     <div class="w-full flex justify-center mt-8">
         {{embed_code}}

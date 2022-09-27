@@ -60,7 +60,7 @@
                 x-on:click="searchBar = true"
                 x-on:click.outside="searchBar = false"
             >
-                <img src="/assets/site/search.svg" class="h-6 w-6">
+                <img src="/assets/site/search.svg" class="h-6 w-6" width="24px" height="24px">
                 <input id="searchBar" x-show="searchBar" @click="searchBar = true" class="border-2 border-gray outline-none px-2 h-8 rounded-none placeholdler-black font-futura ml-4 w-3/4" placeholder="Search" type="search" name="q" value="{{get:q}}" placeholder="Search">    
                 <span class="text-white  bg-green-600 hover:bg-green-700 font-bold py-1 px-4 mr-2" x-bind:class="{'hidden': searchBar, 'cursor-pointer': searchBar}" x-on:click="searchBar = !searchBar">Search</span>
                 <button class="bg-green-600 hover:bg-green-700 text-white font-bold py-1 px-4 mr-2" x-bind:class="{'hidden': !searchBar, 'cursor-pointer': !searchBar}" x-on:click="searchBar = !searchBar" type="submit">

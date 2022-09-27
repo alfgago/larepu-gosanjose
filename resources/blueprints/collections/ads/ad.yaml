@@ -16,22 +16,26 @@ sections:
           input_type: text
           antlers: false
       -
-        handle: ad_image
+        handle: image
         field:
-          mode: list
-          container: assets
-          restrict: true
-          allow_uploads: false
-          show_filename: true
+          use_breakpoints: false
+          allow_ratio: false
+          allow_fit: true
+          breakpoints:
+            - sm
+            - md
+            - lg
+            - xl
+            - 2xl
+          restrict: false
+          allow_uploads: true
           display: Image
-          type: assets
+          type: responsive
           icon: assets
           listable: hidden
           instructions_position: above
           visibility: visible
           always_save: false
-          folder: content/lr
-          max_files: 1
   sidebar:
     display: Sidebar
     fields:

@@ -19,10 +19,10 @@ sections:
           type: text
           display: Subtitle
       -
-        handle: main_image
+        handle: featured_image
         field:
-          use_breakpoints: true
-          allow_ratio: true
+          use_breakpoints: false
+          allow_ratio: false
           allow_fit: true
           breakpoints:
             - sm
@@ -32,7 +32,7 @@ sections:
             - 2xl
           restrict: false
           allow_uploads: true
-          display: 'Main Image'
+          display: 'Featured Image'
           type: responsive
           icon: assets
           listable: hidden
@@ -184,3 +184,14 @@ sections:
           max_items: 1
           listable: false
           localizable: true
+      -
+        handle: excerpt
+        field:
+          antlers: false
+          display: Excerpt
+          type: textarea
+          icon: textarea
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+          always_save: false

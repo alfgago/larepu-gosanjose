@@ -4,7 +4,7 @@ blueprint: home
 title: Home
 template: home
 updated_by: 9f14bbaf-8a9c-47ea-b074-5c2f52882546
-updated_at: 1664237465
+updated_at: 1664310249
 sections:
   -
     section_type: full
@@ -104,5 +104,11 @@ sections:
 main_image:
   src:
     - 'assets::site/go-san-jose-(1).webp'
+feature_image:
+  src:
+    - 'assets::site/go-san-jose.png'
+featured_image:
+  src:
+    - 'assets::site/go-san-jose.png'
+excerpt: 'Your guide to the heart of Costa Rica.'
 ---
-![Go San José Main Image](/assets/site/go-san-jose-(1).webp)

@@ -7,18 +7,18 @@
         <title>{{ title }} — {{ settings:site_name }}</title>
         <meta name="description" content="{{ excerpt ?? title }}">
         <meta name="theme-color" content="00908F">
-        <meta property="og:title" content="Go San José" />
-        <meta property="og:description" content="Your guide to the heart of Costa Rica." />
-        <meta property="og:url" content="https://gosanjose.cr/" />
-        <meta property="og:image" content="https://gosanjose.cr/assets/site/gosanjose-home.png" />
+        <meta property="og:title" content="{{ title }} — {{ settings:site_name }}" />
+        <meta property="og:description" content="{{ excerpt ?? title }}" />
+        <meta property="og:url" content="{{current_url}}" />
+        <meta property="og:image" content="https://gosanjose.cr{{ featured_image:src }}" />
         <meta property="og:locale" content="en_US" />
-        <meta property="og:type" content="website" />
+        <meta property="og:type" content="{{ if is_homepage }}website{{ else }}article{{ /if }}" />
         <link rel="stylesheet" href="{{ mix src='css/fonts.css' }}">
         <link rel="stylesheet" href="{{ mix src='css/tailwind.css' }}">
         <script src="{{ mix src='/js/site.js' }}" defer></script>
-        <script src="js/weather.js" async></script>
-        <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" async></script>
-        <script src="js/translate.js" async></script>
+        <script src="js/weather.js" defer></script>
+        <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" defer></script>
+        <script src="js/translate.js" defer></script>
     </head>
     <body id="body" class="bg-white leading-normal text-grey-800 font-futural overflow-x-hidden" x-data="{ showMobileNav: false, showDesktop: false, showExtraMenu: false, searchBar: false}">
         {{ partial:nav }}

@@ -4,7 +4,7 @@ blueprint: home
 title: Home
 template: home
 updated_by: 9f14bbaf-8a9c-47ea-b074-5c2f52882546
-updated_at: 1663984307
+updated_at: 1664237465
 sections:
   -
     section_type: full
@@ -101,5 +101,8 @@ sections:
     show_ad: false
     type: data
     enabled: true
+main_image:
+  src:
+    - 'assets::site/go-san-jose-(1).webp'
 ---
 ![Go San José Main Image](/assets/site/go-san-jose-(1).webp)

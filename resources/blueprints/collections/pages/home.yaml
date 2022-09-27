@@ -19,6 +19,27 @@ sections:
           type: text
           display: Subtitle
       -
+        handle: main_image
+        field:
+          use_breakpoints: true
+          allow_ratio: true
+          allow_fit: true
+          breakpoints:
+            - sm
+            - md
+            - lg
+            - xl
+            - 2xl
+          restrict: false
+          allow_uploads: true
+          display: 'Main Image'
+          type: responsive
+          icon: assets
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+          always_save: false
+      -
         handle: content
         field:
           restrict: false

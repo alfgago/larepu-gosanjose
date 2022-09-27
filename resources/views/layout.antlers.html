@@ -13,6 +13,11 @@
         <meta property="og:image" content="https://gosanjose.cr{{ featured_image:src }}" />
         <meta property="og:locale" content="en_US" />
         <meta property="og:type" content="{{ if is_homepage }}website{{ else }}article{{ /if }}" />
+        <meta content="summary" name="twitter:card"  >
+        <meta name="twitter:title" content="{{ title }}">
+        <meta content="{{current_url}}" name="twitter:site">
+        <meta name="twitter:image" content="https://gosanjose.cr{{ featured_image:src }}">
+        <meta name="twitter:description" content="{{ excerpt ?? title }}">
         <link rel="stylesheet" href="{{ mix src='css/fonts.css' }}">
         <link rel="stylesheet" href="{{ mix src='css/tailwind.css' }}">
         <script src="{{ mix src='/js/site.js' }}" defer></script>

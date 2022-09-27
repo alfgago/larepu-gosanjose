@@ -33,6 +33,9 @@
         "allow-plugins": {
             "composer/package-versions-deprecated": true,
             "pixelfear/composer-dist-plugin": true
+        },
+        "platform": {
+            "php": "7.4"
         }
     },
     "extra": {

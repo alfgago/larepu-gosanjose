@@ -109,20 +109,6 @@ sections:
           columns: 1
           rows: 1
       -
-        handle: design
-        field:
-          type: terms
-          taxonomies:
-            - design
-          display: Design
-          mode: select
-          instructions_position: above
-          listable: hidden
-          visibility: visible
-          always_save: false
-          max_items: 1
-          create: true
-      -
         handle: topics
         field:
           type: terms
@@ -140,3 +126,11 @@ sections:
           instructions_position: above
           visibility: visible
           always_save: false
+      -
+        handle: design
+        field:
+          type: terms
+          taxonomies:
+            - design
+          display: Design
+          mode: select

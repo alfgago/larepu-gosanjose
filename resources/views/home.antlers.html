@@ -1,7 +1,7 @@
 <div class="max-w-5xl mx-auto relative">
     <article id="home" class="pt-6">
         <p class="font-medium text-lg text-teal">{{ subtitle }}</p>
-        {{responsive:featured_image class="max-h-350 max-h-620 h-auto w-full object-cover" webp="true" avif="false" quality:webp="85" glide:width="1200" }}
+        {{responsive:featured_image class="max-h-350 max-h-620 h-auto w-full object-cover" webp="true" avif="false" quality:webp="85" glide:width="1200" width="1200" height="628" }}
     </article>
 </div>
 
@@ -35,9 +35,9 @@
                         
                         <a class="object-cover max-h-350 max-h-620" href="{{url}}">
                             {{ if sectionIndex == 0 && articleIndex == 0 }}
-                                {{responsive:featured_image class="max-h-350 max-h-620 h-auto w-full object-cover" webp="true" avif="false" quality:webp="85" glide:width="1200" }}
+                                {{responsive:featured_image class="max-h-350 max-h-620 h-auto w-full object-cover" webp="true" avif="false" quality:webp="85" glide:width="1200" width="1200" height="628"}}
                             {{ else }}
-                                {{responsive:featured_image loading='lazy' class="max-h-350 max-h-620 h-auto w-full object-cover" webp="true" avif="false" quality:webp="85" glide:width="1200" }}
+                                {{responsive:featured_image loading='lazy' class="max-h-350 max-h-620 h-auto w-full object-cover" webp="true" avif="false" quality:webp="85" glide:width="1200" width="1200" height="628" }}
                             {{ /if }}
                         </a>
                     </div>
@@ -50,7 +50,7 @@
             <div class="mb-8 w-full">
                 <a href="{{select_ad:link}}" target="_blank" rel="">
                     {{select_ad}}
-                        {{responsive:image loading='lazy' class="w-full h-auto lg:h-52" webp="true" avif="false" quality:webp="85" glide:width="1200" }}
+                        {{responsive:image loading='lazy' class="w-full h-auto lg:h-52" webp="true" avif="false" quality:webp="85" glide:width="1200" width="1200" height="200"}}
                     {{/select_ad}}
                 </a>
             </div>

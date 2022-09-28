@@ -107,9 +107,9 @@ a.goog-te-menu-value{
 }
 
 .content-show img{
-    object-fit: cover;
-    width: 500px !important;
-    height: 400px;
+    object-fit: contain;
+    width: 1200px !important;
+    height: 500px;
 }
 
 article h1{

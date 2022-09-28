@@ -33,3 +33,13 @@ sections:
           required: true
           validate:
             - required
+      -
+        handle: priority
+        field:
+          display: Priority
+          type: integer
+          icon: integer
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+          always_save: false

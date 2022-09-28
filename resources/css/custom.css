@@ -150,4 +150,8 @@ article h1{
     .max-h-350{
         max-height: 350px !important;
     }
+    
+    .content-show img{
+        height: 300px;
+    }
 }

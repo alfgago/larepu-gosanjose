@@ -781,16 +781,6 @@ h1 {
   margin-bottom: 0.75rem !important;
 }
 
-.mx-auto {
-  margin-left: auto !important;
-  margin-right: auto !important;
-}
-
-.my-3 {
-  margin-top: 0.75rem !important;
-  margin-bottom: 0.75rem !important;
-}
-
 .mt-16 {
   margin-top: 4rem !important;
 }
@@ -853,14 +843,6 @@ h1 {
 
 .mb-32 {
   margin-bottom: 8rem !important;
-}
-
-.ml-2 {
-  margin-left: 0.5rem !important;
-}
-
-.mt-8 {
-  margin-top: 2rem !important;
 }
 
 .block {
@@ -967,14 +949,6 @@ h1 {
   width: 5rem !important;
 }
 
-.w-5 {
-  width: 1.25rem !important;
-}
-
-.w-full {
-  width: 100% !important;
-}
-
 .max-w-5xl {
   max-width: 64rem !important;
 }
@@ -989,10 +963,6 @@ h1 {
 
 .max-w-4xl {
   max-width: 56rem !important;
-}
-
-.max-w-5xl {
-  max-width: 64rem !important;
 }
 
 .cursor-pointer {
@@ -1099,11 +1069,6 @@ h1 {
   background-color: rgb(31 41 55 / var(--tw-bg-opacity)) !important;
 }
 
-.bg-green-600 {
-  --tw-bg-opacity: 1 !important;
-  background-color: rgb(22 163 74 / var(--tw-bg-opacity)) !important;
-}
-
 .object-cover {
   -o-object-fit: cover !important;
      object-fit: cover !important;
@@ -1119,22 +1084,6 @@ h1 {
 
 .p-2\.5 {
   padding: 0.625rem !important;
-}
-
-.p-4 {
-  padding: 1rem !important;
-}
-
-.p-8 {
-  padding: 2rem !important;
-}
-
-.p-2\.5 {
-  padding: 0.625rem !important;
-}
-
-.p-2 {
-  padding: 0.5rem !important;
 }
 
 .p-4 {
@@ -1193,16 +1142,6 @@ h1 {
 .py-16 {
   padding-top: 4rem !important;
   padding-bottom: 4rem !important;
-}
-
-.px-4 {
-  padding-left: 1rem !important;
-  padding-right: 1rem !important;
-}
-
-.py-1 {
-  padding-top: 0.25rem !important;
-  padding-bottom: 0.25rem !important;
 }
 
 .pt-6 {
@@ -1277,18 +1216,6 @@ h1 {
   padding-top: 8rem !important;
 }
 
-.pt-8 {
-  padding-top: 2rem !important;
-}
-
-.pb-6 {
-  padding-bottom: 1.5rem !important;
-}
-
-.pt-4 {
-  padding-top: 1rem !important;
-}
-
 .text-center {
   text-align: center !important;
 }
@@ -1334,10 +1261,6 @@ h1 {
 
 .font-bold {
   font-weight: 700 !important;
-}
-
-.font-medium {
-  font-weight: 500 !important;
 }
 
 .uppercase {
@@ -1392,16 +1315,6 @@ h1 {
 .text-gray-800 {
   --tw-text-opacity: 1 !important;
   color: rgb(31 41 55 / var(--tw-text-opacity)) !important;
-}
-
-.text-green-700 {
-  --tw-text-opacity: 1 !important;
-  color: rgb(21 128 61 / var(--tw-text-opacity)) !important;
-}
-
-.text-white {
-  --tw-text-opacity: 1 !important;
-  color: rgb(255 255 255 / var(--tw-text-opacity)) !important;
 }
 
 .no-underline {
@@ -1581,6 +1494,10 @@ article h1{
     .max-h-350{
         max-height: 350px !important;
     }
+    
+    .content-show img{
+        height: 300px;
+    }
 }
 
 .hover\:bg-green-700:hover {
@@ -1591,11 +1508,6 @@ article h1{
 .hover\:bg-green-600:hover {
   --tw-bg-opacity: 1 !important;
   background-color: rgb(22 163 74 / var(--tw-bg-opacity)) !important;
-}
-
-.hover\:bg-green-700:hover {
-  --tw-bg-opacity: 1 !important;
-  background-color: rgb(21 128 61 / var(--tw-bg-opacity)) !important;
 }
 
 .hover\:text-green-700:hover {
@@ -1611,11 +1523,6 @@ article h1{
 .hover\:text-teal:hover {
   --tw-text-opacity: 1 !important;
   color: rgb(0 132 131 / var(--tw-text-opacity)) !important;
-}
-
-.hover\:text-white:hover {
-  --tw-text-opacity: 1 !important;
-  color: rgb(255 255 255 / var(--tw-text-opacity)) !important;
 }
 
 .focus\:outline-none:focus {
@@ -1649,20 +1556,12 @@ article h1{
     visibility: visible !important;
   }
 
-  .lg\:relative {
-    position: relative !important;
-  }
-
   .lg\:top-5 {
     top: 1.25rem !important;
   }
 
   .lg\:right-0 {
     right: 0px !important;
-  }
-
-  .lg\:bottom-14 {
-    bottom: 3.5rem !important;
   }
 
   .lg\:mx-0 {
@@ -1695,14 +1594,6 @@ article h1{
     margin-top: 1rem !important;
   }
 
-  .lg\:mb-16 {
-    margin-bottom: 4rem !important;
-  }
-
-  .lg\:mt-4 {
-    margin-top: 1rem !important;
-  }
-
   .lg\:flex {
     display: flex !important;
   }
@@ -1718,10 +1609,6 @@ article h1{
   .lg\:py-32 {
     padding-top: 8rem !important;
     padding-bottom: 8rem !important;
-  }
-
-  .lg\:pb-16 {
-    padding-bottom: 4rem !important;
   }
 
   .lg\:pb-0 {

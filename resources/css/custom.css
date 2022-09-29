@@ -123,12 +123,6 @@ article h1{
 .gmap_canvas iframe{
     width: inherit;
 }
-#google-trans{
-    z-index: 10000;
-    right: 150px;
-    top: 5.25rem;
-}
-
 #search-desktop div{
     flex-direction: row-reverse;
     position: absolute !important;

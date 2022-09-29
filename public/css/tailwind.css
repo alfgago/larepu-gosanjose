@@ -744,6 +744,14 @@ h1 {
   position: relative !important;
 }
 
+.top-5 {
+  top: 1.25rem !important;
+}
+
+.right-0 {
+  right: 0px !important;
+}
+
 .bottom-1 {
   bottom: 0.25rem !important;
 }
@@ -1342,34 +1350,11 @@ body {
     align-items: start!important;
 }
 
-.goog-te-gadget-simple{
-    background-color: transparent !important;
-    border: none !important;
-    font-size: inherit;
-    display: block;
-    padding-top: 1px;
-    padding-bottom: 2px;
-    cursor: pointer;
-    zoom: 1;
-    display: inline;
-}
-
-.goog-te-menu-value{
-    display: flex;
-}
-
-.goog-te-gadget img,
-a.goog-te-menu-value > span:first-of-type,
-a.goog-te-menu-value > span:nth-of-type(2) {
+#google_translate_element2{
     display: none;
 }
 
-a.goog-te-menu-value{
-    position: relative;
-    height: 20px;
-}
-
-.goog-te-menu-value:before {
+#google-trans:before {
     content: '';
     position: relative;
     top: 0;
@@ -1381,8 +1366,16 @@ a.goog-te-menu-value{
     background-repeat: no-repeat;
 }
 
-.goog-te-gadget-simple .goog-te-menu-value span {
-    color: #fff !important;
+#translate{
+    background-color: transparent;
+    width: 42px;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+#translate option{
+    background-color: #fff;
+    color: #000;
 }
 
 #search-desktop input{
@@ -1511,14 +1504,6 @@ article h1{
 
   .lg\:visible {
     visibility: visible !important;
-  }
-
-  .lg\:top-5 {
-    top: 1.25rem !important;
-  }
-
-  .lg\:right-0 {
-    right: 0px !important;
   }
 
   .lg\:mx-0 {

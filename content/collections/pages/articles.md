@@ -4,7 +4,7 @@ published: false
 blueprint: home
 title: Articles
 template: articles.index
-updated_by: 9f14bbaf-8a9c-47ea-b074-5c2f52882546
+updated_by: 58dc2927-c737-49c3-8d0a-0a681180bcc4
 updated_at: 1661483362
 ---
 These are my various writings. Some might say they are cool.

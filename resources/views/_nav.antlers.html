@@ -53,19 +53,7 @@
     
     <div class="third-part w-1/5 flex flex-row">
         <form id="searchForm" action="/search/results" >
-            <div class="desktop flex items-center relative cursor-pointer"
-                x-on:click="searchBar = true"
-                x-on:click.outside="searchBar = false"
-            >
-                <img src="/assets/site/search.svg" class="h-6 w-6 " width="24px" height="24px">
-                <span class="text-white  bg-green-600 hover:bg-green-700 font-bold py-1 px-4 ml-2" x-bind:class="{'hidden': searchBar, 'cursor-pointer': searchBar}" x-on:click="searchBar = !searchBar">Search</span>
-                <input id="searchBar" x-show="searchBar" @click="searchBar = true" class="border-2 border-gray outline-none px-2 h-8 rounded-none placeholdler-black font-futura ml-4 w-3/4 " placeholder="Search" type="search" name="q" value="{{get:q}}" placeholder="Search">    
-                <button class="bg-green-600 hover:bg-green-700 text-white font-bold py-1 px-4 ml-2" x-bind:class="{'hidden': !searchBar, 'cursor-pointer': !searchBar}" x-on:click="searchBar = !searchBar" type="submit">
-                    <span class="text-white ">Search</span>
-                </button>
-            </div>
-            
-            <div class="flex items-center relative cursor-pointer mobile"
+            <div class="flex items-center relative cursor-pointer"
                 x-on:click="mobileSearch = true"
                 x-on:click.outside="mobileSearch = false"
             >

@@ -3,7 +3,7 @@ id: 62136fa2-9e5c-4c38-a894-a2753f02f5ff
 published: false
 blueprint: home
 title: About
-updated_by: 9f14bbaf-8a9c-47ea-b074-5c2f52882546
+updated_by: 58dc2927-c737-49c3-8d0a-0a681180bcc4
 updated_at: 1660909391
 template: page
 ---

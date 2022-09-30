@@ -21,7 +21,7 @@
     </div>
 
     <div class="second-part w-3/5">
-        <div class="desktop">
+        <div class="desktop justify-center">
             <div class="w-full lg:w-auto lg:flex items-center justify-center gap-8">
                 {{ taxonomy:topics title:not_in="Med|Ed" sort="priority" }}
                 <a x-on:click="extraMenu=false" href="{{if current_uri == '/'}} #{{ title|slugify }} {{else}} /#{{ title|slugify }} {{/if}}" class="font-futurab block uppercase {{ is_current || is_parent ?= 'font-medium text-white' }} mt-4 xl:inline-block text-white text-xl hover:text-white xl:mt-0 ">

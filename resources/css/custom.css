@@ -72,7 +72,7 @@ article h1{
 #searchForm div{
     flex-direction: row;
     position: absolute !important;
-    right: 10%;
+    right: 12%;
     top: 20px;
 }
 #home img{

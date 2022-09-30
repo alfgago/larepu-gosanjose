@@ -17,7 +17,7 @@
 
         {{sectionIndex = index}}
         <div class="flex flex-wrap mb-8 justify-between w-full">
-            {{collection:articles taxonomy:topics={section_topic:slug} as="article" sort="priority" limit={amount} }}
+            {{collection:articles taxonomy:topics={section_topic:slug} as="article" sort="priority" limit="{amount}" }}
                 {{article}}
                 {{articleIndex = index}}
                 

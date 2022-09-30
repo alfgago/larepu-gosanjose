@@ -180,3 +180,10 @@ article h1{
     padding-left: 3px !important;
     padding-right: 3px !important;
 }
+.go{
+    content: '';
+    background: url(/assets/site/logo-gsj.png);
+    height: 2rem;
+    width: 3rem;
+    background-repeat: no-repeat;
+}

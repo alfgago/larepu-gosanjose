@@ -1,7 +1,12 @@
+body, html {
+    font-size: 16px;
+}
+
 body {
     top: 0px !important; 
     padding-top: 64px;
 }
+
 .go{
     letter-spacing: -6px;
 }
@@ -39,7 +44,6 @@ body {
 }
 #translate{
     background-color: transparent;
-    width: 42px;
     text-transform: uppercase;
     color: #fff;
 }
@@ -71,9 +75,9 @@ article h1{
 }
 #searchForm div{
     flex-direction: row;
-    position: absolute !important;
-    right: 12%;
-    top: 20px;
+    position: absolute!important;
+    right: 12.5rem;
+    top: 1.15rem;
 }
 #home img{
     height: auto;
@@ -101,7 +105,20 @@ article h1{
 #searchForm div .mobile{
     display: none !important;
 }
+@media (max-width: 1400px) {
+    body, html {
+        font-size: 15px;
+    }
+}
+@media (max-width: 1200px) {
+    body, html {
+        font-size: 14px;
+    }
+}
 @media (max-width: 640px) {
+    body, html {
+        font-size: 15px;
+    }
     .max-h-350{
         max-height: 350px !important;
     }
@@ -116,6 +133,12 @@ article h1{
 
     .mobile{
         display: flex;
+        position: fixed;
+        background: #31b963;
+        left: 0;
+        top: 4rem;
+        padding: 0 3rem 1rem 0;
+        height: 100%;
     }
     #nav{
         flex-direction: column;
@@ -127,11 +150,12 @@ article h1{
     }
 }
 #searchForm  .mobileSearch{
+    position: fixed !important;
     display: flex;
     flex-direction: row;
-    top: 44px;
-    left: -45px;
-    height: 40px !important;
+    top: 4rem;
+    right: 11px;
+    height: 2.5rem!important;
 }
 #searchForm .mobileSearch input{
     position: relative;

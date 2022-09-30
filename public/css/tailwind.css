@@ -813,6 +813,14 @@ h1 {
   margin-top: 3rem !important;
 }
 
+.ml-2 {
+  margin-left: 0.5rem !important;
+}
+
+.mr-2 {
+  margin-right: 0.5rem !important;
+}
+
 .mt-4 {
   margin-top: 1rem !important;
 }
@@ -821,20 +829,8 @@ h1 {
   margin-left: 1rem !important;
 }
 
-.mr-2 {
-  margin-right: 0.5rem !important;
-}
-
-.ml-8 {
-  margin-left: 2rem !important;
-}
-
 .mb-2 {
   margin-bottom: 0.5rem !important;
-}
-
-.ml-2 {
-  margin-left: 0.5rem !important;
 }
 
 .mt-8 {
@@ -1113,14 +1109,14 @@ h1 {
   padding-bottom: 1.5rem !important;
 }
 
-.px-2 {
-  padding-left: 0.5rem !important;
-  padding-right: 0.5rem !important;
-}
-
 .py-1 {
   padding-top: 0.25rem !important;
   padding-bottom: 0.25rem !important;
+}
+
+.px-2 {
+  padding-left: 0.5rem !important;
+  padding-right: 0.5rem !important;
 }
 
 .py-16 {
@@ -1150,10 +1146,6 @@ h1 {
 
 .pr-2 {
   padding-right: 0.5rem !important;
-}
-
-.pl-6 {
-  padding-left: 1.5rem !important;
 }
 
 .pr-1 {
@@ -1378,7 +1370,7 @@ body {
     color: #000;
 }
 
-#search-desktop input{
+#searchForm .desktop input{
     position: absolute;
     right: 0px;
     top: 55px;
@@ -1423,10 +1415,11 @@ article h1{
     width: inherit;
 }
 
-#search-desktop div{
-    flex-direction: row-reverse;
+#searchForm div{
+    flex-direction: row;
     position: absolute !important;
-    right: 15%;
+    right: 10%;
+    top: 20px;
 }
 
 #home img{
@@ -1440,6 +1433,27 @@ article h1{
     max-height: 620px !important;
 }
 
+.desktop{
+    display: flex !important;
+}
+
+.mobile{
+    display: none;
+}
+
+#searchForm{
+    display:flex;
+    flex-direction: row;
+    justify-items: center;
+}
+
+#nav{
+    padding-top: 0.75rem !important;
+    padding-right: auto !important;
+    padding-bottom: 0.75rem !important;
+    padding-left: auto !important;
+}
+
 @media (max-width: 640px) {
     .max-h-350{
         max-height: 350px !important;
@@ -1448,6 +1462,83 @@ article h1{
     .content-show img{
         height: 300px;
     }
+
+    .desktop{
+        display: none !important;
+    }
+
+    .mobile{
+        display: flex;
+    }
+
+    #nav{
+        flex-direction: column;
+        align-items: flex-start !important;
+        padding: 0;
+    }
+    #searchForm > div{
+        right: 42%;
+    }
+    #searchForm  .mobileSearch{
+        display: flex;
+        flex-direction: row;
+        top: 44px;
+        left: -45px;
+        height: 40px !important;
+    }
+    #searchForm .mobileSearch input{
+        position: relative;
+        right: 0px;
+        top: 0px;
+        width: 200px !important;
+        height: 100% !important;
+        min-width: 180px;
+        margin-left: 0px !important;
+        border-left: 0 !important;
+    }
+    
+    #searchForm .mobileSearch button{
+        margin-left: 0px !important;
+    }
+    #searchForm .mobileSearch img{
+        border-top-width: 2px !important;
+        border-left-width: 2px !important;
+        border-bottom-width: 2px !important;
+        height: 100% !important;
+        background-color: #16A34A;
+        padding-left: 3px !important;
+        padding-right: 3px !important;
+    }
+    /*#searchForm input{
+        position: absolute;
+        right: 0px;
+        top: 55px;
+        margin-right: 7px;
+        width: 200px !important;
+    }
+    #search-mobile{
+        display: flex !important;
+    }
+    #search-mobile .mobileSearchBar{
+        position: absolute;
+        top: 48px;
+    }
+    .mobileSearchBar input{
+        min-width: 180px;
+        margin-left: 0px !important;
+        border-left: 0 !important;
+
+    }
+    .mobileSearchBar img{
+        border-top-width: 2px !important;
+        border-left-width: 2px !important;
+        border-bottom-width: 2px !important;
+        height: 2rem !important;
+        background-color: #16A34A;
+        padding-left: 3px !important;
+        padding-right: 3px !important;
+    }*/
+
 }
 
 .hover\:bg-green-700:hover {
@@ -1520,6 +1611,14 @@ article h1{
     margin-bottom: 1.5rem !important;
   }
 
+  .lg\:mr-0 {
+    margin-right: 0px !important;
+  }
+
+  .lg\:ml-6 {
+    margin-left: 1.5rem !important;
+  }
+
   .lg\:ml-4 {
     margin-left: 1rem !important;
   }
@@ -1546,6 +1645,10 @@ article h1{
 
   .lg\:h-52 {
     height: 13rem !important;
+  }
+
+  .lg\:w-auto {
+    width: auto !important;
   }
 
   .lg\:py-32 {
@@ -1583,10 +1686,6 @@ article h1{
 
   .xl\:w-1\/5 {
     width: 20% !important;
-  }
-
-  .xl\:w-auto {
-    width: auto !important;
   }
 }
 

@@ -9,3 +9,10 @@ preferences:
         - title
         - priority
         - slug
+  collections:
+    articles:
+      columns:
+        - title
+        - author
+        - slug
+        - topics

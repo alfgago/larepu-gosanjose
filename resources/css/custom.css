@@ -67,7 +67,7 @@ body {
     color: #000;
 }
 
-#search-desktop input{
+#searchForm .desktop input{
     position: absolute;
     right: 0px;
     top: 55px;
@@ -109,10 +109,11 @@ article h1{
 .gmap_canvas iframe{
     width: inherit;
 }
-#search-desktop div{
-    flex-direction: row-reverse;
+#searchForm div{
+    flex-direction: row;
     position: absolute !important;
-    right: 15%;
+    right: 10%;
+    top: 20px;
 }
 
 #home img{
@@ -125,7 +126,24 @@ article h1{
 .max-h-620{
     max-height: 620px !important;
 }
+.desktop{
+    display: flex !important;
+}
 
+.mobile{
+    display: none;
+}
+#searchForm{
+    display:flex;
+    flex-direction: row;
+    justify-items: center;
+}
+#nav{
+    padding-top: 0.75rem !important;
+    padding-right: auto !important;
+    padding-bottom: 0.75rem !important;
+    padding-left: auto !important;
+}
 @media (max-width: 640px) {
     .max-h-350{
         max-height: 350px !important;
@@ -134,4 +152,81 @@ article h1{
     .content-show img{
         height: 300px;
     }
+
+    .desktop{
+        display: none !important;
+    }
+
+    .mobile{
+        display: flex;
+    }
+
+    #nav{
+        flex-direction: column;
+        align-items: flex-start !important;
+        padding: 0;
+    }
+    #searchForm > div{
+        right: 42%;
+    }
+    #searchForm  .mobileSearch{
+        display: flex;
+        flex-direction: row;
+        top: 44px;
+        left: -45px;
+        height: 40px !important;
+    }
+    #searchForm .mobileSearch input{
+        position: relative;
+        right: 0px;
+        top: 0px;
+        width: 200px !important;
+        height: 100% !important;
+        min-width: 180px;
+        margin-left: 0px !important;
+        border-left: 0 !important;
+    }
+    
+    #searchForm .mobileSearch button{
+        margin-left: 0px !important;
+    }
+    #searchForm .mobileSearch img{
+        border-top-width: 2px !important;
+        border-left-width: 2px !important;
+        border-bottom-width: 2px !important;
+        height: 100% !important;
+        background-color: #16A34A;
+        padding-left: 3px !important;
+        padding-right: 3px !important;
+    }
+    /*#searchForm input{
+        position: absolute;
+        right: 0px;
+        top: 55px;
+        margin-right: 7px;
+        width: 200px !important;
+    }
+    #search-mobile{
+        display: flex !important;
+    }
+    #search-mobile .mobileSearchBar{
+        position: absolute;
+        top: 48px;
+    }
+    .mobileSearchBar input{
+        min-width: 180px;
+        margin-left: 0px !important;
+        border-left: 0 !important;
+
+    }
+    .mobileSearchBar img{
+        border-top-width: 2px !important;
+        border-left-width: 2px !important;
+        border-bottom-width: 2px !important;
+        height: 2rem !important;
+        background-color: #16A34A;
+        padding-left: 3px !important;
+        padding-right: 3px !important;
+    }*/
+
 }

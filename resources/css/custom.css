@@ -96,10 +96,7 @@ article h1{
     justify-items: center;
 }
 #nav{
-    padding-top: 0.75rem !important;
-    padding-right: auto !important;
-    padding-bottom: 0.75rem !important;
-    padding-left: auto !important;
+    padding: 0.75rem 0.50rem !important;
 }
 #searchForm div .mobile{
     display: none !important;

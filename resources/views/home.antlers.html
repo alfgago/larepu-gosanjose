@@ -15,36 +15,34 @@
             </div>
         {{ /if }}
 
-        {{ if section_type == "full" }}
-            {{sectionIndex = index}}
-            <div class="flex flex-wrap mb-8 justify-between w-full">
-                {{collection:articles taxonomy:topics={section_topic:slug} as="article" sort="date" limit={amount} offset="{skip_count}" }}
-                   {{article}}
-                   {{articleIndex = index}}
-                   
-                    <div class="mb-16 w-full mx-8 lg:mx-0">
-                        <h2 class="font-futurab mb-4 text-center mx-3">
-                            <a href="{{ url }}" class="text-3xl lg:text-3xl tracking-tight leading-tight font-bold">
-                                {{ title }}
-                            </a>
-                        </h2>
-                        
-                        <p class="font-futural text-gray-600 text-xl mb-3 lg:mb-6 text-center mx-3">
-                            {{ excerpt | widont ?? content | strip_tags | safe_truncate(150, '...') }}
-                        </p>
-                        
-                        <a class="object-cover max-h-350 max-h-620" href="{{url}}">
-                            {{ if sectionIndex == 0 && articleIndex == 0 }}
-                                {{responsive:featured_image class="max-h-350 max-h-620 h-auto w-full object-cover" webp="true" avif="false" quality:webp="85" glide:width="1200" width="1200" height="628"}}
-                            {{ else }}
-                                {{responsive:featured_image loading='lazy' class="max-h-350 max-h-620 h-auto w-full object-cover" webp="true" avif="false" quality:webp="85" glide:width="1200" width="1200" height="628" }}
-                            {{ /if }}
+        {{sectionIndex = index}}
+        <div class="flex flex-wrap mb-8 justify-between w-full">
+            {{collection:articles taxonomy:topics={section_topic:slug} as="article" sort="date" limit={amount} offset="{skip_count}" }}
+                {{article}}
+                {{articleIndex = index}}
+                
+                <div class="mb-16 w-full mx-8 lg:mx-0">
+                    <h2 class="font-futurab mb-4 text-center mx-3">
+                        <a href="{{ url }}" class="text-3xl lg:text-3xl tracking-tight leading-tight font-bold">
+                            {{ title }}
                         </a>
-                    </div>
-                    {{/article}}
-                {{/collection:articles }}
-            </div>
-        {{/if}}
+                    </h2>
+                    
+                    <p class="font-futural text-gray-600 text-xl mb-3 lg:mb-6 text-center mx-3">
+                        {{ excerpt | widont ?? content | strip_tags | safe_truncate(150, '...') }}
+                    </p>
+                    
+                    <a class="object-cover max-h-350 max-h-620" href="{{url}}">
+                        {{ if sectionIndex == 0 && articleIndex == 0 }}
+                            {{responsive:featured_image class="max-h-350 max-h-620 h-auto w-full object-cover" webp="true" avif="false" quality:webp="85" glide:width="1200" width="1200" height="628"}}
+                        {{ else }}
+                            {{responsive:featured_image loading='lazy' class="max-h-350 max-h-620 h-auto w-full object-cover" webp="true" avif="false" quality:webp="85" glide:width="1200" width="1200" height="628" }}
+                        {{ /if }}
+                    </a>
+                </div>
+                {{/article}}
+            {{/collection:articles }}
+        </div>
         
         {{ if show_ad == "1" }}
             <div class="mb-8 w-full">

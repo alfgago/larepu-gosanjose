@@ -13,12 +13,6 @@ sections:
           validate:
             - required
       -
-        handle: subtitle
-        field:
-          character_limit: 0
-          type: text
-          display: Subtitle
-      -
         handle: featured_image
         field:
           use_breakpoints: false
@@ -64,29 +58,6 @@ sections:
               display: Data
               fields:
                 -
-                  handle: section_type
-                  field:
-                    options:
-                      full: 'Full width'
-                      half-right: 'Half Right'
-                      half-left: 'Half Left'
-                      3-columns: 3-columns
-                    multiple: false
-                    max_items: 1
-                    clearable: false
-                    searchable: true
-                    taggable: false
-                    push_tags: false
-                    cast_booleans: false
-                    display: 'Section type'
-                    type: select
-                    icon: select
-                    listable: hidden
-                    instructions_position: above
-                    visibility: visible
-                    always_save: false
-                    default: full
-                -
                   handle: section_topic
                   field:
                     max_items: 1
@@ -105,16 +76,6 @@ sections:
                   handle: amount
                   field:
                     display: Amount
-                    type: integer
-                    icon: integer
-                    listable: hidden
-                    instructions_position: above
-                    visibility: visible
-                    always_save: false
-                -
-                  handle: skip_count
-                  field:
-                    display: Offset
                     type: integer
                     icon: integer
                     listable: hidden

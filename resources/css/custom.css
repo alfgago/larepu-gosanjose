@@ -184,3 +184,6 @@ article h1{
     height: 2rem;
     width: 3rem;
 }
+.goog-te-banner-frame{
+    display: none !important;
+}

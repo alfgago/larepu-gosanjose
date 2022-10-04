@@ -148,6 +148,16 @@ article h1{
     #searchForm > div{
         right: 42%;
     }
+    .mapouter{
+        width: 100vw !important;
+        padding: 0 15px;
+    }
+    .gmap_canvas{
+        width: 90vw !important;
+    }
+    .gmap_canvas iframe{
+        width: 100% !important;
+    }
 }
 #searchForm  .mobileSearch{
     position: fixed !important;

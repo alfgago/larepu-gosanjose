@@ -1,4 +1,8 @@
 super: true
 name: 'Francisco Aguilar'
 id: 58dc2927-c737-49c3-8d0a-0a681180bcc4
+<<<<<<< HEAD
 password_hash: $2y$10$5eNIiwDo1.kem76480Eh1ur2Ch8M8gBen4DIinuv9Luaktcwe6JWe
+=======
+password_hash: $2y$10$DZJ.NMw9aZ189h5rdGToFe1LU6acVZyAn/COEbfROlF369Uj/fSLq
+>>>>>>> 8eab88d0570b80c949c801676d9271161c503192

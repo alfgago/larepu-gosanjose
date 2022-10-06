@@ -126,4 +126,17 @@ return [
 
     'custom_css_url' => env('STATAMIC_CUSTOM_CSS_URL', null),
 
+
+
+
+    'type' => 'analytics',
+
+    'group' => 'totalVisitorsAndPageViews',
+    
+    'width' => 50,
+    
+    'days' => 10,
+    
+    'display' => 'table'
+
 ];

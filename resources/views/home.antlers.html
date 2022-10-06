@@ -29,7 +29,7 @@
                     </h2>
                     
                     <p class="font-futural text-gray-600 text-xl mb-3 lg:mb-6 text-center mx-3">
-                        {{ excerpt | widont ?? content | strip_tags | safe_truncate(150, '...') }}
+                        {{ excerpt }}
                     </p>
                     
                     <a class="object-cover max-h-350 max-h-620" href="{{url}}">
@@ -56,5 +56,4 @@
 
     {{ /sections }}
     
-
 </div>

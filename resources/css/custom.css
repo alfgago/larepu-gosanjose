@@ -195,5 +195,5 @@ article h1{
     width: 3rem;
 }
 .goog-te-banner-frame{
-    display: none !important;
+    visibility: hidden !important;
 }

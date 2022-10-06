@@ -1524,7 +1524,7 @@ article h1{
 }
 
 .goog-te-banner-frame{
-    display: none !important;
+    visibility: hidden !important;
 }
 
 .hover\:bg-green-700:hover {

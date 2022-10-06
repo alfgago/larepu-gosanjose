@@ -27,7 +27,7 @@ class AppServiceProvider extends ServiceProvider
         // Statamic::script('app', 'cp');
         // Statamic::style('app', 'cp');
         if (env('APP_ENV') !== 'local') {
-            URL::forceScheme('https');
+            \URL::forceScheme('https');
         }
     }
 }

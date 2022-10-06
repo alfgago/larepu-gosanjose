@@ -80,7 +80,13 @@ return [
         'class' => null,
 
         'rules' => [
-            //
+            'collections' => [
+                'articles' => [
+                    'topics' => [
+                        'Now'
+                    ]
+                ],
+            ],
         ],
 
     ],

@@ -24,6 +24,14 @@
         <script src="js/weather.js" defer></script>
         <script src="js/custom.js" defer></script>
     </head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BRT52B8S6F"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-BRT52B8S6F');
+    </script>
     <body id="body" class="bg-white leading-normal text-grey-800 font-futural overflow-x-hidden">
         {{ partial:nav }}
         {{ template_content }}

@@ -4,7 +4,7 @@ blueprint: home
 title: Home
 template: home
 updated_by: 58dc2927-c737-49c3-8d0a-0a681180bcc4
-updated_at: 1664516414
+updated_at: 1665428790
 sections:
   -
     section_type: full
@@ -54,7 +54,7 @@ sections:
   -
     section_type: full
     section_topic: green
-    amount: 3
+    amount: 4
     skip_count: 0
     show_title: true
     show_ad: false

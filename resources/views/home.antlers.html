@@ -1,7 +1,7 @@
 <div id="Go" class="max-w-5xl mx-auto relative">
     <article id="home" class="pt-6">
         <p class="font-medium text-lg text-teal">{{ subtitle }}</p>
-        {{responsive:featured_image class="max-h-350 max-h-620 h-auto w-full object-cover" webp="true" avif="false" quality:webp="85" glide:width="1200" width="1200" height="628" }}
+        {{responsive:featured_image class="h-auto w-full object-cover" webp="true" avif="false" quality:webp="85" glide:width="1200" width="1200" height="628" }}
     </article>
 </div>
 
@@ -10,13 +10,13 @@
     {{ sections }}
         
         {{ if show_title }}
-            <div id="{{section_topic:slug|slugify}}" class="pt-16">
+            <div id="{{section_topic:slug|slugify}}" class="pt-8">
                 <h1 class="text-xl py-3 px-20 text-white bg-green-600 border-2 tracking-tight leading-tight uppercase mb-8">{{section_topic:slug}}</h1>
             </div>
         {{ /if }}
 
         {{sectionIndex = index}}
-        <div class="flex flex-wrap mb-8 justify-between w-full">
+        <div class="flex flex-wrap sm:mb-8 justify-between w-full">
             {{collection:articles taxonomy:topics={section_topic:slug} as="article" sort="priority" limit="{amount}" }}
                 {{article}}
                 {{articleIndex = index}}
@@ -32,11 +32,11 @@
                         {{ excerpt }}
                     </p>
                     
-                    <a class="object-cover max-h-350 max-h-620" href="{{url}}">
+                    <a class="object-cover" href="{{url}}">
                         {{ if sectionIndex == 0 && articleIndex == 0 }}
-                            {{responsive:featured_image class="max-h-350 max-h-620 h-auto w-full object-cover" webp="true" avif="false" quality:webp="85" glide:width="1200" width="1200" height="628"}}
+                            {{responsive:featured_image class="h-auto w-full object-cover" webp="true" avif="false" quality:webp="85" glide:width="1200" width="1200" height="628"}}
                         {{ else }}
-                            {{responsive:featured_image loading='lazy' class="max-h-350 max-h-620 h-auto w-full object-cover" webp="true" avif="false" quality:webp="85" glide:width="1200" width="1200" height="628" }}
+                            {{responsive:featured_image loading='lazy' class="h-auto w-full object-cover" webp="true" avif="false" quality:webp="85" glide:width="1200" width="1200" height="628" }}
                         {{ /if }}
                     </a>
                 </div>

@@ -68,7 +68,7 @@ body {
 .content-show img{
     object-fit: contain;
     width: 1200px !important;
-    height: 500px;
+    height: auto;
 }
 article h1{
     margin-bottom: 2rem;
@@ -119,12 +119,9 @@ article h1{
     body, html {
         font-size: 15px;
     }
-    .max-h-350{
-        max-height: 350px !important;
-    }
     
     .content-show img{
-        height: 300px;
+        height: auto;
     }
 
     .desktop{

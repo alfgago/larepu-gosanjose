@@ -4,12 +4,12 @@ blueprint: home
 title: Home
 template: home
 updated_by: 58dc2927-c737-49c3-8d0a-0a681180bcc4
-updated_at: 1665428790
+updated_at: 1665523484
 sections:
   -
     section_type: full
     section_topic: now
-    amount: 5
+    amount: 10
     skip_count: 0
     show_title: true
     show_ad: false

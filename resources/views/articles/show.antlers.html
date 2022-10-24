@@ -7,17 +7,10 @@
     </a>
     <article class="pb-6 lg:pb-0 pt-4">
         <h1 id="note-title" class="px-4">{{ title }}</h1>
-        {{topics}}
-            {{if title == 'Now'}}
-                <div class="bg-gray-800 inline-block text-sm p-4 uppercase tracking-widest text-white py-1 my-3">
-                    {{ date format="F j, Y" }}
-                </div>
-            {{/if}}
-        {{/topics}}
         <div class="flex flex-col content-show">
             {{responsive:featured_image loading='lazy' id="note-image" class="w-full" webp="true" avif="false" quality:webp="85" glide:width="1600"}}
             <div class="p-8">
-                {{ content | widont }}
+                {{ content }}
             </div>
         </div>
     </article>

@@ -10,3 +10,9 @@ preferences:
         - author
         - slug
         - topics
+  taxonomies:
+    topics:
+      columns:
+        - title
+        - slug
+        - priority

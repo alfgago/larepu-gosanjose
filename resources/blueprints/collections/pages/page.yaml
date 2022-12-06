@@ -57,21 +57,3 @@ sections:
           always_save: false
           validate:
             - required
-  related:
-    display: Related
-    fields:
-      -
-        handle: ad_field
-        field:
-          mode: select
-          create: true
-          display: 'Ad Field'
-          type: entries
-          icon: entries
-          listable: hidden
-          instructions_position: above
-          visibility: visible
-          always_save: false
-          max_items: 1
-          collections:
-            - ads

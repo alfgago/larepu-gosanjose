@@ -16,3 +16,7 @@ use Illuminate\Support\Facades\Route;
 Route::statamic('/search/results', 'search', [
     'title' => 'Search Results'
 ]);
+
+Route::statamic('/{section_name}', 'section', [
+    'title' => 'Section'
+]);

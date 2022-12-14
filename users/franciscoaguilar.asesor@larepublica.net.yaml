@@ -7,6 +7,6 @@ preferences:
     articles:
       columns:
         - title
-        - author
         - slug
         - topics
+        - date

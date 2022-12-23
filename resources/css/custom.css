@@ -222,3 +222,11 @@ article h1{
     right: -16rem;
 }
 
+.max-w-95vw{
+    max-width: 95vw !important;
+}
+
+.mtop-1rem img{
+    margin-top: 1rem;
+}
+

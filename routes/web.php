@@ -18,4 +18,6 @@ Route::statamic('/search/results', 'search', [
 ]);
 
 
-Route::statamic('/category/{section_name}', 'section');
+Route::statamic('/category/{section_name}', 'section', [
+    'title' => 'Category'
+]);

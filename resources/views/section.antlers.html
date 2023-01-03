@@ -1,5 +1,5 @@
 <div class="lg:max-w-5xl mx-auto relative mt-8 content">
-    {{collection:articles as="article" taxonomy:topics="{section_name}" paginate="10"}}
+    {{collection:articles as="article" taxonomy:topics="{section_name}" sort="priority" paginate="10"}}
     <div id="{{section_name}}" class="pt-4 mb-4">
         <h1 class="text-xl py-3 px-20 text-white bg-green-600 border-2 tracking-tight leading-tight uppercase mb-8 text-center">{{section_name}}</h1>
     </div>
